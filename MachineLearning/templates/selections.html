@@ -1,0 +1,73 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+	<style>
+		#data_choices .ui-selecting { background: #FECA40; }
+		#data_choices .ui-selected { background: #F39814; color: white; }
+		#data_choices { list-style-type: none; margin: 0; padding: 0; width: 95%; }
+		#data_choices li { margin: 3px; padding: 0.4em; font-size: 1em; height: 32px; }
+		#model_choices .ui-selecting { background: #FECA40; }
+		#model_choices .ui-selected { background: #F39814; color: white; }
+		#model_choices { list-style-type: none; margin: 0; padding: 0; width: 95%; }
+		#model_choices li { margin: 3px; padding: 0.4em; font-size: 1em; height: 32px; }
+		.column { float: left; padding: 5%; width: 40%; }
+		.row:after { content: ""; display: table; clear: both; }
+	</style>	
+	<script type="text/javascript">window.CSRF_TOKEN="{{ csrf_token }}";</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			// We only want one selections at a time
+			$("#data_choices").selectable({
+				selected: function(event, ui) {
+				    selected_data=$(ui.selected).text();
+					$(ui.selected).addClass("ui-selected").siblings().removeClass("ui-selected");
+					
+				}
+			});
+			
+			$("#model_choices").selectable({
+				selected: function(event, ui) {
+				    selected_data=$(ui.selected).text();
+					$(ui.selected).addClass("ui-selected").siblings().removeClass("ui-selected");
+					
+				}
+			});
+			
+		});	
+	</script>	
+</head>	
+<body>
+	<a href='/logout'><h3>Log out</h3></a>
+	
+	<div class="row">
+		<div class="column">
+			<ol id="data_choices"><h3>Data Choices</h3>
+				<li class="ui-widget-content">Sand Mining PPI</li>
+				<li class="ui-widget-content">Choice #2</li>
+				<li class="ui-widget-content">Choice #3</li>
+				<li class="ui-widget-content">Choice #4</li>
+				<li class="ui-widget-content">Choice #5</li>
+			</ol>
+		</div>
+		<div class="column">
+			<ol id="model_choices"><h3>Model Choices</h3>
+				<li class="ui-widget-content">ARIMA</li>
+				<li class="ui-widget-content">Choice #2</li>
+				<li class="ui-widget-content">Choice #3</li>
+				<li class="ui-widget-content">Choice #4</li>
+				<li class="ui-widget-content">Choice #5</li>
+			</ol>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="column"></div>
+		<div class="column">
+			<a href='/forecast-model'><h2>Run Model >>></h2></a>
+		</div>	
+	</div>
+	
+</body>
+</html>
