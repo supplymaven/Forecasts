@@ -1,3 +1,5 @@
+import os
+from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
@@ -8,6 +10,7 @@ import pmdarima as pm
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from datetime import datetime
 
 # Create your views here.
 def selections(request):
@@ -25,18 +28,18 @@ def forecast_model(request):
     df=pd.DataFrame.from_records(SandMining.objects.all().values())
     model=pm.auto_arima(df.ppi, start_p=1, start_q=1,
                         test='adf',       # use adftest to find optimal 'd'
-                        max_p=3, max_q=3, # maximum p and q
-                        m=1,              # frequency of series
+                        max_p=5, max_q=5, # maximum p and q
+                        m=12,              # frequency of series
                         d=None,           # let model determine 'd'
-                        seasonal=False,   # No Seasonality
+                        seasonal=True,   # Seasonality
                         start_P=0, 
-                        D=0, 
+                        D=None, 
                         trace=True,
                         error_action='ignore',  
                         suppress_warnings=True, 
                         stepwise=True)
                       
-    print(model.summary())
+    #print(model.summary())
     #model.plot_diagnostics(figsize=(20,10))
     #plt.show()
     
@@ -58,6 +61,11 @@ def forecast_model(request):
                      color='k', alpha=.15)
 
     plt.title("ARIMA Forecast of Sand Mining PPI")
-    plt.show()
+    #plt.show()
+    now=datetime.now()
+    timestamp=datetime.timestamp(now)
+    image_file_name='arima' + str(int(round(timestamp,0))) + '.png'
+    plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name))
+    predictions=model.predict(n_periods)
 
-    return HttpResponse('')                 
+    return render(request, '../templates/forecast_model.html', {'image_file_name': image_file_name, 'predictions': [round(p,2) for p in predictions]})              

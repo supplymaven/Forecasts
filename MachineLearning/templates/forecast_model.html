@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+<head>
+	<style>
+		#column1 { float: left; padding: 5%; width: 640px; }
+		#column2 { float: left; padding: 5%; width: 100px; }
+		.row:after { content: ""; display: table; clear: both; }
+		th { padding: 5%; }
+		td { padding: 5%; }
+	</style>	
+</head>	
+<body>
+	<div class="row">
+		<div id="column1" class="column">
+			{% with '/images/'|add:image_file_name as image_static %}
+				<img src="{% static image_static %}" alt="ARIMA image" />
+			{% endwith %}
+		</div>
+		<div id="column2" class="column">			
+			<table cellspacing="10">
+				<tbody>
+					<tr>
+						<th>Timestep</th><th>Prediction</th>
+					</tr>
+					{% for p in predictions %}
+						<tr>
+							<td>{{ forloop.counter }}</td><td>{{ p|floatformat:2 }}</td>
+						</tr>	
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
