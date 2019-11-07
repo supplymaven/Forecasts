@@ -1,22 +1,48 @@
+{% extends "base.html" %}
+
 {% load static %}
-<html>
-<head>
-	<style>
+
+{% block additional_css %}
 		#column1 { float: left; padding: 5%; width: 640px; }
-		#column2 { float: left; padding: 5%; width: 100px; }
+		#column2 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
+		#column3 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
+		#column4 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
+		#column5 { float: left; padding: 5%; width: 80px; margin-top: 25px;}
 		.row:after { content: ""; display: table; clear: both; }
-		th { padding: 5%; }
-		td { padding: 5%; }
-	</style>	
-</head>	
-<body>
+		//th { padding: 5%; }
+		//td { padding: 5%; }
+{% endblock %}
+
+{% block main_content %}
 	<div class="row">
 		<div id="column1" class="column">
 			{% with '/images/'|add:image_file_name as image_static %}
 				<img src="{% static image_static %}" alt="ARIMA image" />
 			{% endwith %}
 		</div>
-		<div id="column2" class="column">			
+		<div id="column2" class="column">
+			<h4>Var</h4>
+			<div>Constant</div>
+			{% for ar in ar_vars %}
+				<div>{{ ar }}</div>
+			{% endfor %}
+			{% for ma in ma_vars %}
+				<div>{{ ma }}</div>
+			{% endfor %}
+		</div>
+		<div id="column3" class="column">
+			<h4>Coeffs</h4>
+			{% for coef in coefficients %}
+				<div>{% if coef > 0 %}<span style="visibility: hidden;">-</span>{{ coef|floatformat:2 }}{% else %}{{ coef|floatformat:2 }}{% endif %}</div>
+			{% endfor %}
+	    </div>
+		<div id="column4" class="column">
+			<h4>PVals</h4>
+			{% for p in pvalues %}
+				<div>{{ p|floatformat:2 }}</div>
+			{% endfor %}
+		</div>
+		<div id="column5" class="column">			
 			<table cellspacing="10">
 				<tbody>
 					<tr>
@@ -31,5 +57,6 @@
 			</table>
 		</div>
 	</div>
-</body>
-</html>
+	
+	<br><br><br>{{ summary }}
+{% endblock %}

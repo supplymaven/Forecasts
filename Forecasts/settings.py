@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': os.path.join(BASE_DIR, 'db.mysql'),
-        'NAME': 'timeseries',#'IngredientMatching',
+        'NAME': 'timeseries',
         'USER': 'root',
         'PASSWORD': 'a6!modern',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on

@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<style>
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+*, *:before, *:after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/*| Navigation |*/
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.1);
+}
+nav ul:first-child {
+	margin-left: 100px;
+}
+  nav ul{
+    list-style: none;
+    position: relative;
+    float: left;
+    margin-right: 100px;
+    display: inline-table;
+  }
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+    nav ul li:hover{background: rgba(0,0,0,.15);}
+    nav ul li:hover > ul{display: block;}
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+      nav ul li a{
+        display: block; 
+        padding: 30px 20px;
+        color: #222; 
+        font-size: .9em;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      nav ul ul{
+        display: none;
+        background: #fff;
+        position: absolute; 
+        top: 100%;
+        box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+        border: 1px solid rgba(0,0,0,.1);
+      }
+        nav ul ul li{float: none; position: relative;}
+          nav ul ul li a {
+            padding: 15px 30px; 
+            border-bottom: 1px solid rgba(0,0,0,.05);
+          }
+          nav ul ul ul {
+            position: absolute; 
+            left: 100%; 
+            top:0;
+          }	
+	{% block additional_css %}	{% endblock %}  
+	</style>
+	</head>
+	<body>
+		<nav role='navigation'>
+		    <ul>
+		        <li><a href="#">Home</a></li>
+		        <li><a href="#">Forecast</a>
+		        <ul>
+		            <li><a href="#">Sand Mining</a>
+						<ul>
+							<li><a href="/forecast-model/sand-mining/arima">ARIMA</a></li>
+							<li><a href="/forecast-model/sand-mining/lstm">LSTM</a></li>
+						</ul>
+					</li>
+		            <li><a href="#">Commodity Indices</a>
+						<ul>
+							<li><a href="/forecast-model/commodity-indices/arima">ARIMA</a></li>
+							<li><a href="/forecast-model/commodity-indices/lstm">LSTM</a></li>
+						</ul>	
+					</li>
+					<li><a href="#">Corporate Bond Yield Rates</a>
+						<ul>
+							<li><a href="/forcast-model/corporate-bond-yield-rates/arima">ARIMA</a></li>
+							<li><a href="/forcast-model/corporate-bond-yield-rates/lstm">LSTM</a></li>
+						</ul>	
+					</li>
+					<li><a href="#">NASDAQ</a>
+						<ul>
+							<li><a href="/forecast-model/nasdaq/arima">ARIMA</a></li>
+							<li><a href="/forecast-model/nasdaq/lstm">LSTM</a></li>
+						</ul>						
+					</li>
+					<li><a href="#">S&P 500 Ratios</a>
+						<ul>
+							<li><a href="/forecast-model/sp-ratios/arima">ARIMA</a></li>
+							<li><a href="/forecast-model/sp-ratios/lstm">LSTM</a></li>
+						</ul>	
+					</li>
+					<li><a href="#">Yale</a>
+						<ul>
+							<li><a href="/forecast-model/yale/arima">ARIMA</a></li>
+							<li><a href="/forecast-model/yale/lstm">LSTM</a></li>
+						</ul>	
+					</li>
+					<li><a href="#">Zillow</a>
+						<ul>
+							<li><a href="/forecast-model/zillow/arima">ARIMA</a></li>
+							<li><a href="/forecast-model/zillow/lstm">LSTM</a></li>
+						</ul>	
+					</li>
+		         </ul>
+		       </li>
+		       <li><a href="/logout">Log Out</a></li>
+		       <li><a href="#">Contact Us</a></li>
+		    </ul>
+		</nav> 
+		
+		{% block main_content %} {% endblock %}
+		
+	</body>
+	
+</html>	
