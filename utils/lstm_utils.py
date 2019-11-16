@@ -11,6 +11,21 @@ from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import MinMaxScaler
 import numpy
 
+# split a univariate sequence into samples
+def split_sequence(sequence, n_steps):
+	X, y = list(), list()
+	for i in range(len(sequence)):
+		# find the end of this pattern
+		end_ix = i + n_steps
+		# check if we are beyond the sequence
+		if end_ix > len(sequence)-1:
+			break
+		# gather input and output parts of the pattern
+		seq_x, seq_y = sequence[i:end_ix], sequence[end_ix]
+		X.append(seq_x)
+		y.append(seq_y)
+	return numpy.array(X), numpy.array(y)
+
 # frame a sequence as a supervised learning problem
 def timeseries_to_supervised(df, lag=1):
 	#df = DataFrame(data)

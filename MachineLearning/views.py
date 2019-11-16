@@ -114,50 +114,35 @@ def forecast_model(request, series, model):
     
         return render(request, '../templates/forecast_model.html', {'image_file_name': image_file_name, 'coefficients': coefficients, 'pvalues': pvalues, 'ar_vars': ar_vars, 'ma_vars': ma_vars, 'predictions': [round(p,2) for p in predictions]})              
     elif model=='lstm':
-        # transform data to be stationary
-        raw_values=pd.to_numeric(df['inx']).to_numpy()
-        print(raw_values)
-        diff_values=difference(raw_values,1)
-        #print(diff_values)
-        # transform data to be supervised learning
-        supervised=timeseries_to_supervised(diff_values, 1)
-        supervised_values=supervised.values
-        #print(supervised_values)
-        # split data into train and test-sets
-        train, test = supervised_values[0:-12], supervised_values[-12:]
+        # define input sequence
+        raw_seq=[float(i) for i in df['inx'].values.tolist()]
+        # choose a number of time steps
+        n_steps = 3
+        # split into samples
+        X, y = split_sequence(raw_seq, n_steps)
+        # reshape from [samples, timesteps] into [samples, timesteps, features]
+        n_features = 1
+        X = X.reshape((X.shape[0], X.shape[1], n_features))
+        # define model
+        model = Sequential()
+        model.add(LSTM(50, activation='relu', input_shape=(n_steps, n_features)))
+        model.add(Dense(1))
+        model.compile(optimizer='adam', loss='mse')
+        # fit model
+        model.fit(X, y, epochs=200, verbose=0)
+        # demonstrate prediction  
+        # the last 2 of the X sequence and the last y of the y sequence
+        x_input=np.array([i[0] for i in X[-1][-2:]]+[y[-1]])
         
-        # transform the scale of the data
-        scaler, train_scaled, test_scaled = scale(train, test)
- 
-        # fit the model
-        lstm_model = fit_lstm(train_scaled, 1, 1, 4)
-        # forecast the entire training dataset to build up state for forecasting
-        train_reshaped = train_scaled[:, 0].reshape(len(train_scaled), 1, 1)
-        lstm_model.predict(train_reshaped, batch_size=1)
-         
-        # walk-forward validation on the test data
-        predictions = list()
-        for i in range(len(test_scaled)):
-            # make one-step forecast
-            X, y = test_scaled[i, 0:-1], test_scaled[i, -1]
-            yhat = forecast_lstm(lstm_model, 1, X)
-            # invert scaling
-            yhat = invert_scale(scaler, X, yhat)
-            # invert differencing
-            yhat = inverse_difference(raw_values, yhat, len(test_scaled)+1-i)
-            # store forecast
-            predictions.append(yhat)
-            expected = raw_values[len(train) + i + 1]
-            print('Month=%d, Predicted=%f, Expected=%f' % (i+1, yhat, expected))
-         
-        # report performance
-        rmse = sqrt(mean_squared_error(raw_values[-12:], predictions))
-        print('Test RMSE: %.3f' % rmse)
-        # line plot of observed vs predicted
-        plt.plot(raw_values[-12:])
-        plt.plot(predictions)
-        plt.show()
-                
-                
+        # We only take the last three elements of a series to make a prediction of the next element.
+        # We continually append the input array with predictions, so the input array continually grows.
+        # However, we use [-3:] to make sure we are always only using the last 3 elements for the next
+        # prediction.
+        for i in range(0,10):
+            x_input_reshaped = x_input[-3:].reshape((1, n_steps, n_features))
+            yhat = model.predict(x_input_reshaped, verbose=0)
+            x_input=np.append(x_input, yhat)
+            
+            print(yhat)        
         
         return HttpResponse("")
