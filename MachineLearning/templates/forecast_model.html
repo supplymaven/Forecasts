@@ -20,28 +20,30 @@
 				<img src="{% static image_static %}" alt="ARIMA image" />
 			{% endwith %}
 		</div>
-		<div id="column2" class="column">
-			<h4>Var</h4>
-			<div>Constant</div>
-			{% for ar in ar_vars %}
-				<div>{{ ar }}</div>
-			{% endfor %}
-			{% for ma in ma_vars %}
-				<div>{{ ma }}</div>
-			{% endfor %}
-		</div>
-		<div id="column3" class="column">
-			<h4>Coeffs</h4>
-			{% for coef in coefficients %}
-				<div>{% if coef > 0 %}<span style="visibility: hidden;">-</span>{{ coef|floatformat:2 }}{% else %}{{ coef|floatformat:2 }}{% endif %}</div>
-			{% endfor %}
-	    </div>
-		<div id="column4" class="column">
-			<h4>PVals</h4>
-			{% for p in pvalues %}
-				<div>{{ p|floatformat:2 }}</div>
-			{% endfor %}
-		</div>
+		{% if coefficients %}
+			<div id="column2" class="column">
+				<h4>Var</h4>
+				<div>Constant</div>
+				{% for ar in ar_vars %}
+					<div>{{ ar }}</div>
+				{% endfor %}
+				{% for ma in ma_vars %}
+					<div>{{ ma }}</div>
+				{% endfor %}
+			</div>
+			<div id="column3" class="column">
+				<h4>Coeffs</h4>
+				{% for coef in coefficients %}
+					<div>{% if coef > 0 %}<span style="visibility: hidden;">-</span>{{ coef|floatformat:2 }}{% else %}{{ coef|floatformat:2 }}{% endif %}</div>
+				{% endfor %}
+			</div>
+			<div id="column4" class="column">
+				<h4>PVals</h4>
+				{% for p in pvalues %}
+					<div>{{ p|floatformat:2 }}</div>
+				{% endfor %}
+			</div>
+		{% endif %}	
 		<div id="column5" class="column">			
 			<table cellspacing="10">
 				<tbody>

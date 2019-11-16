@@ -138,11 +138,19 @@ def forecast_model(request, series, model):
         # We continually append the input array with predictions, so the input array continually grows.
         # However, we use [-3:] to make sure we are always only using the last 3 elements for the next
         # prediction.
-        for i in range(0,10):
+        for i in range(0,12):
             x_input_reshaped = x_input[-3:].reshape((1, n_steps, n_features))
             yhat = model.predict(x_input_reshaped, verbose=0)
             x_input=np.append(x_input, yhat)
-            
-            print(yhat)        
+
+        plt.plot(raw_seq[:-3])
+        plt.plot(pd.Series(x_input.tolist(),index=np.arange(len(raw_seq[:-3]),len(raw_seq[:-3])+len(x_input))), color='darkgreen')
+        plt.title("LSTM Forecast of " + formatted_series)
+        now=datetime.now()
+        timestamp=datetime.timestamp(now)
+        image_file_name='lstm' + str(int(round(timestamp,0))) + '.png'
+        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name))
+        # clear the figure
+        plt.clf()
+        return render(request, '../templates/forecast_model.html', {'image_file_name': image_file_name, 'predictions': [round(p,2) for p in x_input[3:]]})  
         
-        return HttpResponse("")
