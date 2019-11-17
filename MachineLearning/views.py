@@ -7,6 +7,7 @@ from django.urls import reverse
 from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
+from keras import backend as K
 import pmdarima as pm
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -143,8 +144,9 @@ def forecast_model(request, series, model):
             yhat = model.predict(x_input_reshaped, verbose=0)
             x_input=np.append(x_input, yhat)
 
-        plt.plot(raw_seq[:-3])
-        plt.plot(pd.Series(x_input.tolist(),index=np.arange(len(raw_seq[:-3]),len(raw_seq[:-3])+len(x_input))), color='darkgreen')
+        K.clear_session()
+        plt.plot(raw_seq)
+        plt.plot(pd.Series(x_input.tolist()[3:],index=np.arange(len(raw_seq),len(raw_seq)+len(x_input.tolist()[3:]))), color='darkgreen')
         plt.title("LSTM Forecast of " + formatted_series)
         now=datetime.now()
         timestamp=datetime.timestamp(now)
