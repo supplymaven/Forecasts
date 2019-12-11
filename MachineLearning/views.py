@@ -4,11 +4,12 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
-from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices
+from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
 from keras import backend as K
 import pmdarima as pm
+import statsmodels.api as sm
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -155,4 +156,14 @@ def forecast_model(request, series, model):
         # clear the figure
         plt.clf()
         return render(request, '../templates/forecast_model.html', {'image_file_name': image_file_name, 'predictions': [round(p,2) for p in x_input[3:]]})  
+    elif model=='econometric':
+        df=pd.DataFrame(list(crude.objects.all().values()))
+        target=pd.DataFrame(list(crude.objects.all().values('wti_real_price')))
+        X=df[["world_liquid_fuels_production_capacity_change","avg_num_outstanding_oil_futures_contract","assets_under_management","world_gdp_growth","world_liquid_fuels_consumption_change"]]
+        y=target["wti_real_price"]
+        X = sm.add_constant(X)
+        model=sm.OLS(y.astype(float), X.astype(float)).fit()
+        # predictions=model.predict(X)
+        summ=model.summary()
+        return render(request, '../templates/econometric_model.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html()})
         

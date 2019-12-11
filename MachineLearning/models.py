@@ -30,6 +30,16 @@ class commodity_indices(models.Model):
     observation_date=models.DateField(unique=True) # data is daily
     inx=models.DecimalField(max_digits=6, decimal_places=2)
     
+class crude(models.Model):
+    frequency=models.DateField(unique=True, null=True)
+    wti_real_price=models.DecimalField(max_digits=7, decimal_places=4) # dependent variable
+    world_liquid_fuels_production_capacity_change=models.DecimalField(max_digits=5, decimal_places=4)
+    avg_num_outstanding_oil_futures_contract=models.DecimalField(max_digits=8, decimal_places=4)
+    assets_under_management=models.DecimalField(max_digits=7, decimal_places=4)
+    world_gdp_growth=models.DecimalField(max_digits=5, decimal_places=4)
+    world_liquid_fuels_consumption_change=models.DecimalField(max_digits=5, decimal_places=4)
+    
+    
     
     
     

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block additional_css %}
+		#column1 { float: left; padding: 5%; width: 640px; }
+		#column2 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
+		#column3 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
+		#column4 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
+		#column5 { float: left; padding: 5%; width: 80px; margin-top: 25px;}
+		.row:after { content: ""; display: table; clear: both; }
+		table { margin-top: 10%; }
+		td { height: 25px; padding: 10px; }
+		th:first-child {text-align: left; }
+		//th { padding: 5%; }
+		//td { padding: 5%; }
+{% endblock %}
+
+{% block main_content %}
+	<div class="row">
+		<div id="column1" class="column">
+			<div class="row">
+				{{ summary1|safe }}
+			</div>
+			<div class="row">
+				{{ summary2|safe }}
+			</div>
+			<div class="row">
+				{{ summary3|safe }}
+			</div>
+		</div>
+		
+	</div>	
+{% endblock %}

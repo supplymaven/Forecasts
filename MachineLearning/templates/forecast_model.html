@@ -20,7 +20,7 @@
 				<img src="{% static image_static %}" alt="ARIMA image" />
 			{% endwith %}
 		</div>
-		{% if coefficients %}
+		{% if coefficients|length > 0 %}
 			<div id="column2" class="column">
 				<h4>Var</h4>
 				<div>Constant</div>
