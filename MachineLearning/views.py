@@ -7,6 +7,7 @@ from django.urls import reverse
 from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
 from keras import backend as K
 import pmdarima as pm
 import statsmodels.api as sm
@@ -160,10 +161,13 @@ def forecast_model(request, series, model):
         df=pd.DataFrame(list(crude.objects.all().values()))
         target=pd.DataFrame(list(crude.objects.all().values('wti_real_price')))
         X=df[["world_liquid_fuels_production_capacity_change","avg_num_outstanding_oil_futures_contract","assets_under_management","world_gdp_growth","world_liquid_fuels_consumption_change"]]
+        X=sm.add_constant(X)
         y=target["wti_real_price"]
-        X = sm.add_constant(X)
-        model=sm.OLS(y.astype(float), X.astype(float)).fit()
-        # predictions=model.predict(X)
+        X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
+        #X_train=sm.add_constant(X_train)
+        model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
+        predictions=model.predict(X.astype(float))
+        print(predictions)
         summ=model.summary()
         return render(request, '../templates/econometric_model.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html()})
         
