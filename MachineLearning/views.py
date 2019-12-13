@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 from keras import backend as K
 import pmdarima as pm
 import statsmodels.api as sm
+from statsmodels.tools.eval_measures import rmse
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -166,8 +167,22 @@ def forecast_model(request, series, model):
         X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
         #X_train=sm.add_constant(X_train)
         model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
-        predictions=model.predict(X.astype(float))
-        print(predictions)
+        predictions_train=model.predict(X_train.astype(float))
+        predictions_test=model.predict(X_test.astype(float))
+        rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
+        rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),3)
+        now=datetime.now()
+        timestamp=datetime.timestamp(now)
+        plt.title("Econometric Forecast of " + series.title())
+        plt.plot(y_train.astype(float),label='y_train_actual')
+        plt.plot(y_test.astype(float),label='y_test_actual')
+        plt.plot(predictions_train.astype(float),label='y_train_pred')
+        plt.plot(predictions_test.astype(float),label='y_test_pred')
+        plt.legend(loc='upper right')
+        image_file_name='econometric' + str(int(round(timestamp,0))) + '.png'
+        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name))
+        # clear the figure
+        plt.clf()
         summ=model.summary()
-        return render(request, '../templates/econometric_model.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html()})
+        return render(request, '../templates/econometric_model.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test })
         
