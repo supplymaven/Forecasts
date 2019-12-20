@@ -161,6 +161,12 @@ def forecast_model(request, series, model):
     elif model=='econometric':
         df=pd.DataFrame(list(crude.objects.all().values()))
         target=pd.DataFrame(list(crude.objects.all().values('wti_real_price')))
+        # use a genetic algorithm to select the independent (explanatory) variables
+        num_variables=5 # for crude
+        size_of_chromosome_population=32 # 2^5
+        crossover_probability=0.7
+        mutation_probability=0.001
+        
         X=df[["world_liquid_fuels_production_capacity_change","avg_num_outstanding_oil_futures_contract","assets_under_management","world_gdp_growth","world_liquid_fuels_consumption_change"]]
         X=sm.add_constant(X)
         y=target["wti_real_price"]
@@ -170,7 +176,8 @@ def forecast_model(request, series, model):
         predictions_train=model.predict(X_train.astype(float))
         predictions_test=model.predict(X_test.astype(float))
         rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
-        rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),3)
+        # We will use this as our fitness function in the GA
+        rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),3) 
         now=datetime.now()
         timestamp=datetime.timestamp(now)
         plt.title("Econometric Forecast of " + series.title())
