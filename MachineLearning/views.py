@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from datetime import datetime
 from utils.lstm_utils import *
-
+from utils.genetic_algorithm import *
 
 # Create your views here.
 def selections(request):
@@ -162,12 +162,55 @@ def forecast_model(request, series, model):
         df=pd.DataFrame(list(crude.objects.all().values()))
         target=pd.DataFrame(list(crude.objects.all().values('wti_real_price')))
         # use a genetic algorithm to select the independent (explanatory) variables
-        num_variables=5 # for crude
-        size_of_chromosome_population=32 # 2^5
+        num_generations=10
+        num_variables=13 # for crude
+        size_of_chromosome_population=200 # 2^5
         crossover_probability=0.7
         mutation_probability=0.001
+        #                                  num_possble_vars, num_possible_combinations_of_vars
+        chromosome_population=generate_initial_population(num_variables,size_of_chromosome_population)
         
-        X=df[["world_liquid_fuels_production_capacity_change","avg_num_outstanding_oil_futures_contract","assets_under_management","world_gdp_growth","world_liquid_fuels_consumption_change"]]
+        
+        for i in range(num_generations):
+        
+            new_chromosome_population=[]
+           
+            while len(new_chromosome_population)!=len(chromosome_population):
+                # get fitness of each chromosome
+                chromosome_fitness_pairs=[]
+                accumulated_fitness=0
+                for chromosome in chromosome_population:
+                    # get all indices in bit string where bit string is a '1'
+                    # we don't want the first three colums, however: id and frequency and the dependent variable
+                    indices=[i+3 for i, x in enumerate(chromosome) if x == '1']
+                    # these are the dataframe columns corresponding to those bits in the bit string that are equal to 1
+                    X=df.iloc[:,indices]        
+                    X=sm.add_constant(X)
+                    y=target["wti_real_price"]
+                    X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
+                    #X_train=sm.add_constant(X_train)
+                    model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
+                    predictions_train=model.predict(X_train.astype(float))
+                    predictions_test=model.predict(X_test.astype(float))
+                    rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
+                    # We will use this as our fitness function in the GA
+                    rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),10) 
+                    chromosome_fitness_pairs.append((chromosome,1/rmse_test))
+                    accumulated_fitness+=1/rmse_test
+                    
+                # get the fitness ratios    
+                chromosome_fitness_pairs=[(i,j/accumulated_fitness) for (i,j) in chromosome_fitness_pairs]    
+                
+                mating_pair=select_chromosome_pair(chromosome_fitness_pairs)
+                new_pair=mate_pair(mating_pair, crossover_probability, mutation_probability)
+                new_chromosome_population.append(new_pair[0])
+                new_chromosome_population.append(new_pair[1])
+            chromosome_population=[new_chromosome for new_chromosome in new_chromosome_population]
+            new_chromosome_population=[]
+            
+        print(chromosome_population)    
+        
+        X=df[["avg_num_outstanding_oil_futures_contract","world_gdp_growth",]]
         X=sm.add_constant(X)
         y=target["wti_real_price"]
         X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)

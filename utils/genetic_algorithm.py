@@ -7,26 +7,26 @@ def create_binary_string(num_vars):
         binary_string+=str(random.randint(0,1))
     return binary_string
 
-# pass a list of binary strings with their accompanying fitness raton as a tuple pair
+# pass a list of binary strings with their accompanying fitness ratio as a tuple pair
 # and return a tuple pair of selected chromosomes 
-def select_chromosome_pair(chromosome_fitness_ratio_pairs):
-    rand_num1=random.random()
-    rand_num2=random.random()
-    
+def select_chromosome_pair(chromosome_fitness_ratio_pairs): 
     sorted_by_fitness_ratio=sorted(chromosome_fitness_ratio_pairs, key=lambda x: x[1])
-    accumulated_fitness_ratio=0
-    for pair in sorted_by_fitness_ratio:
-        accumulated_fitness_ratio+=pair[1]
-        if rand_num1<accumulated_fitness_ratio:
-            chromosome1=pair[0]
-            break
-            
-    accumulated_fitness_ratio=0
-    for pair in sorted_by_fitness_ratio:
-        accumulated_fitness_ratio+=pair[1]
-        if rand_num2<accumulated_fitness_ratio and pair[0]!=chromosome1:
-            chromosome2=pair[0]
-            break        
+    fitness_ratios=[pair[1] for pair in sorted_by_fitness_ratio]
+    accumulated_fitness_ratios=[sum(fitness_ratios[:i]) for i in range(1,len(fitness_ratios)+1)]
+    chromosome1=[]
+    chromosome2=[]
+    while chromosome1==chromosome2:
+        rand_num1=random.random()
+        rand_num2=random.random()
+        for i in range(len(sorted_by_fitness_ratio)):
+            if rand_num1<accumulated_fitness_ratios[i]:
+                chromosome1=sorted_by_fitness_ratio[i][0]
+                break
+                
+        for i in range(len(sorted_by_fitness_ratio)):
+            if rand_num2<accumulated_fitness_ratios[i]:
+                chromosome2=sorted_by_fitness_ratio[i][0]
+                break      
             
     return (chromosome1,chromosome2)
 
@@ -60,12 +60,13 @@ def mate_pair(pair, crossover_probability, mutation_probability):
             new_chromosome1=list(new_chromosome1)
             new_chromosome1[mutation_point]='1'
             new_chromosome1="".join(new_chromosome1)
+            
         if new_chromosome2[mutation_point]=='1':
             new_chromosome2=list(new_chromosome2)
             new_chromosome2[mutation_point]='0'
             new_chromosome2="".join(new_chromosome2)
         else:
-            new_chromosome1=list(new_chromosome2)
+            new_chromosome2=list(new_chromosome2)
             new_chromosome2[mutation_point]='1'
             new_chromosome2="".join(new_chromosome2)
 
