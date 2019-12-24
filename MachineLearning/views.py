@@ -1,4 +1,5 @@
 import os
+import math
 from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
@@ -162,15 +163,15 @@ def forecast_model(request, series, model):
         df=pd.DataFrame(list(crude.objects.all().values()))
         target=pd.DataFrame(list(crude.objects.all().values('wti_real_price')))
         # use a genetic algorithm to select the independent (explanatory) variables
-        num_generations=10
+        num_generations=25
         num_variables=13 # for crude
-        size_of_chromosome_population=200 # 2^5
+        size_of_chromosome_population=100 # 2^5
         crossover_probability=0.7
         mutation_probability=0.001
         #                                  num_possble_vars, num_possible_combinations_of_vars
         chromosome_population=generate_initial_population(num_variables,size_of_chromosome_population)
-        
-        
+        min_rmse_test=math.inf
+        most_fit_chromosome=''
         for i in range(num_generations):
         
             new_chromosome_population=[]
@@ -195,6 +196,9 @@ def forecast_model(request, series, model):
                     rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
                     # We will use this as our fitness function in the GA
                     rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),10) 
+                    if rmse_test<min_rmse_test:
+                        min_rmse_test=rmse_test
+                        most_fit_chromosome=chromosome
                     chromosome_fitness_pairs.append((chromosome,1/rmse_test))
                     accumulated_fitness+=1/rmse_test
                     
@@ -208,9 +212,16 @@ def forecast_model(request, series, model):
             chromosome_population=[new_chromosome for new_chromosome in new_chromosome_population]
             new_chromosome_population=[]
             
-        print(chromosome_population)    
+        print(chromosome_population)
+        print(most_fit_chromosome)
+        print(min_rmse_test)       
+        #X=df[["non_opec_liquid_fuels_production","opec_spare_production_capacity","non_oecd_liquid_fuels_consumption_change","non_oecd_gdp_growth","avg_num_outstanding_oil_futures_contract","world_liquid_fuels_consumption_change"]]
+        # get all indices in bit string where bit string is a '1'
+        # we don't want the first three colums, however: id and frequency and the dependent variable
+        indices=[i+3 for i, x in enumerate(most_fit_chromosome) if x == '1']
+        # these are the dataframe columns corresponding to those bits in the bit string that are equal to 1
+        X=df.iloc[:,indices]
         
-        X=df[["avg_num_outstanding_oil_futures_contract","world_gdp_growth",]]
         X=sm.add_constant(X)
         y=target["wti_real_price"]
         X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
