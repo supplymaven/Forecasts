@@ -4,7 +4,7 @@
 
 {% block additional_css %}
 		#column1 { float: left; padding: 5%; width: 640px; }
-		#column2 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
+		#column2 { float: left; padding: 5%; width: 90px; }//; margin-top: 33px;}
 		#column3 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
 		#column4 { float: left; padding: 5%; width: 90px; margin-top: 33px;}
 		#column5 { float: left; padding: 5%; width: 80px; margin-top: 25px;}
@@ -19,6 +19,11 @@
 {% block main_content %}
 	<div class="row">
 		<div id="column1" class="column">
+			<div class="row">
+				{% with '/images/'|add:image_file_name as image_static %}
+					<img src="{% static image_static %}" alt="Econometric image" />
+				{% endwith %}
+			</div>
 			<div class="row">
 				{{ summary1|safe }}
 			</div>
@@ -42,9 +47,10 @@
 			</div>
 		</div>
 		<div id="column2" class="column">
+			
 			<div class="row">
-				{% with '/images/'|add:image_file_name as image_static %}
-					<img src="{% static image_static %}" alt="Econometric image" />
+				{% with '/images/'|add:image_file_name_donut as image_static_donut %}
+					<img src="{% static image_static_donut %}" alt="Donut image" />
 				{% endwith %}
 			</div>
 		</div>

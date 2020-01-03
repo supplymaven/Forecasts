@@ -212,9 +212,9 @@ def forecast_model(request, series, model):
             chromosome_population=[new_chromosome for new_chromosome in new_chromosome_population]
             new_chromosome_population=[]
             
-        print(chromosome_population)
-        print(most_fit_chromosome)
-        print(min_rmse_test)       
+        #print(chromosome_population)
+        #print(most_fit_chromosome)
+        #print(min_rmse_test)       
         #X=df[["non_opec_liquid_fuels_production","opec_spare_production_capacity","non_oecd_liquid_fuels_consumption_change","non_oecd_gdp_growth","avg_num_outstanding_oil_futures_contract","world_liquid_fuels_consumption_change"]]
         # get all indices in bit string where bit string is a '1'
         # we don't want the first three colums, however: id and frequency and the dependent variable
@@ -245,15 +245,40 @@ def forecast_model(request, series, model):
         summ=model.summary()
         
         # standardize data to get standardized coefficients for donut graph
-        X=X.drop(columns=['const'])
+        X=X.drop(columns=['const']) # X had a column vector of 1s in the original dataframe so we remove it prior to normalizing and adding a constant to the new model
         X_standardized=(X.astype(float)-X.astype(float).mean())/X.astype(float).std()
         X_standardized=sm.add_constant(X_standardized)
         y_standardized=(y.astype(float)-y.astype(float).mean())/y.astype(float).std()
         
         X_train_std, X_test_std, y_train_std, y_test_std=train_test_split(X_standardized, y_standardized, test_size=0.2, random_state=42, shuffle=False)
         model_standardized=sm.OLS(y_train_std.astype(float), X_train_std.astype(float)).fit()
-        coefficients=model_standardized.params
-        print(coefficients)
+        coefficients=dict(model_standardized.params)
+        # donut chart of normalized coefficients
+        fig, ax = plt.subplots(figsize=(8, 5), subplot_kw=dict(aspect="equal"))
+        coeffs=[key for key in coefficients.keys() if key!='const']
+        data=[coefficients[key] for key in coefficients.keys() if key!='const']
+        wedges, texts = ax.pie(data, wedgeprops=dict(width=0.5), startangle=-40)
+
+        bbox_props = dict(boxstyle="square,pad=0.3", fc="w", ec="k", lw=0.72)
+        kw = dict(arrowprops=dict(arrowstyle="-"),
+                  bbox=bbox_props, zorder=0, va="center")
+
+        for i, p in enumerate(wedges):
+            ang = (p.theta2 - p.theta1)/2. + p.theta1
+            y = np.sin(np.deg2rad(ang))
+            x = np.cos(np.deg2rad(ang))
+            horizontalalignment = {-1: "right", 1: "left"}[int(np.sign(x))]
+            connectionstyle = "angle,angleA=0,angleB={}".format(ang)
+            kw["arrowprops"].update({"connectionstyle": connectionstyle})
+            ax.annotate(coeffs[i].replace('_','\n'), xy=(x, y), xytext=(1.35*np.sign(x), 1.4*y),
+                        horizontalalignment=horizontalalignment, **kw)
+
+        ax.set_title("Impact of Coefficients")
+
+        image_file_name_donut='coefficients' + str(int(round(timestamp,0))) + '.png'
+        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name_donut))
         
-        return render(request, '../templates/econometric_model.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test })
+        plt.clf()
+        
+        return render(request, '../templates/econometric_model.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'image_file_name_donut': image_file_name_donut, 'rmse_train': rmse_train, 'rmse_test': rmse_test })
         
