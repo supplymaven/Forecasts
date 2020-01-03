@@ -163,7 +163,7 @@ def forecast_model(request, series, model):
         df=pd.DataFrame(list(crude.objects.all().values()))
         target=pd.DataFrame(list(crude.objects.all().values('wti_real_price')))
         # use a genetic algorithm to select the independent (explanatory) variables
-        num_generations=25
+        num_generations=1
         num_variables=13 # for crude
         size_of_chromosome_population=100 # 2^5
         crossover_probability=0.7
@@ -220,12 +220,10 @@ def forecast_model(request, series, model):
         # we don't want the first three colums, however: id and frequency and the dependent variable
         indices=[i+3 for i, x in enumerate(most_fit_chromosome) if x == '1']
         # these are the dataframe columns corresponding to those bits in the bit string that are equal to 1
-        X=df.iloc[:,indices]
-        
+        X=df.iloc[:,indices]        
         X=sm.add_constant(X)
         y=target["wti_real_price"]
         X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
-        #X_train=sm.add_constant(X_train)
         model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
         predictions_train=model.predict(X_train.astype(float))
         predictions_test=model.predict(X_test.astype(float))
@@ -245,5 +243,17 @@ def forecast_model(request, series, model):
         # clear the figure
         plt.clf()
         summ=model.summary()
+        
+        # standardize data to get standardized coefficients for donut graph
+        X=X.drop(columns=['const'])
+        X_standardized=(X.astype(float)-X.astype(float).mean())/X.astype(float).std()
+        X_standardized=sm.add_constant(X_standardized)
+        y_standardized=(y.astype(float)-y.astype(float).mean())/y.astype(float).std()
+        
+        X_train_std, X_test_std, y_train_std, y_test_std=train_test_split(X_standardized, y_standardized, test_size=0.2, random_state=42, shuffle=False)
+        model_standardized=sm.OLS(y_train_std.astype(float), X_train_std.astype(float)).fit()
+        coefficients=model_standardized.params
+        print(coefficients)
+        
         return render(request, '../templates/econometric_model.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test })
         
