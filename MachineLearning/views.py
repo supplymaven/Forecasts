@@ -163,7 +163,7 @@ def forecast_model(request, series, model):
         df=pd.DataFrame(list(crude.objects.all().values()))
         target=pd.DataFrame(list(crude.objects.all().values('wti_real_price')))
         # use a genetic algorithm to select the independent (explanatory) variables
-        num_generations=1
+        num_generations=20
         num_variables=13 # for crude
         size_of_chromosome_population=100 # 2^5
         crossover_probability=0.7
@@ -253,16 +253,22 @@ def forecast_model(request, series, model):
         X_train_std, X_test_std, y_train_std, y_test_std=train_test_split(X_standardized, y_standardized, test_size=0.2, random_state=42, shuffle=False)
         model_standardized=sm.OLS(y_train_std.astype(float), X_train_std.astype(float)).fit()
         coefficients=dict(model_standardized.params)
+        
         # donut chart of normalized coefficients
-        fig, ax = plt.subplots(figsize=(8, 5), subplot_kw=dict(aspect="equal"))
+        fig, ax = plt.subplots(figsize=(6, 5), subplot_kw=dict(aspect="equal"))
+        ax.axis("off")
+        ax = fig.add_subplot(211)
         coeffs=[key for key in coefficients.keys() if key!='const']
-        data=[coefficients[key] for key in coefficients.keys() if key!='const']
-        wedges, texts = ax.pie(data, wedgeprops=dict(width=0.5), startangle=-40)
+        data=[abs(coefficients[key]) for key in coefficients.keys() if key!='const']
+        wedges, texts = ax.pie(data, wedgeprops=dict(width=0.5), startangle=-40, radius=1.25)
+        ax2 = fig.add_subplot(212)
+        ax2.axis("off") 
+        ax2.legend(wedges,coeffs, loc="center")
+        #bbox_props = dict(boxstyle="square,pad=0.3", fc="w", ec="k", lw=0.72)
+        #kw = dict(arrowprops=dict(arrowstyle="-"),
+        #          bbox=bbox_props, zorder=0, va="center")
 
-        bbox_props = dict(boxstyle="square,pad=0.3", fc="w", ec="k", lw=0.72)
-        kw = dict(arrowprops=dict(arrowstyle="-"),
-                  bbox=bbox_props, zorder=0, va="center")
-
+        """
         for i, p in enumerate(wedges):
             ang = (p.theta2 - p.theta1)/2. + p.theta1
             y = np.sin(np.deg2rad(ang))
@@ -270,9 +276,9 @@ def forecast_model(request, series, model):
             horizontalalignment = {-1: "right", 1: "left"}[int(np.sign(x))]
             connectionstyle = "angle,angleA=0,angleB={}".format(ang)
             kw["arrowprops"].update({"connectionstyle": connectionstyle})
-            ax.annotate(coeffs[i].replace('_','\n'), xy=(x, y), xytext=(1.35*np.sign(x), 1.4*y),
+            ax.annotate(coeffs[i].replace('_','\n'), xy=(x, y), xytext=(1.05*np.sign(x), 1.1*y),
                         horizontalalignment=horizontalalignment, **kw)
-
+        """
         ax.set_title("Impact of Coefficients")
 
         image_file_name_donut='coefficients' + str(int(round(timestamp,0))) + '.png'
