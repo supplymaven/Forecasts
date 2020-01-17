@@ -20,6 +20,13 @@ from datetime import datetime
 from utils.lstm_utils import *
 from utils.genetic_algorithm import *
 
+# Example of template
+def index(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(revers('login'))
+    
+    return render(request, '../templates/index.html', {})
+
 # Create your views here.
 def selections(request):
     # You can't just arrive at this page; you must first be logged in

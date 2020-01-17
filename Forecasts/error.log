@@ -1,0 +1,1224 @@
+[Sun Jan 12 06:26:44.838658 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 06:26:44.839668 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 06:26:44.840168 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 07:36:58.679858 2020] [cgid:error] [pid 55747:tid 140642931930880] [client 50.63.164.78:40234] AH01264: script not found or unable to stat: /var/www/vhosts/default/cgi-bintest-cgi
+[Sun Jan 12 07:36:58.928940 2020] [cgid:error] [pid 55747:tid 140642923538176] [client 50.63.164.78:40236] AH01264: script not found or unable to stat: /var/www/vhosts/default/cgi-binenv.sh
+[Sun Jan 12 11:56:07.269895 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 11:56:10.336482 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 11:56:10.336770 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 11:56:10.336789 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 11:56:10.340158 2020] [access_compat:error] [pid 62727:tid 140642982287104] [client 127.0.0.1:32854] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 11:57:37.296171 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 11:57:40.366992 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 11:57:40.367314 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 11:57:40.367334 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 11:57:40.370817 2020] [access_compat:error] [pid 63172:tid 140642973894400] [client 127.0.0.1:32864] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 12:23:55.788548 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 12:23:58.852879 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 12:23:58.853142 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 12:23:58.853170 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 12:23:58.856890 2020] [access_compat:error] [pid 63844:tid 140643094066944] [client 127.0.0.1:33134] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 12:29:38.836225 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 12:29:41.902436 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 12:29:41.903450 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 12:29:41.903961 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 12:29:41.907196 2020] [access_compat:error] [pid 64188:tid 140642948716288] [client 127.0.0.1:33154] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 12:43:01.085478 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 12:43:04.158132 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 12:43:04.158372 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 12:43:04.158387 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 12:43:04.161835 2020] [access_compat:error] [pid 64935:tid 140642965501696] [client 127.0.0.1:33180] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 12:43:24.909318 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 12:43:27.974648 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 12:43:27.975228 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 12:43:27.975246 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 12:43:27.978275 2020] [access_compat:error] [pid 65330:tid 140642688673536] [client 127.0.0.1:33188] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 14:55:26.408970 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 14:55:29.475505 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 14:55:29.475751 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 14:55:29.475771 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 14:55:29.479081 2020] [access_compat:error] [pid 67161:tid 140643089250048] [client 127.0.0.1:33444] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 19:14:06.684237 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 19:14:09.751315 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 19:14:09.752438 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 19:14:09.752987 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 19:14:09.756995 2020] [access_compat:error] [pid 69624:tid 140642973894400] [client 127.0.0.1:33966] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 19:50:51.875160 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 19:50:54.941357 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 19:50:54.941719 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 19:50:54.941743 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 19:50:54.944679 2020] [access_compat:error] [pid 70920:tid 140642940323584] [client 127.0.0.1:34050] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 19:54:10.298366 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 19:54:13.362977 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 19:54:13.369406 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 19:54:13.369433 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 19:54:13.373071 2020] [access_compat:error] [pid 71392:tid 140642856396544] [client 127.0.0.1:34074] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 20:46:20.324303 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jan 12 20:46:23.393193 2020] [ssl:warn] [pid 892:tid 140643252202432] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 20:46:23.394116 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 20:46:23.394150 2020] [core:notice] [pid 892:tid 140643252202432] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 20:46:23.397514 2020] [access_compat:error] [pid 72807:tid 140642554455808] [client 127.0.0.1:34240] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[Sun Jan 12 20:55:00.747796 2020] [mpm_event:notice] [pid 892:tid 140643252202432] AH00491: caught SIGTERM, shutting down
+[ N 2020-01-12 20:55:01.8540 79725/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2020-01-12 20:55:01.8721 79728/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2020-01-12 20:55:01.8722 79728/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2020-01-12 20:55:01.8784 79728/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 79728
+[Sun Jan 12 20:55:01.882167 2020] [ssl:warn] [pid 79723:tid 140488800422848] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 20:55:01.882964 2020] [suexec:notice] [pid 79723:tid 140488800422848] AH01232: suEXEC mechanism enabled (wrapper: /usr/lib/apache2/suexec)
+
+[ N 2020-01-12 20:55:01.8956 79728/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2020-01-12 20:55:01.8966 79728/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2020-01-12 20:55:01.8967 79728/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2020-01-12 20:55:01.8967 79728/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2020-01-12 20:55:01.8967 79728/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2020-01-12 20:55:01.8967 79728/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2020-01-12 20:55:01.8978 79728/Tc Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2020-01-12 20:55:01.8978 79728/Tc Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2020-01-12 20:55:01.9388 79753/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2020-01-12 20:55:01.9572 79756/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2020-01-12 20:55:01.9579 79756/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2020-01-12 20:55:01.9642 79756/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 79756
+[Sun Jan 12 20:55:01.967716 2020] [ssl:warn] [pid 79747:tid 140488800422848] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 20:55:01.970765 2020] [mpm_event:notice] [pid 79747:tid 140488800422848] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 Phusion_Passenger/6.0.2 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 20:55:01.970809 2020] [core:notice] [pid 79747:tid 140488800422848] AH00094: Command line: '/usr/sbin/apache2'
+[ N 2020-01-12 20:55:02.3865 79728/T1 age/Cor/TelemetryCollector.h:531 ]: Message from Phusion: End time can not be before or equal to begin time
+[ N 2020-01-12 20:55:02.4174 79728/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2020-01-12 20:55:04.4824 79756/T6 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[Sun Jan 12 20:57:13.817334 2020] [mpm_event:notice] [pid 79747:tid 140488800422848] AH00493: SIGUSR1 received.  Doing graceful restart
+
+[ N 2020-01-12 20:57:13.8414 79756/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2020-01-12 20:57:13.8419 79756/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2020-01-12 20:57:13.8420 79756/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2020-01-12 20:57:13.8420 79756/T9 Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2020-01-12 20:57:13.8420 79756/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2020-01-12 20:57:13.8420 79756/T9 Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2020-01-12 20:57:13.8422 79756/Tc Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2020-01-12 20:57:13.8422 79756/Tc Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2020-01-12 20:57:14.3785 79756/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2020-01-12 20:57:16.9290 82577/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2020-01-12 20:57:16.9502 82580/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2020-01-12 20:57:16.9503 82580/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2020-01-12 20:57:16.9580 82580/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 82580
+[Sun Jan 12 20:57:16.961196 2020] [ssl:warn] [pid 79747:tid 140488800422848] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 20:57:16.961429 2020] [mpm_event:notice] [pid 79747:tid 140488800422848] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 Phusion_Passenger/6.0.2 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 20:57:16.961446 2020] [core:notice] [pid 79747:tid 140488800422848] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 20:57:16.965422 2020] [access_compat:error] [pid 82598:tid 140488229246720] [client 127.0.0.1:34306] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[ N 2020-01-12 20:57:19.4721 82580/T6 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 82655 output: Traceback (most recent call last):
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 82655 output:     import MySQLdb as Database
+App 82655 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 82655 output: 
+App 82655 output: The above exception was the direct cause of the following exception:
+App 82655 output: 
+App 82655 output: Traceback (most recent call last):
+App 82655 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 82655 output:     app_module = load_app()
+App 82655 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 82655 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 82655 output:     module = _load(spec)
+App 82655 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 82655 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 82655 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 82655 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 82655 output:     application = get_wsgi_application()
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 82655 output:     django.setup(set_prefix=False)
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 82655 output:     apps.populate(settings.INSTALLED_APPS)
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 82655 output:     app_config.import_models()
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 82655 output:     self.models_module = import_module(models_module_name)
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 82655 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 82655 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 82655 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 82655 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 82655 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 82655 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 82655 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 82655 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 82655 output:     class AbstractBaseUser(models.Model):
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 82655 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 82655 output:     value.contribute_to_class(cls, name)
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 82655 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 82655 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 82655 output:     backend = load_backend(db['ENGINE'])
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 82655 output:     return import_module('%s.base' % backend_name)
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 82655 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 82655 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 82655 output:     ) from err
+App 82655 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 82655 output: Did you install mysqlclient?
+App 82655 output: 
+[ E 2020-01-12 20:57:21.1132 82580/Tf age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 4bb3530e
+  Error details saved to: /tmp/passenger-error-aAK7gZ.html
+
+[ E 2020-01-12 20:57:21.1199 82580/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 4bb3530e. Please see earlier logs for details about the error.
+App 82703 output: Traceback (most recent call last):
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 82703 output:     import MySQLdb as Database
+App 82703 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 82703 output: 
+App 82703 output: The above exception was the direct cause of the following exception:
+App 82703 output: 
+App 82703 output: Traceback (most recent call last):
+App 82703 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 82703 output:     app_module = load_app()
+App 82703 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 82703 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 82703 output:     module = _load(spec)
+App 82703 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 82703 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 82703 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 82703 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 82703 output:     application = get_wsgi_application()
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 82703 output:     django.setup(set_prefix=False)
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 82703 output:     apps.populate(settings.INSTALLED_APPS)
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 82703 output:     app_config.import_models()
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 82703 output:     self.models_module = import_module(models_module_name)
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 82703 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 82703 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 82703 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 82703 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 82703 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 82703 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 82703 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 82703 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 82703 output:     class AbstractBaseUser(models.Model):
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 82703 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 82703 output:     value.contribute_to_class(cls, name)
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 82703 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 82703 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 82703 output:     backend = load_backend(db['ENGINE'])
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 82703 output:     return import_module('%s.base' % backend_name)
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 82703 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 82703 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 82703 output:     ) from err
+App 82703 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 82703 output: Did you install mysqlclient?
+[ E 2020-01-12 20:57:34.3775 82580/Tk age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 4d9d4915
+  Error details saved to: /tmp/passenger-error-sRk381.html
+
+[ E 2020-01-12 20:57:34.3850 82580/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 4d9d4915. Please see earlier logs for details about the error.
+[Sun Jan 12 21:12:35.237128 2020] [mpm_event:notice] [pid 79747:tid 140488800422848] AH00493: SIGUSR1 received.  Doing graceful restart
+
+[ N 2020-01-12 21:12:35.2619 82580/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2020-01-12 21:12:35.2620 82580/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2020-01-12 21:12:35.2621 82580/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2020-01-12 21:12:35.2622 82580/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2020-01-12 21:12:35.2622 82580/Tc Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2020-01-12 21:12:35.2622 82580/Tc Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2020-01-12 21:12:35.2623 82580/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2020-01-12 21:12:35.2623 82580/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2020-01-12 21:12:35.8163 82580/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2020-01-12 21:12:38.3502 83438/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2020-01-12 21:12:38.3714 83441/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2020-01-12 21:12:38.3715 83441/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2020-01-12 21:12:38.3794 83441/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 83441
+[Sun Jan 12 21:12:38.382789 2020] [ssl:warn] [pid 79747:tid 140488800422848] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 21:12:38.383029 2020] [mpm_event:notice] [pid 79747:tid 140488800422848] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 Phusion_Passenger/6.0.2 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 21:12:38.383044 2020] [core:notice] [pid 79747:tid 140488800422848] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 21:12:38.387111 2020] [access_compat:error] [pid 83459:tid 140488522827520] [client 127.0.0.1:34360] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[ N 2020-01-12 21:12:40.8890 83441/T6 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+[Sun Jan 12 21:13:41.673098 2020] [mpm_event:notice] [pid 79747:tid 140488800422848] AH00493: SIGUSR1 received.  Doing graceful restart
+
+[ N 2020-01-12 21:13:41.6907 83441/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2020-01-12 21:13:41.6907 83441/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2020-01-12 21:13:41.6908 83441/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2020-01-12 21:13:41.6908 83441/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2020-01-12 21:13:41.6908 83441/Tb Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2020-01-12 21:13:41.6908 83441/Tb Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2020-01-12 21:13:41.6909 83441/Tc Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2020-01-12 21:13:41.6910 83441/Tc Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2020-01-12 21:13:42.2175 83441/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2020-01-12 21:13:44.7822 83948/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2020-01-12 21:13:44.8032 83951/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2020-01-12 21:13:44.8033 83951/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2020-01-12 21:13:44.8112 83951/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 83951
+[Sun Jan 12 21:13:44.814462 2020] [ssl:warn] [pid 79747:tid 140488800422848] AH01909: default:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jan 12 21:13:44.814687 2020] [mpm_event:notice] [pid 79747:tid 140488800422848] AH00489: Apache/2.4.29 (Ubuntu) mod_fcgid/2.3.9 Phusion_Passenger/6.0.2 OpenSSL/1.1.1 configured -- resuming normal operations
+[Sun Jan 12 21:13:44.814703 2020] [core:notice] [pid 79747:tid 140488800422848] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 12 21:13:44.818984 2020] [access_compat:error] [pid 83969:tid 140488531220224] [client 127.0.0.1:34374] AH01797: client denied by server configuration: /usr/share/plesk-service.localdomain/
+[ N 2020-01-12 21:13:47.3303 83951/T6 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 84035 output: Traceback (most recent call last):
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 84035 output:     import MySQLdb as Database
+App 84035 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 84035 output: 
+App 84035 output: The above exception was the direct cause of the following exception:
+App 84035 output: 
+App 84035 output: Traceback (most recent call last):
+App 84035 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 84035 output:     app_module = load_app()
+App 84035 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 84035 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 84035 output:     module = _load(spec)
+App 84035 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 84035 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 84035 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 84035 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 84035 output:     application = get_wsgi_application()
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 84035 output:     django.setup(set_prefix=False)
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 84035 output:     apps.populate(settings.INSTALLED_APPS)
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 84035 output:     app_config.import_models()
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 84035 output:     self.models_module = import_module(models_module_name)
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 84035 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 84035 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 84035 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 84035 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 84035 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 84035 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 84035 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 84035 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 84035 output:     class AbstractBaseUser(models.Model):
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 84035 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 84035 output:     value.contribute_to_class(cls, name)
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 84035 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 84035 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 84035 output:     backend = load_backend(db['ENGINE'])
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 84035 output:     return import_module('%s.base' % backend_name)
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 84035 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 84035 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 84035 output:     ) from err
+App 84035 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 84035 output: Did you install mysqlclient?
+[ E 2020-01-12 21:15:17.7437 83951/Tf age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 03a40367
+  Error details saved to: /tmp/passenger-error-fmt20G.html
+
+[ E 2020-01-12 21:15:17.7511 83951/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 03a40367. Please see earlier logs for details about the error.
+App 87556 output: Traceback (most recent call last):
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 87556 output:     import MySQLdb as Database
+App 87556 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 87556 output: 
+App 87556 output: The above exception was the direct cause of the following exception:
+App 87556 output: 
+App 87556 output: Traceback (most recent call last):
+App 87556 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 87556 output:     app_module = load_app()
+App 87556 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 87556 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 87556 output:     module = _load(spec)
+App 87556 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 87556 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 87556 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 87556 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 87556 output:     application = get_wsgi_application()
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 87556 output:     django.setup(set_prefix=False)
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 87556 output:     apps.populate(settings.INSTALLED_APPS)
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 87556 output:     app_config.import_models()
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 87556 output:     self.models_module = import_module(models_module_name)
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 87556 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 87556 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 87556 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 87556 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 87556 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 87556 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 87556 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 87556 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 87556 output:     class AbstractBaseUser(models.Model):
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 87556 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 87556 output:     value.contribute_to_class(cls, name)
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 87556 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 87556 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 87556 output:     backend = load_backend(db['ENGINE'])
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 87556 output:     return import_module('%s.base' % backend_name)
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 87556 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 87556 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 87556 output:     ) from err
+App 87556 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 87556 output: Did you install mysqlclient?
+App 87556 output: 
+[ E 2020-01-12 22:52:01.4968 83951/Tk age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: dc054af7
+  Error details saved to: /tmp/passenger-error-xbrrWq.html
+
+[ E 2020-01-12 22:52:01.5057 83951/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is dc054af7. Please see earlier logs for details about the error.
+App 87651 output: Traceback (most recent call last):
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 87651 output:     import MySQLdb as Database
+App 87651 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 87651 output: 
+App 87651 output: The above exception was the direct cause of the following exception:
+App 87651 output: 
+App 87651 output: Traceback (most recent call last):
+App 87651 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 87651 output:     app_module = load_app()
+App 87651 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 87651 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 87651 output:     module = _load(spec)
+App 87651 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 87651 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 87651 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 87651 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 87651 output:     application = get_wsgi_application()
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 87651 output:     django.setup(set_prefix=False)
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 87651 output:     apps.populate(settings.INSTALLED_APPS)
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 87651 output:     app_config.import_models()
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 87651 output:     self.models_module = import_module(models_module_name)
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 87651 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 87651 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 87651 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 87651 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 87651 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 87651 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 87651 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 87651 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 87651 output:     class AbstractBaseUser(models.Model):
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 87651 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 87651 output:     value.contribute_to_class(cls, name)
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 87651 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 87651 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 87651 output:     backend = load_backend(db['ENGINE'])
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 87651 output:     return import_module('%s.base' % backend_name)
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 87651 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 87651 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 87651 output:     ) from err
+App 87651 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 87651 output: Did you install mysqlclient?
+[ E 2020-01-12 22:54:01.0586 83951/Tp age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 432dd8d5
+  Error details saved to: /tmp/passenger-error-XoqNMp.html
+
+[ E 2020-01-12 22:54:01.0653 83951/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-2] Cannot checkout session because a spawning error occurred. The identifier of the error is 432dd8d5. Please see earlier logs for details about the error.
+App 87821 output: Traceback (most recent call last):
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 87821 output:     import MySQLdb as Database
+App 87821 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 87821 output: 
+App 87821 output: The above exception was the direct cause of the following exception:
+App 87821 output: 
+App 87821 output: Traceback (most recent call last):
+App 87821 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 87821 output:     app_module = load_app()
+App 87821 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 87821 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 87821 output:     module = _load(spec)
+App 87821 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 87821 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 87821 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 87821 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 87821 output:     application = get_wsgi_application()
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 87821 output:     django.setup(set_prefix=False)
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 87821 output:     apps.populate(settings.INSTALLED_APPS)
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 87821 output:     app_config.import_models()
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 87821 output:     self.models_module = import_module(models_module_name)
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 87821 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 87821 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 87821 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 87821 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 87821 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 87821 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 87821 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 87821 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 87821 output:     class AbstractBaseUser(models.Model):
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 87821 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 87821 output:     value.contribute_to_class(cls, name)
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 87821 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 87821 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 87821 output:     backend = load_backend(db['ENGINE'])
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 87821 output:     return import_module('%s.base' % backend_name)
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 87821 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 87821 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 87821 output:     ) from err
+App 87821 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 87821 output: Did you install mysqlclient?
+[ E 2020-01-12 22:58:18.4261 83951/Tu age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 8861675f
+  Error details saved to: /tmp/passenger-error-XqioJh.html
+
+[ E 2020-01-12 22:58:18.4340 83951/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-2] Cannot checkout session because a spawning error occurred. The identifier of the error is 8861675f. Please see earlier logs for details about the error.
+App 88687 output: Traceback (most recent call last):
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 88687 output:     import MySQLdb as Database
+App 88687 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 88687 output: 
+App 88687 output: The above exception was the direct cause of the following exception:
+App 88687 output: 
+App 88687 output: Traceback (most recent call last):
+App 88687 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 88687 output:     app_module = load_app()
+App 88687 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 88687 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 88687 output:     module = _load(spec)
+App 88687 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 88687 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 88687 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 88687 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 88687 output:     application = get_wsgi_application()
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 88687 output:     django.setup(set_prefix=False)
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 88687 output:     apps.populate(settings.INSTALLED_APPS)
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 88687 output:     app_config.import_models()
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 88687 output:     self.models_module = import_module(models_module_name)
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 88687 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 88687 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 88687 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 88687 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 88687 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 88687 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 88687 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 88687 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 88687 output:     class AbstractBaseUser(models.Model):
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 88687 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 88687 output:     value.contribute_to_class(cls, name)
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 88687 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 88687 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 88687 output:     backend = load_backend(db['ENGINE'])
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 88687 output:     return import_module('%s.base' % backend_name)
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 88687 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 88687 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 88687 output:     ) from err
+App 88687 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 88687 output: Did you install mysqlclient?
+[ E 2020-01-12 23:40:54.1751 83951/Tz age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 97064477
+  Error details saved to: /tmp/passenger-error-Zv2nfF.html
+
+[ E 2020-01-12 23:40:54.1823 83951/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-3] Cannot checkout session because a spawning error occurred. The identifier of the error is 97064477. Please see earlier logs for details about the error.
+App 90200 output: Traceback (most recent call last):
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 90200 output:     import MySQLdb as Database
+App 90200 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 90200 output: 
+App 90200 output: The above exception was the direct cause of the following exception:
+App 90200 output: 
+App 90200 output: Traceback (most recent call last):
+App 90200 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 90200 output:     app_module = load_app()
+App 90200 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 90200 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 90200 output:     module = _load(spec)
+App 90200 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 90200 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 90200 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 90200 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 90200 output:     application = get_wsgi_application()
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 90200 output:     django.setup(set_prefix=False)
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 90200 output:     apps.populate(settings.INSTALLED_APPS)
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 90200 output:     app_config.import_models()
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 90200 output:     self.models_module = import_module(models_module_name)
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 90200 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 90200 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 90200 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 90200 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 90200 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 90200 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 90200 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 90200 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 90200 output:     class AbstractBaseUser(models.Model):
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 90200 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 90200 output:     value.contribute_to_class(cls, name)
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 90200 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 90200 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 90200 output:     backend = load_backend(db['ENGINE'])
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 90200 output:     return import_module('%s.base' % backend_name)
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 90200 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 90200 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 90200 output:     ) from err
+App 90200 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 90200 output: Did you install mysqlclient?
+App 90200 output: 
+[ E 2020-01-13 01:12:30.2735 83951/T14 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 8d3e137c
+  Error details saved to: /tmp/passenger-error-L9H0pM.html
+
+[ E 2020-01-13 01:12:30.2825 83951/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-3] Cannot checkout session because a spawning error occurred. The identifier of the error is 8d3e137c. Please see earlier logs for details about the error.
+App 90261 output: Traceback (most recent call last):
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 90261 output:     import MySQLdb as Database
+App 90261 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 90261 output: 
+App 90261 output: The above exception was the direct cause of the following exception:
+App 90261 output: 
+App 90261 output: Traceback (most recent call last):
+App 90261 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 90261 output:     app_module = load_app()
+App 90261 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 90261 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 90261 output:     module = _load(spec)
+App 90261 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 90261 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 90261 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 90261 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 90261 output:     application = get_wsgi_application()
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 90261 output:     django.setup(set_prefix=False)
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 90261 output:     apps.populate(settings.INSTALLED_APPS)
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 90261 output:     app_config.import_models()
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 90261 output:     self.models_module = import_module(models_module_name)
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 90261 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 90261 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 90261 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 90261 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 90261 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 90261 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 90261 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 90261 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 90261 output:     class AbstractBaseUser(models.Model):
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 90261 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 90261 output:     value.contribute_to_class(cls, name)
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 90261 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 90261 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 90261 output:     backend = load_backend(db['ENGINE'])
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 90261 output:     return import_module('%s.base' % backend_name)
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 90261 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 90261 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 90261 output:     ) from err
+App 90261 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 90261 output: Did you install mysqlclient?
+[ E 2020-01-13 01:14:03.2831 83951/T19 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 163b9cd6
+  Error details saved to: /tmp/passenger-error-ZLtUx5.html
+
+[ E 2020-01-13 01:14:03.2896 83951/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-4] Cannot checkout session because a spawning error occurred. The identifier of the error is 163b9cd6. Please see earlier logs for details about the error.
+App 90758 output: Traceback (most recent call last):
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 90758 output:     import MySQLdb as Database
+App 90758 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 90758 output: 
+App 90758 output: The above exception was the direct cause of the following exception:
+App 90758 output: 
+App 90758 output: Traceback (most recent call last):
+App 90758 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 90758 output:     app_module = load_app()
+App 90758 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 90758 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 90758 output:     module = _load(spec)
+App 90758 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 90758 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 90758 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 90758 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 90758 output:     application = get_wsgi_application()
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 90758 output:     django.setup(set_prefix=False)
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 90758 output:     apps.populate(settings.INSTALLED_APPS)
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 90758 output:     app_config.import_models()
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 90758 output:     self.models_module = import_module(models_module_name)
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 90758 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 90758 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 90758 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 90758 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 90758 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 90758 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 90758 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 90758 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 90758 output:     class AbstractBaseUser(models.Model):
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 90758 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 90758 output:     value.contribute_to_class(cls, name)
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 90758 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 90758 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 90758 output:     backend = load_backend(db['ENGINE'])
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 90758 output:     return import_module('%s.base' % backend_name)
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 90758 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 90758 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 90758 output:     ) from err
+App 90758 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 90758 output: Did you install mysqlclient?
+App 90758 output: 
+[ E 2020-01-13 02:18:32.3800 83951/T1e age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 93117d16
+  Error details saved to: /tmp/passenger-error-DvJlkp.html
+
+[ E 2020-01-13 02:18:32.3861 83951/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-4] Cannot checkout session because a spawning error occurred. The identifier of the error is 93117d16. Please see earlier logs for details about the error.
+App 91325 output: Traceback (most recent call last):
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 91325 output:     import MySQLdb as Database
+App 91325 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 91325 output: 
+App 91325 output: The above exception was the direct cause of the following exception:
+App 91325 output: 
+App 91325 output: Traceback (most recent call last):
+App 91325 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 91325 output:     app_module = load_app()
+App 91325 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 91325 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 91325 output:     module = _load(spec)
+App 91325 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 91325 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 91325 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 91325 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 91325 output:     application = get_wsgi_application()
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 91325 output:     django.setup(set_prefix=False)
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 91325 output:     apps.populate(settings.INSTALLED_APPS)
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 91325 output:     app_config.import_models()
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 91325 output:     self.models_module = import_module(models_module_name)
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 91325 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 91325 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 91325 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 91325 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 91325 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 91325 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 91325 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 91325 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 91325 output:     class AbstractBaseUser(models.Model):
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 91325 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 91325 output:     value.contribute_to_class(cls, name)
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 91325 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 91325 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 91325 output:     backend = load_backend(db['ENGINE'])
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 91325 output:     return import_module('%s.base' % backend_name)
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 91325 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 91325 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 91325 output:     ) from err
+App 91325 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 91325 output: Did you install mysqlclient?
+App 91325 output: 
+[ E 2020-01-13 03:41:30.3699 83951/T1j age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 72650714
+  Error details saved to: /tmp/passenger-error-lMnuOo.html
+
+[ E 2020-01-13 03:41:30.3762 83951/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-5] Cannot checkout session because a spawning error occurred. The identifier of the error is 72650714. Please see earlier logs for details about the error.
+App 91550 output: Traceback (most recent call last):
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 91550 output:     import MySQLdb as Database
+App 91550 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 91550 output: 
+App 91550 output: The above exception was the direct cause of the following exception:
+App 91550 output: 
+App 91550 output: Traceback (most recent call last):
+App 91550 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 91550 output:     app_module = load_app()
+App 91550 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 91550 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 91550 output:     module = _load(spec)
+App 91550 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 91550 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 91550 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 91550 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 91550 output:     application = get_wsgi_application()
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 91550 output:     django.setup(set_prefix=False)
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 91550 output:     apps.populate(settings.INSTALLED_APPS)
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 91550 output:     app_config.import_models()
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 91550 output:     self.models_module = import_module(models_module_name)
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 91550 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 91550 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 91550 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 91550 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 91550 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 91550 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 91550 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 91550 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 91550 output:     class AbstractBaseUser(models.Model):
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 91550 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 91550 output:     value.contribute_to_class(cls, name)
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 91550 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 91550 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 91550 output:     backend = load_backend(db['ENGINE'])
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 91550 output:     return import_module('%s.base' % backend_name)
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 91550 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 91550 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 91550 output:     ) from err
+App 91550 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 91550 output: Did you install mysqlclient?
+[ E 2020-01-13 04:10:04.4814 83951/T1o age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: d61abc06
+  Error details saved to: /tmp/passenger-error-3wtCfR.html
+
+[ E 2020-01-13 04:10:04.4879 83951/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-5] Cannot checkout session because a spawning error occurred. The identifier of the error is d61abc06. Please see earlier logs for details about the error.
+App 91693 output: Traceback (most recent call last):
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 91693 output:     import MySQLdb as Database
+App 91693 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 91693 output: 
+App 91693 output: The above exception was the direct cause of the following exception:
+App 91693 output: 
+App 91693 output: Traceback (most recent call last):
+App 91693 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 91693 output:     app_module = load_app()
+App 91693 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 91693 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 91693 output:     module = _load(spec)
+App 91693 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 91693 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 91693 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 91693 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 91693 output:     application = get_wsgi_application()
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 91693 output:     django.setup(set_prefix=False)
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 91693 output:     apps.populate(settings.INSTALLED_APPS)
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 91693 output:     app_config.import_models()
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 91693 output:     self.models_module = import_module(models_module_name)
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 91693 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 91693 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 91693 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 91693 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 91693 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 91693 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 91693 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 91693 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 91693 output:     class AbstractBaseUser(models.Model):
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 91693 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 91693 output:     value.contribute_to_class(cls, name)
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 91693 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 91693 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 91693 output:     backend = load_backend(db['ENGINE'])
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 91693 output:     return import_module('%s.base' % backend_name)
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 91693 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 91693 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 91693 output:     ) from err
+App 91693 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 91693 output: Did you install mysqlclient?
+App 91693 output: 
+[ E 2020-01-13 04:15:23.3018 83951/T1t age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 1e27b724
+  Error details saved to: /tmp/passenger-error-fSnngX.html
+
+[ E 2020-01-13 04:15:23.3086 83951/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-6] Cannot checkout session because a spawning error occurred. The identifier of the error is 1e27b724. Please see earlier logs for details about the error.
+App 91741 output: Traceback (most recent call last):
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 91741 output:     import MySQLdb as Database
+App 91741 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 91741 output: 
+App 91741 output: The above exception was the direct cause of the following exception:
+App 91741 output: 
+App 91741 output: Traceback (most recent call last):
+App 91741 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 91741 output:     app_module = load_app()
+App 91741 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 91741 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 91741 output:     module = _load(spec)
+App 91741 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 91741 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 91741 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 91741 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 91741 output:     application = get_wsgi_application()
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 91741 output:     django.setup(set_prefix=False)
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 91741 output:     apps.populate(settings.INSTALLED_APPS)
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 91741 output:     app_config.import_models()
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 91741 output:     self.models_module = import_module(models_module_name)
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 91741 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 91741 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 91741 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 91741 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 91741 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 91741 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 91741 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 91741 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 91741 output:     class AbstractBaseUser(models.Model):
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 91741 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 91741 output:     value.contribute_to_class(cls, name)
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 91741 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 91741 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 91741 output:     backend = load_backend(db['ENGINE'])
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 91741 output:     return import_module('%s.base' % backend_name)
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 91741 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 91741 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 91741 output:     ) from err
+App 91741 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 91741 output: Did you install mysqlclient?
+App 91741 output: 
+[ E 2020-01-13 04:15:27.2707 83951/T1y age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: edb9ac21
+  Error details saved to: /tmp/passenger-error-Z6YDgm.html
+
+[ E 2020-01-13 04:15:27.2767 83951/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-6] Cannot checkout session because a spawning error occurred. The identifier of the error is edb9ac21. Please see earlier logs for details about the error.
+App 92018 output: Traceback (most recent call last):
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 92018 output:     import MySQLdb as Database
+App 92018 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 92018 output: 
+App 92018 output: The above exception was the direct cause of the following exception:
+App 92018 output: 
+App 92018 output: Traceback (most recent call last):
+App 92018 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 92018 output:     app_module = load_app()
+App 92018 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 92018 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 92018 output:     module = _load(spec)
+App 92018 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 92018 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 92018 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 92018 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 92018 output:     application = get_wsgi_application()
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 92018 output:     django.setup(set_prefix=False)
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 92018 output:     apps.populate(settings.INSTALLED_APPS)
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 92018 output:     app_config.import_models()
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 92018 output:     self.models_module = import_module(models_module_name)
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 92018 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 92018 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 92018 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 92018 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 92018 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 92018 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 92018 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 92018 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 92018 output:     class AbstractBaseUser(models.Model):
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 92018 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 92018 output:     value.contribute_to_class(cls, name)
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 92018 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 92018 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 92018 output:     backend = load_backend(db['ENGINE'])
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 92018 output:     return import_module('%s.base' % backend_name)
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 92018 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 92018 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 92018 output:     ) from err
+App 92018 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 92018 output: Did you install mysqlclient?
+[ E 2020-01-13 04:27:27.8364 83951/T23 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 06b4f15a
+  Error details saved to: /tmp/passenger-error-DWrHKr.html
+
+[ E 2020-01-13 04:27:27.8433 83951/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-7] Cannot checkout session because a spawning error occurred. The identifier of the error is 06b4f15a. Please see earlier logs for details about the error.
+App 92092 output: Traceback (most recent call last):
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 92092 output:     import MySQLdb as Database
+App 92092 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 92092 output: 
+App 92092 output: The above exception was the direct cause of the following exception:
+App 92092 output: 
+App 92092 output: Traceback (most recent call last):
+App 92092 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 92092 output:     app_module = load_app()
+App 92092 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 92092 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 92092 output:     module = _load(spec)
+App 92092 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 92092 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 92092 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 92092 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 92092 output:     application = get_wsgi_application()
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 92092 output:     django.setup(set_prefix=False)
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 92092 output:     apps.populate(settings.INSTALLED_APPS)
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 92092 output:     app_config.import_models()
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 92092 output:     self.models_module = import_module(models_module_name)
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 92092 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 92092 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 92092 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 92092 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 92092 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 92092 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 92092 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 92092 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 92092 output:     class AbstractBaseUser(models.Model):
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 92092 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 92092 output:     value.contribute_to_class(cls, name)
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 92092 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 92092 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 92092 output:     backend = load_backend(db['ENGINE'])
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 92092 output:     return import_module('%s.base' % backend_name)
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 92092 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 92092 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 92092 output:     ) from err
+App 92092 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 92092 output: Did you install mysqlclient?
+[ E 2020-01-13 04:28:18.1244 83951/T28 age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 15c75db4
+  Error details saved to: /tmp/passenger-error-FHZacq.html
+
+[ E 2020-01-13 04:28:18.1299 83951/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-7] Cannot checkout session because a spawning error occurred. The identifier of the error is 15c75db4. Please see earlier logs for details about the error.
+App 92145 output: Traceback (most recent call last):
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 16, in <module>
+App 92145 output:     import MySQLdb as Database
+App 92145 output: ModuleNotFoundError: No module named 'MySQLdb'
+App 92145 output: 
+App 92145 output: The above exception was the direct cause of the following exception:
+App 92145 output: 
+App 92145 output: Traceback (most recent call last):
+App 92145 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 92145 output:     app_module = load_app()
+App 92145 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 92145 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/imp.py", line 172, in load_source
+App 92145 output:     module = _load(spec)
+App 92145 output:   File "<frozen importlib._bootstrap>", line 684, in _load
+App 92145 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 92145 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 92145 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/passenger_wsgi.py", line 13, in <module>
+App 92145 output:     application = get_wsgi_application()
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+App 92145 output:     django.setup(set_prefix=False)
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+App 92145 output:     apps.populate(settings.INSTALLED_APPS)
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+App 92145 output:     app_config.import_models()
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+App 92145 output:     self.models_module = import_module(models_module_name)
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 92145 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 92145 output:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+App 92145 output:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+App 92145 output:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+App 92145 output:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+App 92145 output:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+App 92145 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 2, in <module>
+App 92145 output:     from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 47, in <module>
+App 92145 output:     class AbstractBaseUser(models.Model):
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 121, in __new__
+App 92145 output:     new_class.add_to_class('_meta', Options(meta, app_label))
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/base.py", line 325, in add_to_class
+App 92145 output:     value.contribute_to_class(cls, name)
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/models/options.py", line 208, in contribute_to_class
+App 92145 output:     self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/__init__.py", line 28, in __getattr__
+App 92145 output:     return getattr(connections[DEFAULT_DB_ALIAS], item)
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 207, in __getitem__
+App 92145 output:     backend = load_backend(db['ENGINE'])
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+App 92145 output:     return import_module('%s.base' % backend_name)
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/importlib/__init__.py", line 126, in import_module
+App 92145 output:     return _bootstrap._gcd_import(name[level:], package, level)
+App 92145 output:   File "/var/www/vhosts/supplymaven.com/httpdocs/python-app-venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 21, in <module>
+App 92145 output:     ) from err
+App 92145 output: django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+App 92145 output: Did you install mysqlclient?
+[ E 2020-01-13 04:28:57.1729 83951/T2d age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /var/www/vhosts/supplymaven.com/httpdocs: The application process exited prematurely.
+  Error ID: 0ea4b773
+  Error details saved to: /tmp/passenger-error-XR4vHp.html
+
+[ E 2020-01-13 04:28:57.1786 83951/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-8] Cannot checkout session because a spawning error occurred. The identifier of the error is 0ea4b773. Please see earlier logs for details about the error.
