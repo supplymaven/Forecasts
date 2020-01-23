@@ -47,7 +47,8 @@ class crude(models.Model):
     world_liquid_fuels_consumption_change=models.DecimalField(max_digits=10, decimal_places=4) # IND.29
     dow_jones_ubs_commodity_index=models.DecimalField(max_digits=7, decimal_places=4) # IND.54
    
-    
-    
-    
-    
+# this is to hold the data that Garrett's python programs grab from various apis into a csv file   
+class timeseries(models.Model):
+    frequency=models.DateField(unique=False, null=True) # monthly
+    series_title=models.CharField(max_length=100, verbose_name="Series Title")
+    price=models.DecimalField(max_digits=10, decimal_places=4)
