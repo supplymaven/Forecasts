@@ -22,9 +22,6 @@ from utils.genetic_algorithm import *
 
 # Example of template
 def index(request):
-    if not request.user.is_authenticated:
-        return HttpResponseRedirect(revers('login'))
-    
     return render(request, '../templates/index.html', {})
 
 # Create your views here.
