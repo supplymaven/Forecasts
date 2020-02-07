@@ -1,6 +1,8 @@
 <html>
 	<head>
 		<style>
+		
+form { position: relative; top: 50%; left: 50%;}		
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 *, *:before, *:after{
@@ -75,8 +77,38 @@ nav ul:first-child {
             left: 100%; 
             top:0;
           }	
+    form {
+		position: absolute;
+		left: 50px;
+		top: 100px;
+	}
+	#timeseries {
+		width: 700px;
+	}
 	{% block additional_css %}	{% endblock %}  
 	</style>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			
+			$("#timeseries").bind('focus', function(){
+				var availableTags=[
+					{% for selection in selections_list %}
+						"{{ selection }}",
+					{% endfor %}
+				];
+				
+				$(this).autocomplete({
+					source: availableTags
+				});
+				
+			});
+		});
+	</script>
+	
+	
 	</head>
 	<body>
 		<nav role='navigation'>
@@ -137,6 +169,15 @@ nav ul:first-child {
 		       <li><a href="#">Contact Us</a></li>
 		    </ul>
 		</nav> 
+		<form method='post' action="/arima/">
+			{% csrf_token %}
+			<div class="ui-widgets">
+				<input id="timeseries" name="timeseries" type="text" />
+			</div>
+
+		</form>
+		
+		
 		
 		{% block main_content %} {% endblock %}
 		

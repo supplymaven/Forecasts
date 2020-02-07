@@ -47,8 +47,11 @@ class crude(models.Model):
     world_liquid_fuels_consumption_change=models.DecimalField(max_digits=10, decimal_places=4) # IND.29
     dow_jones_ubs_commodity_index=models.DecimalField(max_digits=7, decimal_places=4) # IND.54
    
-# this is to hold the data that Garrett's python programs grab from various apis into a csv file   
+# this is to hold the data that Garrett's python programs grab from various apis into a csv file  
+# mysql --local-infile=1 -u root -p
+# set GLOBAL local_infile=1;
+# load data local infile 'C:/users/light/desktop/lightsquaresolutions/gg-supply-maven-master/matt.csv' into table machinelearning_timeseries fields terminated by ',' lines terminated by '\n' ignore 1 lines (@col1,@col2,@col3) set observation_date=CONCAT(SUBSTRING_INDEX(@col2,"/",-1),"-",SUBSTRING_INDEX(@col2,"/",1),"-1"), series_title=@col1, inx=@col3;
 class timeseries(models.Model):
-    frequency=models.DateField(unique=False, null=True) # monthly
+    observation_date=models.DateField(unique=False, null=True) # monthly
     series_title=models.CharField(max_length=100, verbose_name="Series Title")
-    price=models.DecimalField(max_digits=10, decimal_places=4)
+    inx=models.DecimalField(max_digits=10, decimal_places=4)

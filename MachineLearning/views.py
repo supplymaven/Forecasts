@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
-from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude
+from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
@@ -29,8 +29,77 @@ def selections(request):
     # You can't just arrive at this page; you must first be logged in
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse('login')) 
-        
-    return render(request, '../templates/selections.html', {})
+    #selections=timeseries.objects.all()
+    selections_list=timeseries.objects.values_list('series_title', flat=True).distinct()
+
+    return render(request, '../templates/selections.html', {'selections_list': selections_list})
+    
+def arima(request):
+    # machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/
+    # You can't just arrive at this page; you must first be logged in
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('login'))
+
+    if request.POST:
+    
+        selections_list=timeseries.objects.values_list('series_title', flat=True).distinct()
+    
+        df=pd.DataFrame.from_records(timeseries.objects.filter(series_title=request.POST['timeseries']).values())
+        m=12
+        formatted_series='PPI'
+    
+        model=pm.auto_arima(df.inx, start_p=1, start_q=1,
+                            test='adf',       # use adftest to find optimal 'd'
+                            max_p=5, max_q=5, # maximum p and q
+                            m=m,              # frequency of series
+                            d=None,           # let model determine 'd'
+                            seasonal=False,   # Seasonality
+                            start_P=0, 
+                            D=None, 
+                            trace=True,
+                            error_action='ignore',  
+                            suppress_warnings=True, 
+                            stepwise=True)
+                      
+        n_periods = 12
+        fc, confint = model.predict(n_periods=n_periods, return_conf_int=True)
+        index_of_fc = np.arange(len(df.inx), len(df.inx)+n_periods)
+
+        # make series for plotting purpose
+        fc_series = pd.Series(fc, index=index_of_fc)
+        lower_series = pd.Series(confint[:, 0], index=index_of_fc)
+        upper_series = pd.Series(confint[:, 1], index=index_of_fc)
+
+        # Plot
+        plt.plot(df.inx)
+        plt.plot(fc_series, color='darkgreen')
+        plt.fill_between(lower_series.index, 
+                        lower_series, 
+                        upper_series, 
+                        color='k', alpha=.15)
+
+        plt.title("ARIMA Forecast of " + formatted_series)
+        #print([fc])
+        #plt.table(cellText=[['' for i in range(len(df.inx))]+[round(f,1) for f in fc]])
+        #plt.show()
+        now=datetime.now()
+        timestamp=datetime.timestamp(now)
+        image_file_name='arima' + str(int(round(timestamp,0))) + '.png'
+        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name))
+        # clear the figure
+        plt.clf()
+        predictions=model.predict(n_periods)
+        #print(model.params())
+        #print(model.pvalues())
+        print(model.summary())
+        print(model.to_dict())
+        model_dictionary=model.to_dict()
+        coefficients=model.params()
+        pvalues=model.pvalues()
+        ar_vars=['AR' + str(v+1) for v in range(model_dictionary['order'][0])]
+        ma_vars=['MA' + str(v+1) for v in range(model_dictionary['order'][2])]
+    
+        return render(request, '../templates/forecast_model.html', {'selections_list': selections_list, 'image_file_name': image_file_name, 'coefficients': coefficients, 'pvalues': pvalues, 'ar_vars': ar_vars, 'ma_vars': ma_vars, 'predictions': [round(p,2) for p in predictions]})
 
 def forecast_model(request, series, model):
     # You can't just arrive at this page; you must first be logged in

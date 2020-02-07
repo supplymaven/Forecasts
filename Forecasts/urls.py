@@ -25,5 +25,6 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('selections/', views.selections, name='selections'),
     path('index/', views.index, name='index'),
+    path('arima/', views.arima, name='arima'),
     re_path(r'^forecast-model/(?P<series>[-\w]+)/(?P<model>[\w]+)/$', views.forecast_model, name='forecast_model'),
 ]
