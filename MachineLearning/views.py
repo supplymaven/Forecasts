@@ -20,6 +20,9 @@ from datetime import datetime
 from utils.lstm_utils import *
 from utils.genetic_algorithm import *
 
+def home(request):
+    return render(request, '../templates/home.html', {})
+
 # Example of template
 def index(request):
     return render(request, '../templates/index.html', {})
@@ -60,6 +63,9 @@ def arima(request):
                             error_action='ignore',  
                             suppress_warnings=True, 
                             stepwise=True)
+                            
+        model_dictionary=model.to_dict()
+        coefficients=model.params()                    
                       
         n_periods = 12
         fc, confint = model.predict(n_periods=n_periods, return_conf_int=True)
@@ -85,16 +91,15 @@ def arima(request):
         now=datetime.now()
         timestamp=datetime.timestamp(now)
         image_file_name='arima' + str(int(round(timestamp,0))) + '.png'
-        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name))
+        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
         # clear the figure
         plt.clf()
         predictions=model.predict(n_periods)
         #print(model.params())
         #print(model.pvalues())
-        print(model.summary())
-        print(model.to_dict())
-        model_dictionary=model.to_dict()
-        coefficients=model.params()
+        #print(model.summary())
+        #print(model.to_dict())
+        
         pvalues=model.pvalues()
         ar_vars=['AR' + str(v+1) for v in range(model_dictionary['order'][0])]
         ma_vars=['MA' + str(v+1) for v in range(model_dictionary['order'][2])]
@@ -176,7 +181,7 @@ def forecast_model(request, series, model):
         now=datetime.now()
         timestamp=datetime.timestamp(now)
         image_file_name='arima' + str(int(round(timestamp,0))) + '.png'
-        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name))
+        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
         # clear the figure
         plt.clf()
         predictions=model.predict(n_periods)
@@ -228,7 +233,7 @@ def forecast_model(request, series, model):
         now=datetime.now()
         timestamp=datetime.timestamp(now)
         image_file_name='lstm' + str(int(round(timestamp,0))) + '.png'
-        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name))
+        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
         # clear the figure
         plt.clf()
         return render(request, '../templates/forecast_model.html', {'image_file_name': image_file_name, 'predictions': [round(p,2) for p in x_input[3:]]})  
@@ -312,7 +317,7 @@ def forecast_model(request, series, model):
         plt.plot(predictions_test.astype(float),label='y_test_pred')
         plt.legend(loc='upper right')
         image_file_name='econometric' + str(int(round(timestamp,0))) + '.png'
-        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name))
+        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
         # clear the figure
         plt.clf()
         summ=model.summary()
@@ -355,7 +360,7 @@ def forecast_model(request, series, model):
         ax.set_title("Impact of Coefficients")
 
         image_file_name_donut='coefficients' + str(int(round(timestamp,0))) + '.png'
-        plt.savefig(os.path.join(settings.BASE_DIR, '../Forecasts/MachineLearning/static/images/' + image_file_name_donut))
+        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name_donut))
         
         plt.clf()
         

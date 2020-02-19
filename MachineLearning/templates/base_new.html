@@ -1,0 +1,128 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<style>
+				
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+*, *:before, *:after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/*| Navigation |*/
+
+body{
+ margin-left: 20px;
+ margin-right: 20px;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+
+li {
+	display: inline;
+	margin-right: 10px;
+}	
+li > a { 
+	color: rgb(136, 227, 213);
+	text-decoration: none;
+	font-family: "Century Gothic"
+}	
+li.right {
+		position: relative;
+		float: right;
+		padding: 25px;
+		
+}
+p { 
+	position: relative;
+	top: 100px;
+	left: 0;
+	clear: right;
+	margin: 10px;
+	border: 3px solid rgb(136, 195, 227);
+	height: 200px;
+}
+
+form {
+	position: relative;
+	left: 20px;
+	top: 150px;
+}
+#timeseries {
+	width: 700px;
+}
+
+
+	{% block additional_css %}	{% endblock %}  
+	</style>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			
+			$("#timeseries").bind('focus', function(){
+				var availableTags=[
+					{% for selection in selections_list %}
+						"{{ selection }}",
+					{% endfor %}
+				];
+				
+				$(this).autocomplete({
+					source: availableTags
+				});
+				
+			});
+		});
+	</script>
+	
+	
+	</head>
+	<body>
+		<nav role='navigation'>
+			
+			
+		
+		    <ul>
+				<li><img src="{% static '/images/SMLogoNew.gif' %}" alt="logo" /></li>
+		        
+		        
+				
+				<li class="right"><a href="#">Sign Up/Log In</a></li>
+				<li class="right"><a href="#">About</a></li>
+				<li class="right"><a href="#">Models & Data</a></li>
+				<li class="right"><a href="#">Home</a></li>
+		        
+		    </ul>
+		</nav> 
+		<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+		
+		<form method='post' action="/arima/">
+			{% csrf_token %}
+			<div class="ui-widgets">
+				<div>Search for Index</div>
+				<input id="timeseries" name="timeseries" type="text" />
+			</div>
+
+		</form>
+		
+		
+		
+		{% block main_content %} {% endblock %}
+		
+	</body>
+	
+</html>	
