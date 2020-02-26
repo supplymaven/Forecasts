@@ -53,5 +53,5 @@ class crude(models.Model):
 # load data local infile 'C:/users/light/desktop/lightsquaresolutions/gg-supply-maven-master/matt.csv' into table machinelearning_timeseries fields terminated by ',' lines terminated by '\n' ignore 1 lines (@col1,@col2,@col3) set observation_date=CONCAT(SUBSTRING_INDEX(@col2,"/",-1),"-",SUBSTRING_INDEX(@col2,"/",1),"-1"), series_title=@col1, inx=@col3;
 class timeseries(models.Model):
     observation_date=models.DateField(unique=False, null=True) # monthly
-    series_title=models.CharField(max_length=100, verbose_name="Series Title")
+    series_title=models.CharField(db_index=True, max_length=100, verbose_name="Series Title")
     inx=models.DecimalField(max_digits=10, decimal_places=4)

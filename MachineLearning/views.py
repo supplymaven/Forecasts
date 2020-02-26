@@ -21,7 +21,107 @@ from utils.lstm_utils import *
 from utils.genetic_algorithm import *
 
 def home(request):
-    return render(request, '../templates/home.html', {})
+    selections_list=timeseries.objects.values_list('series_title', flat=True).distinct()
+    if request.POST:
+        # list of names of all series except the target
+        column_names=timeseries.objects.values_list('series_title', flat=True).distinct().exclude(series_title=request.POST['timeseries'])
+        # an empty dataframe with columns that are the x-values in our regression
+        df=pd.DataFrame()
+        df_dict={}
+        for x in column_names:
+            #print(list(timeseries.objects.filter(series_title=x).values_list('inx', flat=True)))
+            data_list=list(timeseries.objects.filter(series_title=x, observation_date__range=['2016-01-01','2018-12-01']).values_list('inx', flat=True))
+            if len(data_list)==36: # number of data points given the date range provided
+                df_dict.update({x:data_list})    
+        df=pd.DataFrame.from_dict(df_dict)       
+        #df=pd.DataFrame(list(timeseries.objects.filter(observation_date__lt='2020-01-01', observation_date__gt='2018-12-31').exclude(series_title=request.POST['timeseries']).values()))
+        target=pd.DataFrame({request.POST['timeseries']:timeseries.objects.filter(series_title=request.POST['timeseries'], observation_date__range=['2016-01-01','2018-12-01']).values_list('inx', flat=True)})
+        # use a genetic algorithm to select the independent (explanatory) variables
+        num_generations=5
+        num_variables=len(df.columns)
+        print(num_variables)
+        size_of_chromosome_population=25 # 2^5
+        crossover_probability=0.7
+        mutation_probability=0.001
+        #                                  num_possble_vars, num_possible_combinations_of_vars, max number of independent variables allowed
+        chromosome_population=generate_initial_population(num_variables,size_of_chromosome_population)
+        #print(chromosome_population)
+        min_rmse_test=math.inf
+        most_fit_chromosome=''
+        for i in range(num_generations):        
+            new_chromosome_population=[]
+            while len(new_chromosome_population)!=len(chromosome_population):
+                # get fitness of each chromosome
+                chromosome_fitness_pairs=[]
+                accumulated_fitness=0
+                for chromosome in chromosome_population:
+                    # get all indices in bit string where bit string is a '1'
+                    # we don't want the first three colums, however: id and frequency and the dependent variable
+                    indices=[i for i, x in enumerate(chromosome) if x == '1']
+                    # these are the dataframe columns corresponding to those bits in the bit string that are equal to 1
+                    X=df.iloc[:,indices]        
+                    X=sm.add_constant(X)
+                    y=target[request.POST['timeseries']]
+                    X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
+                    #X_train=sm.add_constant(X_train)
+                    model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
+                    predictions_train=model.predict(X_train.astype(float))
+                    predictions_test=model.predict(X_test.astype(float))
+                    rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
+                    # We will use this as our fitness function in the GA
+                    if chromosome.count('1')>20: # we do not want more variables than we have data points
+                        rmse_test=math.inf
+                    else:    
+                        rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),10) 
+                    if rmse_test<min_rmse_test:
+                        min_rmse_test=rmse_test
+                        most_fit_chromosome=chromosome
+                    chromosome_fitness_pairs.append((chromosome,1/rmse_test))
+                    accumulated_fitness+=1/rmse_test
+                    
+                # get the fitness ratios    
+                chromosome_fitness_pairs=[(i,j/accumulated_fitness) for (i,j) in chromosome_fitness_pairs]    
+                
+                mating_pair=select_chromosome_pair(chromosome_fitness_pairs)
+                new_pair=mate_pair(mating_pair, crossover_probability, mutation_probability)
+                new_chromosome_population.append(new_pair[0])
+                new_chromosome_population.append(new_pair[1])
+            chromosome_population=[new_chromosome for new_chromosome in new_chromosome_population]
+            #new_chromosome_population=[]
+            
+        # get all indices in bit string where bit string is a '1'
+        # we don't want the first three colums, however: id and frequency and the dependent variable
+        indices=[i for i, x in enumerate(most_fit_chromosome) if x == '1']
+        # these are the dataframe columns corresponding to those bits in the bit string that are equal to 1
+        X=df.iloc[:,indices]        
+        X=sm.add_constant(X)
+        y=target[request.POST['timeseries']]
+        X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
+        model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
+        predictions_train=model.predict(X_train.astype(float))
+        predictions_test=model.predict(X_test.astype(float))
+        rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
+        # We will use this as our fitness function in the GA
+        rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),3) 
+        now=datetime.now()
+        timestamp=datetime.timestamp(now)
+        plt.title("Econometric Forecast of " + series.title())
+        plt.plot(y_train.astype(float),label='y_train_actual')
+        plt.plot(y_test.astype(float),label='y_test_actual')
+        plt.plot(predictions_train.astype(float),label='y_train_pred')
+        plt.plot(predictions_test.astype(float),label='y_test_pred')
+        plt.legend(loc='upper right')
+        image_file_name='econometric' + str(int(round(timestamp,0))) + '.png'
+        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
+        # clear the figure
+        plt.clf()
+        summ=model.summary()
+        print(summ)
+        
+        
+        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test })
+    else:    
+        return render(request, '../templates/home.html', {'selections_list': selections_list})
 
 # Example of template
 def index(request):
