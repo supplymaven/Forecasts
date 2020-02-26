@@ -44,7 +44,7 @@ def home(request):
         crossover_probability=0.7
         mutation_probability=0.001
         #                                  num_possble_vars, num_possible_combinations_of_vars, max number of independent variables allowed
-        chromosome_population=generate_initial_population(num_variables,size_of_chromosome_population)
+        chromosome_population=generate_initial_population(num_variables,size_of_chromosome_population, 20)
         #print(chromosome_population)
         min_rmse_test=math.inf
         most_fit_chromosome=''
@@ -69,10 +69,7 @@ def home(request):
                     predictions_test=model.predict(X_test.astype(float))
                     rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
                     # We will use this as our fitness function in the GA
-                    if chromosome.count('1')>20: # we do not want more variables than we have data points
-                        rmse_test=math.inf
-                    else:    
-                        rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),10) 
+                    rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),10) 
                     if rmse_test<min_rmse_test:
                         min_rmse_test=rmse_test
                         most_fit_chromosome=chromosome
