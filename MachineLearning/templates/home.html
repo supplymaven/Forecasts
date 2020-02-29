@@ -1,5 +1,50 @@
 {% extends "base_new.html" %}
 
-<div id="results">
+{% load static %}
 
-</div>
+{% block additional_css %}
+<style>
+
+#results {
+	clear: both;
+}
+.column1 {
+	float: left;
+	width: 620px;
+	margin: 10px;
+}
+.column2 {
+	float: left;
+	width: 300px;
+	margin: 10px;
+}
+.column3 {
+	float: left;
+	width: 300px;
+	margin: 10px;
+}
+
+</style>
+
+{% endblock %}
+
+{% block main_content %}
+
+{% if image_file_name %}
+	<div id="results">
+		<div class="column1">
+			{% with '/images/'|add:image_file_name as image_static %}
+				<img src="{% static image_static %}" alt="Econometric image" />
+			{% endwith %}
+		</div>
+		<div class="column2">
+	
+		</div>
+		<div class="column3">
+	
+		</div>
+	</div>
+{% endif %}
+
+
+{% endblock %}

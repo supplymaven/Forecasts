@@ -11,12 +11,11 @@ def create_binary_string(num_vars, max_vars):
     """
     binary_string=list("0"*num_vars)
     random_spot=0
-    while binary_string.count('1')<max_vars:
-        for i in range(max_vars):
-            random_spot=random.randint(0,num_vars-1)
-            binary_string[random_spot]='1'
-            if binary_string.count('1')==max_vars:
-                break
+    num_ones=random.randint(0,max_vars)
+    for i in range(num_ones+1):
+        random_spot=random.randint(0,num_vars-1)
+        binary_string[random_spot]='1'
+     
     return "".join(binary_string)
         
 # pass a list of binary strings with their accompanying fitness ratio as a tuple pair

@@ -39,7 +39,7 @@ def home(request):
         # use a genetic algorithm to select the independent (explanatory) variables
         num_generations=5
         num_variables=len(df.columns)
-        print(num_variables)
+        #print(num_variables)
         size_of_chromosome_population=25 # 2^5
         crossover_probability=0.7
         mutation_probability=0.001
@@ -50,7 +50,7 @@ def home(request):
         most_fit_chromosome=''
         for i in range(num_generations):        
             new_chromosome_population=[]
-            while len(new_chromosome_population)!=len(chromosome_population):
+            while len(new_chromosome_population)<=len(chromosome_population):
                 # get fitness of each chromosome
                 chromosome_fitness_pairs=[]
                 accumulated_fitness=0
@@ -58,6 +58,7 @@ def home(request):
                     # get all indices in bit string where bit string is a '1'
                     # we don't want the first three colums, however: id and frequency and the dependent variable
                     indices=[i for i, x in enumerate(chromosome) if x == '1']
+                    #print(indices)
                     # these are the dataframe columns corresponding to those bits in the bit string that are equal to 1
                     X=df.iloc[:,indices]        
                     X=sm.add_constant(X)
@@ -70,6 +71,7 @@ def home(request):
                     rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
                     # We will use this as our fitness function in the GA
                     rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),10) 
+                    #print(rmse_test)
                     if rmse_test<min_rmse_test:
                         min_rmse_test=rmse_test
                         most_fit_chromosome=chromosome
@@ -102,7 +104,7 @@ def home(request):
         rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),3) 
         now=datetime.now()
         timestamp=datetime.timestamp(now)
-        plt.title("Econometric Forecast of " + series.title())
+        #plt.title("Econometric Forecast of " + series.title())
         plt.plot(y_train.astype(float),label='y_train_actual')
         plt.plot(y_test.astype(float),label='y_test_actual')
         plt.plot(predictions_train.astype(float),label='y_train_pred')
@@ -113,7 +115,7 @@ def home(request):
         # clear the figure
         plt.clf()
         summ=model.summary()
-        print(summ)
+        #print(summ)
         
         
         return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test })
