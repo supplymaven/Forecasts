@@ -37,7 +37,7 @@ def home(request):
         #df=pd.DataFrame(list(timeseries.objects.filter(observation_date__lt='2020-01-01', observation_date__gt='2018-12-31').exclude(series_title=request.POST['timeseries']).values()))
         target=pd.DataFrame({request.POST['timeseries']:timeseries.objects.filter(series_title=request.POST['timeseries'], observation_date__range=['2016-01-01','2018-12-01']).values_list('inx', flat=True)})
         # use a genetic algorithm to select the independent (explanatory) variables
-        num_generations=5
+        num_generations=2
         num_variables=len(df.columns)
         #print(num_variables)
         size_of_chromosome_population=25 # 2^5
@@ -115,10 +115,14 @@ def home(request):
         # clear the figure
         plt.clf()
         summ=model.summary()
+        df = pd.read_html(model.summary().tables[1].as_html(),header=0,index_col=0)[0][['coef','P>|t|']]
+        #indep_vars=df.index
+        #coefs=df['coef'].values
+        #p_values=df['P>|t|'].values
         #print(summ)
+        table1=df.to_html(bold_rows=False, border=1)
         
-        
-        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test })
+        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test, 'table1': table1 })
     else:    
         return render(request, '../templates/home.html', {'selections_list': selections_list})
 

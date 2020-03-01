@@ -3,10 +3,12 @@
 {% load static %}
 
 {% block additional_css %}
-<style>
+
 
 #results {
-	clear: both;
+	position: absolute;
+	top: 425px;
+	//height: 500px;
 }
 .column1 {
 	float: left;
@@ -24,7 +26,7 @@
 	margin: 10px;
 }
 
-</style>
+
 
 {% endblock %}
 
@@ -38,7 +40,7 @@
 			{% endwith %}
 		</div>
 		<div class="column2">
-	
+			{{ table1 | safe }}
 		</div>
 		<div class="column3">
 	
