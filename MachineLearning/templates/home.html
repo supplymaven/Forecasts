@@ -43,7 +43,11 @@
 			{{ table1 | safe }}
 		</div>
 		<div class="column3">
-	
+			<table>
+				{% for prediction in predictions %}
+					<tr><td>{{ prediction.future_date }}</td><td>{{ prediction.inx }}</td></tr>
+				{% endfor %}	
+			</table>
 		</div>
 	</div>
 {% endif %}

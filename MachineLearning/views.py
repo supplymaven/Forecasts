@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
-from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries
+from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries, arima_predictions
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
@@ -30,7 +30,7 @@ def home(request):
         df_dict={}
         for x in column_names:
             #print(list(timeseries.objects.filter(series_title=x).values_list('inx', flat=True)))
-            data_list=list(timeseries.objects.filter(series_title=x, observation_date__range=['2016-01-01','2018-12-01']).values_list('inx', flat=True))
+            data_list=list(timeseries.objects.filter(series_title=x, observation_date__range=['2017-01-01','2019-12-01']).values_list('inx', flat=True))
             if len(data_list)==36: # number of data points given the date range provided
                 df_dict.update({x:data_list})    
         df=pd.DataFrame.from_dict(df_dict)       
@@ -122,7 +122,13 @@ def home(request):
         #print(summ)
         table1=df.to_html(bold_rows=False, border=1)
         
-        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test, 'table1': table1 })
+        # predictions
+        print(X_train.columns.values)
+        predictions=pd.DataFrame(arima_predictions.objects.filter(series_title__in=X_train.columns.values[1:], future_date__range=['2020-01-01', '2020-12-01']))
+        print(predictions)
+            
+        
+        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test, 'table1': table1, 'predictions': predictions })
     else:    
         return render(request, '../templates/home.html', {'selections_list': selections_list})
 
