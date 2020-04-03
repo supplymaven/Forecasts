@@ -35,6 +35,10 @@
 {% if image_file_name %}
 	<div id="results">
 		<div class="column1">
+			<div>Series ID: ...</div>
+			<div>Title: {{ timeseries }}</div>
+			<div>Industry: ...</div>
+			<div>Base Date: 6/1/2019</div>
 			{% with '/images/'|add:image_file_name as image_static %}
 				<img src="{% static image_static %}" alt="Econometric image" />
 			{% endwith %}

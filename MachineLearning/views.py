@@ -37,7 +37,7 @@ def home(request):
         #df=pd.DataFrame(list(timeseries.objects.filter(observation_date__lt='2020-01-01', observation_date__gt='2018-12-31').exclude(series_title=request.POST['timeseries']).values()))
         target=pd.DataFrame({request.POST['timeseries']:timeseries.objects.filter(series_title=request.POST['timeseries'], observation_date__range=['2017-01-01','2019-12-01']).values_list('inx', flat=True)})
         # use a genetic algorithm to select the independent (explanatory) variables
-        num_generations=2
+        num_generations=1
         num_variables=len(df.columns)
         #print(num_variables)
         size_of_chromosome_population=25 # 2^5
@@ -104,16 +104,25 @@ def home(request):
         rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),3) 
         now=datetime.now()
         timestamp=datetime.timestamp(now)
-        #plt.title("Econometric Forecast of " + series.title())
-        plt.plot(y_train.astype(float),label='y_train_actual')
-        plt.plot(y_test.astype(float),label='y_test_actual')
-        plt.plot(predictions_train.astype(float),label='y_train_pred')
-        plt.plot(predictions_test.astype(float),label='y_test_pred')
-        plt.legend(loc='upper right')
-        image_file_name='econometric' + str(int(round(timestamp,0))) + '.png'
-        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
+        plt.title("Econometric Forecast of " + request.POST['timeseries'])
+        
+        
+        ############### now only plotting last 6 months of actuals and first 6 months of predictions#####################
+        #plt.plot(y_train.astype(float),label='y_train_actual')
+        #plt.plot(y_test.astype(float),label='y_test_actual')
+        #plt.plot(predictions_train.astype(float),label='y_train_pred')
+        #plt.plot(predictions_test.astype(float),label='y_test_pred')
+        #plt.legend(loc='upper right')
+        
+        #image_file_name='econometric' + str(int(round(timestamp,0))) + '.png'
+        #plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
+        
         # clear the figure
-        plt.clf()
+        #plt.clf()
+        
+        
+        #################################################################################################################
+        
         summ=model.summary()
         df = pd.read_html(model.summary().tables[1].as_html(),header=0,index_col=0)[0][['coef','P>|t|']]
         #indep_vars=df.index
@@ -145,7 +154,26 @@ def home(request):
         print(predictions_future)
         future_dates=['2020-01-01','2020-02-01','2020-03-01','2020-04-01','2020-05-01','2020-06-01','2020-07-01','2020-08-01','2020-09-01','2020-10-01','2020-11-01','2020-12-01']
         predictions=zip(predictions_future,future_dates)
-        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test, 'table1': table1, 'predictions': predictions, })
+        
+        print(y_train)
+        # plotting
+        dts=['07-19','08-19','09-19','10-19','11-19','12-19','01-20','02-20','03-20','04-20','05-20','06-20']
+        actuals=y_train[-6:]
+        #actuals['Date']=dts[-6:]
+        #actuals.set_index('Date')
+        preds=predictions_future[:6]
+        #preds['Date']=dts[:6]
+        #preds.set_index('Date')
+        plt.plot(dts[:6],actuals.astype(float))
+        plt.plot(dts[6:],preds.astype(float))
+        plt.margins(0.01)
+        image_file_name='econometric' + str(int(round(timestamp,0))) + '.png'
+        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
+        
+        # clear the figure
+        plt.clf()
+        
+        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test, 'table1': table1, 'predictions': predictions, 'timeseries': request.POST['timeseries'], 'selections_list': selections_list,})
     else:    
         return render(request, '../templates/home.html', {'selections_list': selections_list})
 
