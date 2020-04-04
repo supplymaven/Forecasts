@@ -20,19 +20,19 @@ body{
  margin-left: 20px;
  margin-right: 20px;
 }
+
 nav{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 125px;
   background: #fff;
   box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
   border: 1px solid rgba(0,0,0,.1);
   z-index:300;
   overflow: hidden;
 }
-
 
 li {
 	display: inline;
@@ -59,14 +59,27 @@ p {
 	height: 200px;
 }
 
-form {
+form#autocomplete_form {
 	position: absolute;
 	left: 14px;
 	top: 350px;
 	height: 100px;
 }
+
 #timeseries {
 	width: 700px;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    display: inline;
+    background: none;
+    text-decoration: underline;
+    color: blue;
+}
+button:hover {
+    cursor: pointer;
 }
 
 
@@ -111,10 +124,16 @@ form {
 				<li class="right"><a href="#">Home</a></li>
 		        
 		    </ul>
+			<div>
+			<form action="/do/stuff.php" method="post">
+    <input type="hidden" name="user_id" value="123" />
+    <button>Go to user 123</button>
+</form>
+			</div>
 		</nav> 
 		<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
 		
-		<form method='post' action="/home/">
+		<form id="autocomplete_form" method='post' action="/home/">
 			{% csrf_token %}
 			<div class="ui-widgets">
 				<div>Search for Index</div>
