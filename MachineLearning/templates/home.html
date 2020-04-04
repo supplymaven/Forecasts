@@ -44,11 +44,17 @@
 			{% endwith %}
 		</div>
 		<div class="column2">
-			{{ table1 | safe }}
+			<!--{{ table1 | safe }}-->
+			<table>
+				<tr><th>Coefs</th><th>P-value</th></tr>
+				{% for i,r in df.iterrows %}
+					<tr><td>{{ i|truncatechars:20 }}</td><td>{{ r.0|floatformat:2 }}</td><td>{{ r.1|floatformat:2 }}</td></tr>
+				{% endfor %}
+			</table>
 		</div>
 		<div class="column3">
 			<table>
-				<tr><td>Future Time Period</td><td>Index Value</td></tr>
+				<tr><th>Future Time Period</th><th>Index Value</th></tr>
 				{% for prediction in predictions %}
 					<tr><td>{{ prediction.1 }}</td><td>{{ prediction.0|floatformat:2 }}</td></tr>
 				{% endfor %}	
