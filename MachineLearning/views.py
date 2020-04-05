@@ -40,7 +40,7 @@ def home(request):
         num_generations=1
         num_variables=len(df.columns)
         #print(num_variables)
-        size_of_chromosome_population=25 # 2^5
+        size_of_chromosome_population=10 # 2^5
         crossover_probability=0.7
         mutation_probability=0.001
         #                                  num_possble_vars, num_possible_combinations_of_vars, max number of independent variables allowed
@@ -162,6 +162,8 @@ def home(request):
         preds=predictions_future[:6]
         #preds['Date']=dts[:6]
         #preds.set_index('Date')
+        # clear the figure
+        plt.clf()
         plt.plot(dts[:6],actuals.astype(float))
         plt.plot(dts[6:],preds.astype(float))
         plt.margins(0.01)

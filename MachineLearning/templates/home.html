@@ -46,9 +46,19 @@
 		<div class="column2">
 			<!--{{ table1 | safe }}-->
 			<table>
-				<tr><th>Coefs</th><th>P-value</th></tr>
+				<tr><th>Var</th><th>Coeffs</th><th>PVals</th></tr>
 				{% for i,r in df.iterrows %}
-					<tr><td>{{ i|truncatechars:20 }}</td><td>{{ r.0|floatformat:2 }}</td><td>{{ r.1|floatformat:2 }}</td></tr>
+					<tr>
+						<td>
+							<form action="/home/" method="post">
+								{% csrf_token %}
+								<input type="hidden" name="timeseries" value="{{ i }}" />
+								<button>{{ i|truncatechars:20 }}</button>
+							</form>
+						</td>
+						<td>{{ r.0|floatformat:2 }}</td>
+						<td>{{ r.1|floatformat:2 }}</td>
+					</tr>
 				{% endfor %}
 			</table>
 		</div>
