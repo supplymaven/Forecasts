@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -60,4 +61,10 @@ class timeseries(models.Model):
 class arima_predictions(models.Model):
     future_date=models.DateField(unique=False, null=True)
     series_title=models.CharField(db_index=True, max_length=100, verbose_name="Series Title")
-    inx=models.DecimalField(max_digits=10, decimal_places=4)    
+    inx=models.DecimalField(max_digits=10, decimal_places=4)  
+
+# Stored here are the series the user has ran regressions on (useful for breadcrumbs and storing user interests)
+class series_visited(models.Model):    
+    date_time_clicked=models.DateTimeField(auto_now=True)
+    user=models.ForeignKey(User, verbose_name="User", on_delete=models.CASCADE)
+    series=models.CharField(max_length=100, verbose_name="Series Title")

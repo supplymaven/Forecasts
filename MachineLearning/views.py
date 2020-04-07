@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
-from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries, arima_predictions
+from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries, arima_predictions, series_visited
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
@@ -23,6 +23,8 @@ from utils.genetic_algorithm import *
 def home(request):
     selections_list=timeseries.objects.values_list('series_title', flat=True).distinct()
     if request.POST:
+        visited=series_visited(user=request.user, series=request.POST['timeseries'])
+        visited.save()
         # list of names of all series except the target
         column_names=timeseries.objects.values_list('series_title', flat=True).distinct().exclude(series_title=request.POST['timeseries'])
         # an empty dataframe with columns that are the x-values in our regression
