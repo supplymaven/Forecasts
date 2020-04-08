@@ -16,15 +16,30 @@ from statsmodels.tools.eval_measures import rmse
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timedelta
 from utils.lstm_utils import *
 from utils.genetic_algorithm import *
 
 def home(request):
     selections_list=timeseries.objects.values_list('series_title', flat=True).distinct()
     if request.POST:
-        visited=series_visited(user=request.user, series=request.POST['timeseries'])
+        # Here we create our breadcrumbs by saving what regression was just performed and retrieving all that was performed within the last hour
+        current_time=datetime.now()
+        visited=series_visited(date_time_clicked=current_time, user=request.user, series=request.POST['timeseries'])
         visited.save()
+        current_time=datetime.now()
+        one_hour_ago=current_time-timedelta(hours=1)
+        breadcrumbs=series_visited.objects.filter(user=request.user, date_time_clicked__range=(one_hour_ago, current_time)).order_by('date_time_clicked')
+        breadcrumb_series=[]
+        # we want a unique list of series chronologically ordered (this is our breadcrumb trail)
+        for breadcrumb in breadcrumbs:
+            if breadcrumb.series not in breadcrumb_series:
+                breadcrumb_series.append(breadcrumb.series)
+                
+        # don't send anything for breadcrumbs if there is only one series to report
+        if len(breadcrumb_series)==1:
+            breadcrumb_series=[]
+            
         # list of names of all series except the target
         column_names=timeseries.objects.values_list('series_title', flat=True).distinct().exclude(series_title=request.POST['timeseries'])
         # an empty dataframe with columns that are the x-values in our regression
@@ -175,7 +190,7 @@ def home(request):
         # clear the figure
         plt.clf()
         
-        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test, 'table1': table1, 'predictions': predictions, 'timeseries': request.POST['timeseries'], 'selections_list': selections_list, 'df':df_summary, })
+        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test, 'table1': table1, 'predictions': predictions, 'timeseries': request.POST['timeseries'], 'selections_list': selections_list, 'df':df_summary, 'breadcrumbs': breadcrumb_series, })
     else:    
         return render(request, '../templates/home.html', {'selections_list': selections_list})
 

@@ -65,6 +65,6 @@ class arima_predictions(models.Model):
 
 # Stored here are the series the user has ran regressions on (useful for breadcrumbs and storing user interests)
 class series_visited(models.Model):    
-    date_time_clicked=models.DateTimeField(auto_now=True)
+    date_time_clicked=models.DateTimeField()
     user=models.ForeignKey(User, verbose_name="User", on_delete=models.CASCADE)
     series=models.CharField(max_length=100, verbose_name="Series Title")

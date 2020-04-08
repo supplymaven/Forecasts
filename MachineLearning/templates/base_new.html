@@ -49,6 +49,12 @@ li.right {
 		padding: 25px;
 		
 }
+li.left {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+}
+
 p { 
 	position: absolute;
 	top: 125px;
@@ -93,8 +99,9 @@ td {
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
+
 		$(function() {
-			
+			$( document ).tooltip(); // show full series description without the (...) truncation
 			$("#timeseries").bind('focus', function(){
 				var availableTags=[
 					{% for selection in selections_list %}
@@ -121,10 +128,21 @@ td {
 				<li class="right"><a href="#">Home</a></li>		        
 		    </ul>
 			<div>
-			<form action="/do/stuff.php" method="post">
-    <input type="hidden" name="user_id" value="123" />
-    <button>Go to user 123</button>
-</form>
+				<ul>				
+					{% for breadcrumb in breadcrumbs %}
+						<li class="left">
+							<form action="/home/" method="post">
+								{% csrf_token %}
+								<input type="hidden" name="timeseries" value="{{ breadcrumb }}" />
+								{% if not forloop.last %}
+									<button title="{{ breadcrumb }}">{{ breadcrumb|truncatechars:20 }}</button> >> 
+								{% else %} 
+									<span title="{{ breadcrumb }}">{{ breadcrumb|truncatechars:20 }}</span>
+								{% endif %}
+							</form>
+						</li>	
+					{% endfor %}
+				</ul>	
 			</div>
 		</nav> 
 		<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
