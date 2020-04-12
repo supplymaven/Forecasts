@@ -57,6 +57,9 @@ class timeseries(models.Model):
     series_title=models.CharField(db_index=True, max_length=100, verbose_name="Series Title")
     inx=models.DecimalField(max_digits=10, decimal_places=4)
     
+class series_names(models.Model):
+    series_title=models.CharField(db_index=True, max_length=100, verbose_name="Series Title")
+    
 # we store ARIMA predictions for every index here    
 class arima_predictions(models.Model):
     future_date=models.DateField(unique=False, null=True)
