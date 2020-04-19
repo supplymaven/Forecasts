@@ -3,7 +3,6 @@ import django
 import sys
 import MySQLdb
 import math
-from datetime import datetime, timedelta
 import statsmodels.api as sm
 from sklearn.model_selection import train_test_split
 from statsmodels.tools.eval_measures import rmse
@@ -27,7 +26,7 @@ from pmdarima.arima import StepwiseContext
 import pandas as pd
 import numpy as np
 from dateutil.relativedelta import *
-from MachineLearning.models import timeseries, series_names, arima_predictions
+from MachineLearning.models import timeseries, series_names, arima_predictions, econometric_forecasts, econometric_coefficients, econometric_predictions, 
 from multiprocessing import Pool, Process
 
 def make_predictions(this_series):
@@ -48,7 +47,7 @@ def make_predictions(this_series):
     num_generations=50
     num_variables=len(df.columns)
     #print(num_variables)
-    size_of_chromosome_population=100 # 2^5
+    size_of_chromosome_population=50 # 2^5
     crossover_probability=0.7
     mutation_probability=0.001
     #                                  num_possble_vars, num_possible_combinations_of_vars, max number of independent variables allowed
@@ -121,11 +120,7 @@ def make_predictions(this_series):
     rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
     # We will use this as our fitness function in the GA
     rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),3) 
-    now=datetime.now()
-    timestamp=datetime.timestamp(now)
-    
-    #summ=model.summary()
-    
+
     # predictions
     # the first column is a constant column vector of 1s
     column_names=timeseries.objects.filter(series_title__in=X_train.columns.values[1:]).values_list('series_title', flat=True).distinct()
@@ -137,18 +132,32 @@ def make_predictions(this_series):
         data_list=list(arima_predictions.objects.filter(series_title=x, future_date__range=['2020-01-01','2020-12-01']).values_list('inx', flat=True))
         df_dict.update({x:data_list})    
 
-    try:
-        df=pd.DataFrame.from_dict(df_dict)        
-        df=sm.add_constant(df, has_constant='add')
-        predictions_future=model.predict(df.astype(float))
-    except:
-        print(this_series)
-        print(column_names)
-        return
+    #try:
+    future_dates=['2020-01-01','2020-02-01','2020-03-01','2020-04-01','2020-05-01','2020-06-01','2020-07-01','2020-08-01','2020-09-01','2020-10-01','2020-11-01','2020-12-01']
+    df_summary = pd.read_html(model.summary().tables[1].as_html(),header=0,index_col=0)[0][['coef','P>|t|']]
+    indep_vars=df.index
+    coefs=df_summary['coef'].values
+    p_values=df_summary['P>|t|'].values
+    df=pd.DataFrame.from_dict(df_dict)        
+    df=sm.add_constant(df, has_constant='add')
+    predictions_future=model.predict(df.astype(float)).values.tolist()
+    series=series_names(series_title=this_series)
+    forecast=econometric_forecast(series=series)
+    forecast.save()
+    for i in len(coefs.tolist()):
+        coeffs=econometric_coefficients(forecasted_series=forecast, coefficients=coefs[i], pvalues=p_values[i])
+        coeffs.save()
+    for j in len(predictions_future):
+        p=econometric_predictions(future_date=future_dates[j], forecasted_series=forecast, inx=predictions_future[j])
+        p.save()
+        
+    #except:
+        #print(this_series)
+        #print(column_names)
 
     print(this_series)
     print(predictions_future.values.tolist())
-    return flatten([this_series, [str(p) for p in predictions_future.values.tolist()]])
+    #return flatten([this_series, [str(p) for p in predictions_future.values.tolist()]])
         
 if __name__=='__main__':
     
