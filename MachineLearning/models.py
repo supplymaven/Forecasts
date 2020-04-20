@@ -71,6 +71,7 @@ class econometric_forecast(models.Model):
      
 class econometric_coefficients(models.Model):
     forecasted_series=models.ForeignKey(econometric_forecast, on_delete=models.CASCADE)
+    independent_variables=models.CharField(db_index=True, max_length=100, verbose_name="Independent Variable", null=True)
     coefficients=models.DecimalField(max_digits=10, decimal_places=4)
     pvalues=models.DecimalField(max_digits=10, decimal_places=4)
     
