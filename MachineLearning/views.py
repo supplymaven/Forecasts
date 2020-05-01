@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
-from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries, arima_predictions, series_visited, series_names
+from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries, arima_predictions, series_visited, series_names, econometric_predictions, econometric_coefficients, econometric_forecast
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
@@ -21,8 +21,10 @@ from utils.lstm_utils import *
 from utils.genetic_algorithm import *
 
 def home(request):
-    selections_list=series_names.objects.values_list('series_title', flat=True).distinct()
+    selections_list=series_names.objects.filter(id__in=econometric_forecast.objects.values_list('series', flat=True).distinct()).values_list('series_title',flat=True).distinct()
     if request.POST:
+        series=series_names.objects.get(series_title=request.POST['timeseries'])
+        forecasted_series=econometric_forecast.objects.get(series=series)
         # Here we create our breadcrumbs by saving what regression was just performed and retrieving all that was performed within the last hour
         current_time=datetime.now()
         visited=series_visited(date_time_clicked=current_time, user=request.user, series=request.POST['timeseries'])
@@ -39,169 +41,26 @@ def home(request):
         # don't send anything for breadcrumbs if there is only one series to report
         if len(breadcrumb_series)==1:
             breadcrumb_series=[]
-            
-        # list of names of all series except the target
-        column_names=timeseries.objects.values_list('series_title', flat=True).distinct().exclude(series_title=request.POST['timeseries'])
-        # an empty dataframe with columns that are the x-values in our regression
-        df=pd.DataFrame()
-        df_dict={}
-        for x in column_names:
-            #print(list(timeseries.objects.filter(series_title=x).values_list('inx', flat=True)))
-            data_list=list(timeseries.objects.filter(series_title=x, observation_date__range=['2017-01-01','2019-12-01']).values_list('inx', flat=True))
-            if len(data_list)==36: # number of data points given the date range provided
-                df_dict.update({x:data_list})    
-        df=pd.DataFrame.from_dict(df_dict)       
-        #df=pd.DataFrame(list(timeseries.objects.filter(observation_date__lt='2020-01-01', observation_date__gt='2018-12-31').exclude(series_title=request.POST['timeseries']).values()))
-        target=pd.DataFrame({request.POST['timeseries']:timeseries.objects.filter(series_title=request.POST['timeseries'], observation_date__range=['2017-01-01','2019-12-01']).values_list('inx', flat=True)})
-        # use a genetic algorithm to select the independent (explanatory) variables
-        num_generations=50
-        num_variables=len(df.columns)
-        #print(num_variables)
-        size_of_chromosome_population=100 # 2^5
-        crossover_probability=0.7
-        mutation_probability=0.001
-        #                                  num_possble_vars, num_possible_combinations_of_vars, max number of independent variables allowed
-        chromosome_population=generate_initial_population(num_variables,size_of_chromosome_population, 20)
-        #print(chromosome_population)
-        min_rmse_test=math.inf
-        most_fit_chromosome=''
-        for i in range(num_generations):  
-            # get fitness of each chromosome
-            chromosome_fitness_pairs=[]
-            accumulated_fitness=0
-            for chromosome in chromosome_population:
-                # get all indices in bit string where bit string is a '1'
-                # we don't want the first three colums, however: id and frequency and the dependent variable
-                indices=[i for i, x in enumerate(chromosome) if x == '1']
-                #print(indices)
-                # these are the dataframe columns corresponding to those bits in the bit string that are equal to 1
-                X=df.iloc[:,indices]        
-                X=sm.add_constant(X)
-                y=target[request.POST['timeseries']]
-                X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
-                #X_train=sm.add_constant(X_train)
-                model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
-                predictions_train=model.predict(X_train.astype(float))
-                predictions_test=model.predict(X_test.astype(float))
-                rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
-                # We will use this as our fitness function in the GA
-                rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),10) 
-                #population_rmse_test.append(rmse_test)
-                #print(rmse_test)
-                if rmse_test<min_rmse_test:
-                    min_rmse_test=rmse_test
-                    no_improvement_count=0
-                    print(min_rmse_test)
-                    print(rmse_train)
-                    #print(population_rmse_test)
-                    most_fit_chromosome=chromosome
-                    #if abs(min_rmse_test-rmse_train)/((min_rmse_test+rmse_train)/2)<0.04:
-                        #convergence=True
-                        #break
-                else:
-                    no_improvement_count+=1
-                    
-                    
-                    
-                    
-                chromosome_fitness_pairs.append((chromosome,1/rmse_test))
-                accumulated_fitness+=1/rmse_test
-
-            # get the fitness ratios    
-            chromosome_fitness_pairs=[(i,j/accumulated_fitness) for (i,j) in chromosome_fitness_pairs]  
-        
-            new_chromosome_population=[]
-            #population_rmse_test=[]
-            
-            while len(new_chromosome_population)<=len(chromosome_population):           
-                mating_pair=select_chromosome_pair(chromosome_fitness_pairs)
-                new_pair=mate_pair(mating_pair, crossover_probability, mutation_probability)
-                new_chromosome_population.append(new_pair[0])
-                new_chromosome_population.append(new_pair[1])
-            
-            
-            chromosome_population=[new_chromosome for new_chromosome in new_chromosome_population]
-            
-            # If the test and train rmse are near each other, we assume neither over nor under fitting. 
-            # If the best test rmse is close to that of the population, we assume convergence, and can therefore stop the algorithm early.
-            #mean_rmse_test=sum(population_rmse_test)/len(population_rmse_test)
-            #if abs(min_rmse_test-mean_rmse_test)/((min_rmse_test+mean_rmse_test)/2)<0.04 and abs(min_rmse_test-rmse_train)/((min_rmse_test+rmse_train)/2)<0.04:
-            #    break
-            
-        # get all indices in bit string where bit string is a '1'
-        # we don't want the first three colums, however: id and frequency and the dependent variable
-        indices=[i for i, x in enumerate(most_fit_chromosome) if x == '1']
-        # these are the dataframe columns corresponding to those bits in the bit string that are equal to 1
-        X=df.iloc[:,indices]        
-        X=sm.add_constant(X)
-        y=target[request.POST['timeseries']]
-        X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
-        model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
-        predictions_train=model.predict(X_train.astype(float))
-        predictions_test=model.predict(X_test.astype(float))
-        rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
-        # We will use this as our fitness function in the GA
-        rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),3) 
+             
         now=datetime.now()
         timestamp=datetime.timestamp(now)
         plt.title("Econometric Forecast of " + request.POST['timeseries'])
         
-        
-        ############### now only plotting last 6 months of actuals and first 6 months of predictions#####################
-        #plt.plot(y_train.astype(float),label='y_train_actual')
-        #plt.plot(y_test.astype(float),label='y_test_actual')
-        #plt.plot(predictions_train.astype(float),label='y_train_pred')
-        #plt.plot(predictions_test.astype(float),label='y_test_pred')
-        #plt.legend(loc='upper right')
-        
-        #image_file_name='econometric' + str(int(round(timestamp,0))) + '.png'
-        #plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
-        
-        # clear the figure
-        #plt.clf()
-        
-        
-        #################################################################################################################
-        
-        summ=model.summary()
-        df_summary = pd.read_html(model.summary().tables[1].as_html(),header=0,index_col=0)[0][['coef','P>|t|']]
-        indep_vars=df.index
-        coefs=df_summary['coef'].values
-        p_values=df_summary['P>|t|'].values
-        #print(df_summary)
-        #print(summ)
-        table1=df_summary.to_html(bold_rows=False, border=1)
-        
-        # predictions
-        #print(X_train.columns.values)
-        #print(X_train.columns.values)
-        #predictions=pd.DataFrame(list(arima_predictions.objects.filter(series_title__in=X_train.columns.values[1:], future_date__range=['2020-01-01', '2020-12-01']).values('series_title','inx'))).pivot(columns='series_title')
-        #print(predictions)
-        # the first column is a constant column vector of 1s
-        column_names=timeseries.objects.filter(series_title__in=X_train.columns.values[1:]).values_list('series_title', flat=True).distinct()
-        # an empty dataframe with columns that are the x-values in our regression
-        df=pd.DataFrame()
-        df_dict={}
-        for x in column_names:
-            #print(list(timeseries.objects.filter(series_title=x).values_list('inx', flat=True)))
-            data_list=list(arima_predictions.objects.filter(series_title=x, future_date__range=['2020-01-01','2020-12-01']).values_list('inx', flat=True))
-            df_dict.update({x:data_list})    
-            #print(x)
-            #print(data_list)
-        df=pd.DataFrame.from_dict(df_dict)        
-        df=sm.add_constant(df, has_constant='add')
-        predictions_future=model.predict(df.astype(float))
+        forecasted_series=econometric_forecast.objects.get(series=series)
+        indep_vars=econometric_coefficients.objects.filter(forecasted_series=forecasted_series).values_list('independent_variables',flat=True)
+        coefs=econometric_coefficients.objects.filter(forecasted_series=forecasted_series).values_list('coefficients',flat=True)
+        p_values=econometric_coefficients.objects.filter(forecasted_series=forecasted_series).values_list('pvalues',flat=True)
+        df=pd.DataFrame(list(econometric_coefficients.objects.filter(forecasted_series=forecasted_series).values('independent_variables','coefficients','pvalues')))
+        predictions_future=econometric_predictions.objects.filter(forecasted_series=forecasted_series).values_list('inx',flat=True)
         future_dates=['2020-01-01','2020-02-01','2020-03-01','2020-04-01','2020-05-01','2020-06-01','2020-07-01','2020-08-01','2020-09-01','2020-10-01','2020-11-01','2020-12-01']
+        
         predictions=zip(predictions_future,future_dates)
         
         # plotting
         dts=['07-19','08-19','09-19','10-19','11-19','12-19','01-20','02-20','03-20','04-20','05-20','06-20']
-        actuals=y_train[-6:]
-        #actuals['Date']=dts[-6:]
-        #actuals.set_index('Date')
-        preds=predictions_future[:6]
-        #preds['Date']=dts[:6]
-        #preds.set_index('Date')
+        actuals=np.array(list(timeseries.objects.filter(series_title=request.POST['timeseries'], observation_date__in=['2019-07-01','2019-08-01','2019-09-01','2019-10-01','2019-11-01','2019-12-01']).order_by('observation_date').values_list('inx',flat=True)))
+        preds=np.array(predictions_future[:6])
+
         # clear the figure
         plt.clf()
         plt.plot(dts[:6],actuals.astype(float))
@@ -213,7 +72,7 @@ def home(request):
         # clear the figure
         plt.clf()
         
-        return render(request, '../templates/home.html', {'summary1':summ.tables[0].as_html(), 'summary2': summ.tables[1].as_html(), 'summary3': summ.tables[2].as_html(), 'image_file_name': image_file_name, 'rmse_train': rmse_train, 'rmse_test': rmse_test, 'table1': table1, 'predictions': predictions, 'timeseries': request.POST['timeseries'], 'selections_list': selections_list, 'df':df_summary, 'breadcrumbs': breadcrumb_series, })
+        return render(request, '../templates/home.html', {'image_file_name': image_file_name, 'predictions': predictions, 'timeseries': request.POST['timeseries'], 'selections_list': selections_list, 'breadcrumbs': breadcrumb_series, 'df': df,})
     else:    
         return render(request, '../templates/home.html', {'selections_list': selections_list})
 

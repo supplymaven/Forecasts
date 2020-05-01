@@ -50,18 +50,18 @@
 				{% for i,r in df.iterrows %}
 					<tr>
 						<td>
-							{% if i != 'const' %}
+							{% if r.0 != 'const' %}
 								<form action="/home/" method="post">
 									{% csrf_token %}
-									<input type="hidden" name="timeseries" value="{{ i }}" />
-									<button title="{{ i }}">{{ i|truncatechars:20 }}</button>
+									<input type="hidden" name="timeseries" value="{{ r.0 }}" />
+									<button title="{{ r.0 }}">{{ r.0|truncatechars:20 }}</button>
 								</form>		
 							{% else %}
-								{{ i }}
+								{{ r.0 }}
 							{% endif %}
 						</td>
-						<td>{{ r.0|floatformat:2 }}</td>
 						<td>{{ r.1|floatformat:2 }}</td>
+						<td>{{ r.2|floatformat:2 }}</td>
 					</tr>
 				{% endfor %}
 			</table>
