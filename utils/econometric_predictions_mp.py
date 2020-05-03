@@ -27,14 +27,16 @@ from MachineLearning.models import timeseries, series_names, arima_predictions, 
 from multiprocessing import Pool, Process
 
 def make_predictions(this_series):
+    # the arima predictions for these indexes did not turn out right so we exclude them for the time being
+    to_exclude=['Dow Jones Industrial Average','Gold','PPI Commodity data for Machinery and equipment-Parts and attachments for industrial process furnaces','PPI Commodity data for Nonmetallic mineral products-Handmade pressed and blown glassware not seasona','PPI Commodity data for Textile products and apparel-Womens and girls tailored jackets and vests ex','PPI Commodity data for Transportation equipment-Air brake and other brake equipment not seasonally a','PPI industry data for Industrial process furnace and oven mfg-Parts and attachments for industrial p','PPI industry data for Mechanical power transmission equipment mfg-Plain bearings and bushings not se','PPI industry data for Nonferrous metal (except copper and aluminum) rolling drawing and extruding-Al','PPI industry data for Other metal container mfg-Steel shipping barrels & drums exc. beer barrels (mo','PPI industry data for Power boiler and heat exchanger mfg-Fabricated heat exchangers and steam conde','PPI industry data for Railroad rolling stock mfg-Air brake and other brake equipment not seasonally','PPI industry data for Sawmills-Secondary products not seasonally adjusted','S&P 500','Utility (piped) gas per therm in Atlanta-Sandy Springs-Roswell GA average price not seasonally adjus','Utility (piped) gas service in Atlanta-Sandy Springs-Roswell GA all urban consumers not seasonally a','WTI Crude Oil']
+    
     # list of names of all series except the target
-    column_names=list(arima_predictions.objects.values('series_title').annotate(cnt=Count('id')).filter(cnt=12).values_list('series_title', flat=True).distinct().exclude(series_title=this_series))
-
+    column_names=list(arima_predictions.objects.values('series_title').annotate(cnt=Count('id')).filter(cnt=12).values_list('series_title', flat=True).distinct().exclude(series_title__in=[this_series]+to_exclude))
+    
     # an empty dataframe with columns that are the x-values in our regression
     df=pd.DataFrame()
     df_dict={}
     for x in column_names:
-		
         #print(list(timeseries.objects.filter(series_title=x).values_list('inx', flat=True)))
         data_list=list(timeseries.objects.filter(series_title=x, observation_date__range=['2017-01-01','2019-12-01']).values_list('inx', flat=True))
 		
@@ -123,7 +125,7 @@ def make_predictions(this_series):
 
     # predictions
     # the first column is a constant column vector of 1s
-    column_names=list(timeseries.objects.filter(series_title__in=X_train.columns.values[1:]).values_list('series_title', flat=True).distinct())
+    column_names=list(timeseries.objects.filter(series_title__in=X_train.columns.values[1:]).exclude(series_title__in=to_exclude).values_list('series_title', flat=True).distinct())
     # an empty dataframe with columns that are the x-values in our regression
     df=pd.DataFrame()
     df_dict={}
@@ -148,20 +150,40 @@ def make_predictions(this_series):
     df=sm.add_constant(df, has_constant='add')
     predictions_future=model.predict(df.astype(float)).values.tolist()
     series=series_names.objects.get(series_title=this_series)
+    
+    #forecast=open('forecast.txt','a')
+    #coeffs=open('coefs.txt','a')
+    #preds=open('preds.txt','a')
+    
     forecast=econometric_forecast(series=series)
     forecast.save()
         
+    #forecast.write(str(f_id)+','+str(series.id)+'\n')
+    
     for i in range(len(coefs)):
         coeffs=econometric_coefficients(forecasted_series=forecast, coefficients=coefs[i], pvalues=p_values[i], independent_variables=indep_vars[i])
         coeffs.save()
+        #coeffs.write(str(indep_vars[i])+','+str(coefs[i])+','+str(p_values[i])+','+str(f_id)+'\n')
     for j in range(len(predictions_future)):
         p=econometric_predictions(future_date=future_dates[j], forecasted_series=forecast, inx=predictions_future[j])
         p.save()
+        #preds.write(str(future_dates[j])+','+str(predictions_future[j])+','+str(f_id)+'\n')
+        
+    #forecast.close()
+    #coeffs.close()
+    #preds.close()
         
 if __name__=='__main__':
     
     # only those series titles that have 12 arima predictions
     selections_list=list(arima_predictions.objects.values('series_title').annotate(cnt=Count('id')).filter(cnt=12).values_list('series_title', flat=True).distinct())
-
-    for selection in selections_list:
-        make_predictions(selection)
+    
+    pool=Pool(processes=4)
+    pool.map(make_predictions,selections_list)
+    pool.close()
+    pool.join()
+    
+    #f_id=1
+    #for selection in selections_list:
+    #    make_predictions(selection,f_id)
+    #    f_id+=1

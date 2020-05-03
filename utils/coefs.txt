@@ -1,0 +1,512 @@
+const,90.5014,0.021,1
+PPI Commodity data for Final demand-Government purchased services seasonally adjusted,1.1335,0.040999999999999995,1
+PPI Commodity data for Final demand-Trade of government purchased goods not seasonally adjusted,0.1795,0.485,1
+PPI industry data for Fats and oils refining and blending-Shortening and cooking oils not seasonally,-0.0991,0.12,1
+PPI industry data for Showcases partitions shelving and lockers mfg-Primary products not seasonally,-0.1442,0.16399999999999998,1
+Video discs and other media in U.S. city average all urban consumers not seasonally adjusted,-0.3632,0.018000000000000002,1
+const,83.2637,0.212,2
+Cheese and related products in U.S. city average all urban consumers seasonally adjusted,0.0561,0.7609999999999999,2
+Education and communication in Size Class A all urban consumers not seasonally adjusted,-0.2431,0.21899999999999997,2
+Monthly import price index for BEA End Use 101 Fuels n.e.s. - coals and gas not seasonally adjusted,-0.0019,0.833,2
+Monthly import price index for Harmonized 8501 Electric motors and generators (excludes generating s,0.5363,0.003,2
+PPI Commodity data for Chemicals and allied products-Basic inorganic chemicals not seasonally adjust,0.1275,0.17300000000000001,2
+PPI Commodity data for Final demand-Transportation of government passengers not seasonally adjusted,-0.0691,0.315,2
+PPI Commodity data for Fuels and related products and power-Lubricating grease not from petroleum re,-4.986e-05,0.9990000000000001,2
+PPI Commodity data for Metals and metal products-Hot rolled steel bars plates and structural shapes,-0.0107,0.809,2
+PPI industry data for Explosives manufacturing-Explosives not seasonally adjusted,-0.0136,0.883,2
+PPI industry data for Farm product warehousing and storage-Farm product warehousing and storage serv,0.0301,0.67,2
+PPI industry data for Marine cargo handling-Movement of containers not seasonally adjusted,0.2064,0.342,2
+const,304.0242,0.0,3
+Education and communication commodities in Size Class B/C all urban consumers not seasonally adjuste,-1.0013,0.027000000000000003,3
+const,-580.4244,0.126,4
+Monthly import price index by origin for NAICS 316 Leather and allied product manufacturing China no,-1.2774,0.8,4
+Monthly import price index for Harmonized 95 Toys games and sports requisites; parts and accessories,5.0694,0.038,4
+PPI Commodity data for Final demand-Transportation of passengers for final demand not seasonally adj,0.2004,0.652,4
+PPI Commodity data for Machinery and equipment-Parts for industrial controls and motor-control acces,-1.1831,0.23,4
+PPI industry data for All other transportation equipment mfg-All other miscellaneous transportation,4.6922,0.05,4
+PPI industry data for Petroleum refineries-Unfinished oils and lubricating oil base stock not season,0.0619,0.32,4
+PPI industry data for Welding and soldering equipment mfg-Other welding equipment components and acc,0.0902,0.943,4
+const,52.6356,0.6629999999999999,5
+Commodities less food in Northeast - Size Class B/C all urban consumers not seasonally adjusted,-0.3867,0.528,5
+PPI Commodity data for Lumber and wood products-Prefabricated wood buildings and components seasonal,0.7352,0.012,5
+PPI Commodity data for Nonmetallic mineral products-Nonmetallic minerals and products n.e.c. not sea,0.3002,0.745,5
+PPI industry data for Folding paperboard box manufacturing-Primary products not seasonally adjusted,0.6426,0.41600000000000004,5
+PPI industry data for Sawmills-Softwood dressed lumber and timbers more than 2 inches in nominal thi,0.2027,0.01,5
+PPI industry data for Softwood veneer and plywood manufacturing not seasonally adjusted,-0.0976,0.40700000000000003,5
+const,-191.3531,0.263,6
+All Pork Chops per lb. (453.6 gm) in Midwest urban average price not seasonally adjusted,6.0838,0.151,6
+PPI Commodity data for Final demand-Finished services less distributive services not seasonally adju,-1.8692,0.312,6
+PPI Commodity data for Lumber and wood products-Treated wood not seasonally adjusted,0.1843,0.076,6
+PPI Commodity data for Processed foods and feeds-Cookies crackers and related products not seasonall,1.3174,0.133,6
+PPI industry data for Motor home mfg-Motor homes built on purchased chassis not seasonally adjusted,2.7669,0.11800000000000001,6
+PPI industry data for Other lighting equipment mfg-Secondary products not seasonally adjusted,0.6557,0.307,6
+const,2187.938,0.08,7
+Education and communication commodities in Size Class B/C all urban consumers not seasonally adjuste,-7.2619,0.075,7
+Outpatient hospital services in U.S. city average all urban consumers seasonally adjusted,-0.4618,0.368,7
+PPI Commodity data for Chemicals and allied products-Basic organic chemicals seasonally adjusted,-0.0529,0.8809999999999999,7
+PPI Commodity data for Final demand-Government purchased services seasonally adjusted,-25.8319,0.095,7
+PPI Commodity data for Final demand-Total finished not seasonally adjusted,16.636,0.092,7
+PPI Commodity data for Textile products and apparel-Canvas and related products not seasonally adjus,3.7859,0.204,7
+PPI industry data for All other food mfg not seasonally adjusted,0.1373,0.804,7
+PPI industry data for Fluid power valve and hose fitting mfg not seasonally adjusted,-0.4184,0.895,7
+PPI industry data for New health care building construction not seasonally adjusted,-4.4565,0.44799999999999995,7
+PPI industry data for Travel agencies-Other travel agency services except flight bookings not season,0.3387,0.722,7
+const,283.234,0.295,8
+All items less shelter in Northeast - Size Class A all urban consumers not seasonally adjusted,0.8985,0.423,8
+Cakes cupcakes and cookies in U.S. city average all urban consumers not seasonally adjusted,-0.3321,0.318,8
+Food and beverages in Midwest - Size Class A all urban consumers not seasonally adjusted,-0.5117,0.72,8
+Household furnishings and supplies in Midwest urban all urban consumers not seasonally adjusted,1.8155,0.425,8
+Jewelry in U.S. city average all urban consumers not seasonally adjusted,0.182,0.348,8
+Monthly export price index for BEA End Use 123 Finished metal shapes and advanced metal manufactures,-1.0315,0.297,8
+Monthly export price index for Harmonized 8413 Pumps for liquids whether or not fitted with a measur,1.8467,0.113,8
+PPI industry data for Air-conditioning refrigeration and forced air heating equipment mfg-Primary pr,-0.7267,0.326,8
+PPI industry data for Fruit and vegetable canning-Canned vegetable juices not seasonally adjusted,-0.2971,0.354,8
+PPI industry data for General medical and surgical hospitals-Certain conditions originating in the p,0.0792,0.915,8
+PPI industry data for Hobby toy and game stores-Primary services not seasonally adjusted,-0.5078,0.44799999999999995,8
+PPI industry data for Material recyclers-Yellow brass scrap not seasonally adjusted,-0.0599,0.252,8
+PPI industry data for Other animal food manufacturing-Complete beef cattle feed supplements concentr,0.237,0.7120000000000001,8
+PPI industry data for Pharmacies and drug stores-Retailing of all other goods not seasonally adjuste,-0.0151,0.9570000000000001,8
+PPI industry data for Polystyrene foam product manufacturing-Building and construction polystyrene f,-0.1885,0.652,8
+PPI industry group data for Alumina & aluminum production & processing not seasonally adjusted,-0.4022,0.33399999999999996,8
+const,180.5553,0.297,9
+Monthly import price index for NAICS 331 Primary metal manufacturing not seasonally adjusted,-0.0046,0.9440000000000001,9
+Nondurables less food beverages and apparel in Size Class B/C all urban consumers not seasonally adj,-0.0423,0.736,9
+Other furniture in U.S. city average all urban consumers not seasonally adjusted,0.0313,0.8540000000000001,9
+PPI Commodity data for Final demand energy seasonally adjusted,-0.0234,0.852,9
+PPI Commodity data for Fuels and related products and power-Anthracite not seasonally adjusted,0.0829,0.47700000000000004,9
+PPI Commodity data for Transportation equipment-Passenger cars and chassis seasonally adjusted,0.3015,0.271,9
+PPI industry data for Breakfast cereal manufacturing-Primary products not seasonally adjusted,0.1444,0.39399999999999996,9
+PPI industry data for Measuring dispensing and other pumping equipment mfg-Industrial pumps exclud,-0.0641,0.7959999999999999,9
+PPI industry data for Natural gas distribution-South Atlantic residential natural gas not seasonally,-0.0564,0.807,9
+PPI industry data for Other heavy machinery rental and leasing not seasonally adjusted,0.2613,0.188,9
+PPI industry data for Supermarkets and other grocery stores not seasonally adjusted,0.1104,0.231,9
+PPI industry data for Wineries-Other wines brandy and brandy spirits not seasonally adjusted,-1.3965,0.248,9
+PPI industry group data for Spring & wire product mfg not seasonally adjusted,0.0509,0.8140000000000001,9
+Recreation in Northeast - Size Class B/C all urban consumers not seasonally adjusted,0.4004,0.514,9
+const,125.1355,0.0,10
+Education and communication in Los Angeles-Long Beach-Anaheim CA all urban consumers not seasonally,0.1397,0.105,10
+Education and communication services in U.S. city average all urban consumers seasonally adjusted,-0.0439,0.708,10
+Monthly import price index by origin for NAICS 3333 Commercial and service industry machinery manufa,0.0087,0.9490000000000001,10
+PPI industry data for Nonupholstered wood household furniture mfg-Secondary products not seasonally,0.0524,0.075,10
+PPI industry data for Ornamental and architectural metal work mfg-Iron steel and aluminum stairs sta,0.0225,0.049,10
+PPI industry data for Retail bakeries-Retail bakery products not seasonally adjusted,0.1531,0.0,10
+Whiskey at home in U.S. city average all urban consumers seasonally adjusted,0.0805,0.083,10
+const,224.1511,0.0,11
+Food at employee sites and schools in U.S. city average all urban consumers seasonally adjusted,-0.0322,0.695,11
+New cars in Midwest urban all urban consumers not seasonally adjusted,-0.3304,0.17600000000000002,11
+PPI Commodity data for Metals and metal products-Steel pipe and tube not seasonally adjusted,-0.0146,0.662,11
+PPI Commodity data for Transportation services-Water transportation of freight not seasonally adjust,0.281,0.084,11
+PPI industry data for Material recyclers-Carbon steel scrap not seasonally adjusted,0.0169,0.026000000000000002,11
+PPI industry data for Petroleum lubricating oil and grease mfg. not seasonally adjusted,0.0846,0.18899999999999997,11
+PPI industry data for Prefabricated metal buildings and components mfg not seasonally adjusted,-0.023,0.528,11
+Shelter in South - Size Class A all urban consumers not seasonally adjusted,0.3799,0.003,11
+const,144.5108,0.002,12
+Gasoline all types per gallon/3.785 liters in Midwest - Size Class B/C average price not seasonally,-1.4262,0.27899999999999997,12
+PPI Commodity data for Final demand-Finished services less distributive services seasonally adjusted,1.6206,0.038,12
+PPI Commodity data for Intermediate demand by commodity type-Processed energy goods seasonally adjus,0.0298,0.501,12
+PPI Commodity data for Machinery and equipment-Elevators escalators and other lifts not seasonally a,0.2111,0.278,12
+PPI Commodity data for Machinery and equipment-Other pumps except automotive circulating pumps and m,0.2347,0.522,12
+PPI Commodity data for Processed foods and feeds-Other flavoring agents (except chocolate syrups) no,-0.3249,0.10099999999999999,12
+PPI industry data for All other petroleum and coal products mfg.-Primary products not seasonally adj,0.0183,0.34600000000000003,12
+PPI industry data for Boat building-Primary products not seasonally adjusted,-0.0495,0.648,12
+PPI industry data for Cable and other subscription programming-Cable network advertising services no,-0.023,0.27699999999999997,12
+PPI industry data for Cut stock resawing lumber and planing-Hardwood cut stock and dimension not sea,0.0188,0.491,12
+const,445.3557,0.34,13
+All items less food in U.S. city average all urban consumers not seasonally adjusted,0.9975,0.397,13
+All uncooked ground beef per lb. (453.6 gm) in U.S. city average average price not seasonally adjust,6.2859,0.785,13
+Bread white pan per lb. (453.6 gm) in U.S. city average average price not seasonally adjusted,-88.7141,0.10400000000000001,13
+Chops boneless per lb. (453.6 gm) in South urban average price not seasonally adjusted,-1.8284,0.807,13
+Gasoline unleaded midgrade in Seattle-Tacoma-Bellevue WA all urban consumers not seasonally adjusted,-0.0156,0.878,13
+Household furnishings and supplies in Northeast - Size Class A all urban consumers not seasonally ad,-0.9001,0.307,13
+Monthly import price index for BEA End Use 22010 Parts - civilian aircraft not seasonally adjusted,-0.5382,0.83,13
+Motor fuel in Boston-Cambridge-Newton MA-NH all urban consumers not seasonally adjusted,0.0065,0.9590000000000001,13
+PPI Commodity data for Fuels and related products and power-Lubricating grease not seasonally adjust,-0.1214,0.466,13
+PPI Commodity data for Furniture and household durables-Mirrors (decorated and undecorated) not seas,0.9722,0.544,13
+PPI Commodity data for Textile products and apparel-Other household furnishings made from purchased,-1.8923,0.429,13
+PPI industry data for Conveyor and conveying equipment mfg-Unit handling tow belt roller pneumatic p,-1.5805,0.256,13
+PPI industry data for Soft drink manufacturing not seasonally adjusted,0.3194,0.354,13
+const,-298.371,0.55,14
+Flour and prepared flour mixes in U.S. city average all urban consumers not seasonally adjusted,-0.0147,0.9059999999999999,14
+Gasoline unleaded premium per gallon/3.785 liters in Miami-Fort Lauderdale-West Palm Beach FL averag,5.6445,0.605,14
+Health insurance in U.S. city average all urban consumers not seasonally adjusted,-0.083,0.815,14
+Lemons per lb. (453.6 gm) in West urban average price not seasonally adjusted,-0.8229,0.821,14
+Monthly import price index by origin for NAICS 32 Manufacturing part 2 Latin America not seasonally,0.1939,0.446,14
+Monthly import price index for NAICS 33522 Major appliance manufacturing not seasonally adjusted,0.7383,0.3,14
+Nondurables less food and beverages in Northeast urban all urban consumers not seasonally adjusted,-0.1703,0.698,14
+PPI Commodity data for Metals and metal products-Other fabricated metal products not seasonally adju,0.3956,0.187,14
+PPI Commodity data for Textile products and apparel-Apparel made in knitting mills not seasonally ad,4.8422,0.36200000000000004,14
+PPI industry data for Curtain and linen mills-Other household textile products made from purchased m,0.0538,0.9329999999999999,14
+PPI industry data for Cut stone and stone product manufacturing-Primary products not seasonally adju,0.3646,0.48700000000000004,14
+PPI industry data for Nursing care facilities-Private insurance and all other patients not seasonall,-0.7026,0.18899999999999997,14
+PPI industry data for Plastics pipe and pipe fitting manufacturing-Plastics pipe fittings and unions,-0.0287,0.907,14
+PPI industry data for Power boiler and heat exchanger mfg-Steel power boilers (stationary and marine,-0.1231,0.287,14
+Education and communication services in Northeast - Size Class A all urban consumers not seasonally,0.0981,0.807,15
+Monthly export price index for BEA End Use 21320 Semiconductors not seasonally adjusted,0.7649,0.365,15
+Monthly import price index by origin for NAICS 3221 Pulp paper and paperboard mills Industrialized C,-0.3349,0.111,15
+Monthly import price index for Harmonized 8803 Parts of civil aircraft and spacecraft (excluding mil,1.5546,0.039,15
+Other household equipment and furnishings in U.S. city average all urban consumers not seasonally ad,-0.4607,0.384,15
+PPI Commodity data for Final demand-Personal consumption services not seasonally adjusted,-0.6425,0.589,15
+PPI Commodity data for Processed foods and feeds-Clams not seasonally adjusted,0.0828,0.102,15
+PPI industry data for Commercial screen printing-Primary products not seasonally adjusted,-0.9236,0.278,15
+PPI industry data for Manufacturing and reproducing magnetic and optical media-Audio and video media,1.4736,0.441,15
+PPI industry data for Mining and oil and gas field machinery mfg not seasonally adjusted,1.672,0.031,15
+PPI industry data for Offices of dentists-Primary services not seasonally adjusted,-0.9336,0.684,15
+PPI industry data for Sporting and athletic goods mfg-Gymnasium and exercise equipment not seasonall,-0.4472,0.544,15
+PPI industry data for Steel foundries except investment not seasonally adjusted,-0.0954,0.602,15
+Transportation in West - Size Class A all urban consumers not seasonally adjusted,0.1232,0.428,15
+const,120.2263,0.012,16
+All items less medical care in Midwest - Size Class A all urban consumers not seasonally adjusted,-0.6408,0.047,16
+Commodities less food and beverages in South urban all urban consumers not seasonally adjusted,0.2146,0.083,16
+Monthly export price index for Harmonized 4011 New pneumatic tires of rubber not seasonally adjusted,0.0897,0.591,16
+PPI Commodity data for Fuels and related products and power-Commercial natural gas Middle Atlantic n,0.1022,0.122,16
+PPI industry data for Anthracite mining-Primary products not seasonally adjusted,0.0573,0.382,16
+PPI industry data for Boat building not seasonally adjusted,0.1203,0.335,16
+PPI industry data for Paint and coating manufacturing-Architectural coatings not seasonally adjusted,-0.0303,0.552,16
+Rent of primary residence in Miami-Fort Lauderdale-West Palm Beach FL all urban consumers not season,0.3186,0.032,16
+Sugar white all sizes per lb. (453.6 gm) in South urban average price not seasonally adjusted,0.3104,0.966,16
+Transportation in West - Size Class B/C all urban consumers not seasonally adjusted,-0.0826,0.228,16
+const,128.743,0.003,17
+Alcoholic beverages in Chicago-Naperville-Elgin IL-IN-WI all urban consumers not seasonally adjusted,0.288,0.0,17
+All items - old base in West urban all urban consumers not seasonally adjusted,-0.0351,0.823,17
+Car and truck rental in U.S. city average all urban consumers seasonally adjusted,-0.0316,0.425,17
+Gasoline all types per gallon/3.785 liters in Los Angeles-Long Beach-Anaheim CA average price not se,-0.767,0.597,17
+Monthly import price index by origin for NAICS 32 Manufacturing part 2 Japan not seasonally adjusted,-0.5816,0.11,17
+PPI Commodity data for Final demand-Government purchased goods excluding foods and energy seasonally,1.0321,0.132,17
+PPI industry data for Automobile light truck and utility vehicle mfg-Passenger cars and chassis not,-0.0214,0.898,17
+PPI industry data for Farm machinery and equipment mfg-Parts for farm machinery for sale separately,-0.0007,0.995,17
+PPI industry data for Lessors of nonresidential buildings-Leasing of professional and office buildin,0.0554,0.74,17
+PPI industry data for Software publishers-Desktop and portable device application software publishin,-0.1489,0.147,17
+PPI industry data for Specialty canning-Secondary products not seasonally adjusted,0.0744,0.012,17
+const,37.7514,0.701,18
+Fuel oil #2 per gallon (3.785 liters) in Northeast - Size Class A average price not seasonally adjus,3.0318,0.001,18
+Fuels and utilities in Northeast - Size Class A all urban consumers not seasonally adjusted,-0.0986,0.368,18
+PPI Commodity data for Chemicals and allied products-Other vitamins and nutrients not seasonally adj,0.6511,0.057999999999999996,18
+PPI Commodity data for Intermediate demand by production flow-Inputs to stage 4 goods producers not,0.1713,0.6890000000000001,18
+PPI Commodity data for Metals and metal products-Copper and copper alloy pipe and tube not seasonall,-0.0242,0.47200000000000003,18
+PPI industry data for All other miscellaneous general purpose machinery mfg-Nonreusable media for fi,0.4853,0.004,18
+PPI industry data for Medical laboratories not seasonally adjusted,0.3641,0.46799999999999997,18
+PPI industry group data for Sporting goods and hobby stores not seasonally adjusted,-0.0987,0.485,18
+PPI industry sub-sector data for Gasoline stations not seasonally adjusted,0.027,0.29,18
+const,54.5696,0.789,19
+All items less food and energy in West urban all urban consumers not seasonally adjusted,0.6013,0.022000000000000002,19
+Fuels and utilities in Chicago-Naperville-Elgin IL-IN-WI all urban consumers not seasonally adjusted,0.0166,0.861,19
+Medical care commodities in Midwest urban all urban consumers not seasonally adjusted,0.0228,0.7979999999999999,19
+Monthly export price index for Harmonized XX Miscellaneous manufactured articles not seasonally adju,1.7288,0.31,19
+PPI Commodity data for Lumber and wood products-Wood panel flush & molded face doors interior & exte,-0.3396,0.12,19
+PPI industry data for Nonpackaging plastics film and sheet mfg. not seasonally adjusted,0.0332,0.828,19
+PPI industry data for Travel agencies-International flight bookings not seasonally adjusted,-0.5886,0.489,19
+Transportation commodities less motor fuel in South urban all urban consumers not seasonally adjuste,-0.5183,0.233,19
+const,83.2214,0.0,20
+Monthly import price index for BEA End Use EXFUELCOM All commodities excluding computers peripherals,0.0926,0.652,20
+PPI Commodity data for Rubber and plastic products-Miscellaneous rubber products n.e.c. not seasonal,0.4695,0.02,20
+PPI industry data for Fertilizer mixing only manufacturing-Primary products not seasonally adjusted,-0.1176,0.07,20
+const,353.0899,0.0,21
+All items less medical care in U.S. city average all urban consumers not seasonally adjusted,0.8847,0.049,21
+All items less food and energy in Northeast - Size Class B/C all urban consumers not seasonally adju,-1.1971,0.036000000000000004,21
+Car and truck rental in U.S. city average all urban consumers not seasonally adjusted,-0.0501,0.127,21
+Commodities less food and beverages in Midwest - Size Class A all urban consumers not seasonally adj,-0.3125,0.191,21
+Food away from home in South - Size Class B/C all urban consumers not seasonally adjusted,-0.5588,0.237,21
+Monthly export price index for NAICS 3255 Paint coating and adhesive manufacturing not seasonally ad,-0.1369,0.318,21
+PPI Commodity data for Metals and metal products-Carbon steel scrap bundles not seasonally adjusted,-0.0403,0.078,21
+PPI industry data for Metal cookware cutlery and flatware mfg-Cutlery scissors shears trimmers and s,-0.1617,0.39299999999999996,21
+PPI industry data for Metal window and door mfg not seasonally adjusted,0.2537,0.08900000000000001,21
+PPI industry data for Power-driven handtool mfg-Power-driven handtools electric (except battery powe,-0.0447,0.9059999999999999,21
+PPI industry data for Precision turned product mfg-Primary products not seasonally adjusted,0.0803,0.862,21
+PPI industry data for Sign mfg-Primary products not seasonally adjusted,0.2047,0.122,21
+PPI industry data for Small electrical appliance mfg-Primary products not seasonally adjusted,0.3357,0.47100000000000003,21
+PPI industry data for Speed changer drive and gear mfg-Primary products not seasonally adjusted,-0.2333,0.155,21
+Utility (piped) gas per therm in U.S. city average average price not seasonally adjusted,-9.6672,0.425,21
+const,128.5651,0.012,22
+All items less medical care in South - Size Class A all urban consumers not seasonally adjusted,0.3029,0.324,22
+Household energy in Atlanta-Sandy Springs-Roswell GA all urban consumers not seasonally adjusted,-0.0234,0.043,22
+Monthly export price index for balance of payments H14212 Air passenger fares Other Europe not seaso,0.0146,0.235,22
+PPI Commodity data for Advertising space and time sales-Cable network advertising time sales seasona,-0.0156,0.782,22
+PPI Commodity data for Farm products-Dry garbanzo beans not seasonally adjusted,-0.0007,0.975,22
+PPI Commodity data for Final demand less foods not seasonally adjusted,-0.1443,0.846,22
+PPI Commodity data for Furniture and household durables-Wood office seating including upholstered no,-0.108,0.31,22
+PPI Commodity data for Textile products and apparel-Other noncellulosic organic fibers incl. polyami,0.3292,0.184,22
+PPI industry data for Air and gas compressor mfg-Miscellaneous receipts not seasonally adjusted,0.0617,0.853,22
+PPI industry data for Crushed and broken limestone mining-Primary products not seasonally adjusted,0.3742,0.1,22
+PPI industry data for Motor home mfg-Primary products not seasonally adjusted,-0.1327,0.64,22
+PPI industry data for Saw blade handsaw and hand and edge tool mfg not seasonally adjusted,0.425,0.573,22
+PPI industry group data for Aerospace product and parts manufacturing not seasonally adjusted,-0.3995,0.433,22
+PPI industry group data for Tobacco mfg not seasonally adjusted,-0.0167,0.519,22
+Uncooked beef steaks in U.S. city average all urban consumers not seasonally adjusted,-0.0357,0.5720000000000001,22
+const,-70.8405,0.76,23
+Food at home in Size Class A all urban consumers not seasonally adjusted,-0.0883,0.5589999999999999,23
+Monthly export price index for BEA End Use 301 Trucks buses and special purpose vehicles not seasona,0.09,0.6629999999999999,23
+PPI Commodity data for Chemicals and allied products-Broad and medium spectrum antibiotics not seaso,0.0721,0.105,23
+PPI Commodity data for Chemicals and allied products-Gravure printing inks not seasonally adjusted,1.9522,0.415,23
+PPI Commodity data for Processed foods and feeds-Beef and veal products fresh or frozen seasonally a,-0.0031,0.8420000000000001,23
+PPI industry data for Crude petroleum and natural gas extraction-Primary products not seasonally adj,-0.0241,0.066,23
+PPI industry data for Material recyclers-Used beverage can scrap not seasonally adjusted,-0.0076,0.368,23
+PPI industry group data for Rail transportation not seasonally adjusted,0.1158,0.129,23
+const,-717.5114,0.33799999999999997,24
+Housing in Los Angeles-Long Beach-Anaheim CA all urban consumers not seasonally adjusted,0.1897,0.355,24
+Monthly import price index by origin for NAICS 3252 Resin synthetic rubber and artificial synthetic,-0.1259,0.512,24
+Monthly import price index for BEA End Use 41020 Toiletries and cosmetics not seasonally adjusted,0.5731,0.568,24
+Monthly import price index for Harmonized 76 Aluminum and articles thereof not seasonally adjusted,0.1814,0.134,24
+Other services in Northeast urban all urban consumers not seasonally adjusted,-0.001,0.997,24
+PPI Commodity data for Nonmetallic mineral products-Nonmetallic minerals and products n.e.c. not sea,0.0046,0.992,24
+PPI Commodity data for Transportation services-Shipping services (competitive services) not seasonal,0.1311,0.653,24
+PPI industry data for Concrete block and brick manufacturing-Concrete pavers (including grid interlo,-0.328,0.061,24
+PPI industry data for Flavoring syrup & concentrate mfg not seasonally adjusted,0.0876,0.8270000000000001,24
+PPI industry data for Industrial mold mfg-Primary products not seasonally adjusted,-0.1722,0.885,24
+PPI industry data for Optical instrument and lens mfg-Sighting tracking and fire-control equipment o,6.6598,0.29100000000000004,24
+PPI industry group data for Motor vehicle manufacturing not seasonally adjusted,0.4075,0.242,24
+const,71.1835,0.67,25
+Gas (piped) and electricity in Northeast - Size Class A all urban consumers not seasonally adjusted,-0.1164,0.145,25
+Nonprescription drugs in U.S. city average all urban consumers not seasonally adjusted,0.0915,0.816,25
+PPI Commodity data for Professional services (partial)-Accounting services (partial) seasonally adju,0.2477,0.295,25
+PPI Commodity data for Transportation equipment-Motor vehicle drive train components except wheels a,-0.1572,0.9209999999999999,25
+PPI industry data for Chocolate and confectionery mfg. from cacao-Other chocolate and cocoa products,0.0539,0.526,25
+PPI industry data for Couriers and express delivery services-Primary services not seasonally adjuste,0.0535,0.501,25
+PPI industry data for Ice manufacturing not seasonally adjusted,0.1791,0.425,25
+PPI industry data for Premiums for property and casualty insurance-Premiums for private passenger au,0.121,0.45,25
+const,53.985,0.08900000000000001,26
+Apparel in West - Size Class A all urban consumers not seasonally adjusted,0.098,0.077,26
+Automotive diesel fuel per gallon/3.785 liters in Northeast urban average price not seasonally adjus,-1.6529,0.302,26
+Food away from home in Midwest - Size Class B/C all urban consumers not seasonally adjusted,1.0235,0.0,26
+PPI Commodity data for Processed foods and feeds-Soft drink flavoring syrup sold in bulk not seasona,0.0493,0.693,26
+PPI industry data for Offices of lawyers-Wills estate planning and probate not seasonally adjusted,-0.0384,0.758,26
+const,-1.5765,0.976,27
+Gasoline unleaded midgrade in Midwest urban all urban consumers not seasonally adjusted,-0.0263,0.161,27
+Monthly export price index for Harmonized 8803 Parts of civil aircraft and spacecraft (excluding mil,0.0768,0.7070000000000001,27
+Nondurables less food in Chicago-Naperville-Elgin IL-IN-WI all urban consumers not seasonally adjust,0.0937,0.273,27
+PPI Commodity data for Chemicals and allied products-Sheet-fed packaging inks not seasonally adjuste,1.5451,0.017,27
+PPI Commodity data for Fuels and related products and power-Anthracite not seasonally adjusted,0.0478,0.47700000000000004,27
+PPI Commodity data for Machinery and equipment-Miscellaneous electrical machinery and equipment not,0.038,0.84,27
+PPI Commodity data for Professional services (partial)-Architectural and engineering services not se,-0.008,0.981,27
+PPI industry data for Seafood product preparation and packaging-Fresh and frozen seafood processing,0.1127,0.21,27
+PPI industry group data for Converted paper product mfg not seasonally adjusted,0.0305,0.9079999999999999,27
+PPI industry sub-sector data for U.S. Postal Service not seasonally adjusted,0.0915,0.266,27
+const,131.2901,0.003,28
+Margarine in U.S. city average all urban consumers not seasonally adjusted,0.044,0.183,28
+Monthly export price index for Harmonized 8517 Telephone sets including telephones for cellular or o,-0.2749,0.22,28
+PPI Commodity data for Final demand less government seasonally adjusted,0.8723,0.024,28
+PPI Commodity data for Machinery and equipment-Nonaerospace-type fluid power motors not seasonally a,-0.0258,0.8690000000000001,28
+PPI Commodity data for Metals and metal products-Sheet metal awnings canopies cornices and soffits n,0.0278,0.215,28
+PPI Commodity data for Processed foods and feeds-Peanut butter not seasonally adjusted,0.0252,0.49700000000000005,28
+PPI Commodity data for Pulp paper and allied products-Tablets pads and related products not seasonal,-0.006,0.975,28
+PPI industry data for Petroleum refineries-Regular gasoline not seasonally adjusted,-0.0196,0.017,28
+PPI industry group data for Rubber product mfg not seasonally adjusted,-0.2029,0.33799999999999997,28
+Shelter in Houston-The Woodlands-Sugar Land TX all urban consumers not seasonally adjusted,0.1999,0.012,28
+const,528.8752,0.348,29
+All Other Pork (Excluding Canned Ham and Luncheon Slices) per lb. (453.6 gm) in South urban average,-3.4971,0.7240000000000001,29
+Commodities less food and energy commodities in U.S. city average all urban consumers seasonally adj,0.7597,0.631,29
+Monthly import price index by origin for NAICS 334 Computer and electronic product manufacturing Ass,-3.9974,0.10400000000000001,29
+Monthly import price index for BEA End Use 12135 Synthetic cloth not seasonally adjusted,-0.0074,0.9620000000000001,29
+Monthly import price index for BEA End Use 41020 Toiletries and cosmetics not seasonally adjusted,0.0288,0.981,29
+PPI Commodity data for Final demand-Government purchased services seasonally adjusted,0.3165,0.88,29
+PPI Commodity data for Metals and metal products-Metal doors sash and trim not seasonally adjusted,0.4319,0.024,29
+PPI Commodity data for Net inputs to residential construction goods not seasonally adjusted,0.0077,0.958,29
+PPI Commodity data for Nonmetallic mineral products-Burial vaults and boxes precast concrete not sea,0.4345,0.33799999999999997,29
+PPI industry data for Machine tool mfg-Parts for metal forming machine tools (sold separately) and r,-0.0832,0.6459999999999999,29
+PPI industry data for Office supplies except paper mfg-Miscellaneous receipts not seasonally adjuste,-0.054,0.502,29
+PPI industry data for Plastics pipe and pipe fitting manufacturing-Plastics water pipe not seasonall,0.0969,0.36,29
+Services in South urban all urban consumers not seasonally adjusted,-0.7931,0.171,29
+const,45.1309,0.562,30
+Fresh fruits in U.S. city average all urban consumers not seasonally adjusted,-0.0231,0.653,30
+Monthly import price index for BEA End Use 12135 Synthetic cloth not seasonally adjusted,0.0705,0.368,30
+Nondurables less food and apparel in U.S. city average all urban consumers seasonally adjusted,-0.0882,0.179,30
+PPI Commodity data for Farm products-Grains not seasonally adjusted,0.0702,0.037000000000000005,30
+PPI Commodity data for Fuels and related products and power-Petroleum products refined not seasonall,0.0366,0.231,30
+PPI Commodity data for Machinery and equipment-Special industry machinery and equipment not seasonal,-0.6261,0.145,30
+PPI Commodity data for Pulp paper and allied products-Wastepaper not seasonally adjusted,0.0006,0.9109999999999999,30
+PPI Commodity data for Rubber and plastic products-Custom compounding of purchased plastic resins (i,0.0303,0.655,30
+PPI industry data for Bread & bakery product mfg not seasonally adjusted,-0.2102,0.519,30
+PPI industry data for Broadwoven fabric mills-Finished manmade/natural fiber (exc. cotton/wool) broa,-0.0243,0.9279999999999999,30
+PPI industry data for Clay building material and refractories mfg.-Brick and structural clay tile no,0.4986,0.24,30
+PPI industry data for Metal window and door mfg not seasonally adjusted,-0.0248,0.8290000000000001,30
+PPI industry data for Nonchocolate confectionery manufacturing-Nonchocolate-type confectioneries mad,0.0861,0.5770000000000001,30
+PPI industry data for Rubber and plastics hose and belting mfg.-Industrial rubber and plastics hose,1.107,0.134,30
+PPI industry group data for Office furniture (including fixtures) mfg not seasonally adjusted,0.425,0.047,30
+PPI industry group data for Waste collection not seasonally adjusted,0.2272,0.325,30
+Services less medical care services in Chicago-Naperville-Elgin IL-IN-WI all urban consumers not sea,-0.2571,0.29100000000000004,30
+Utility (piped) gas per therm in U.S. city average average price not seasonally adjusted,-8.1094,0.515,30
+const,128.1912,0.305,31
+Alcoholic beverages at home in U.S. city average all urban consumers seasonally adjusted,0.6812,0.16399999999999998,31
+All Ham (Excluding Canned Ham and Luncheon Slices) per lb. (453.6 gm) in Northeast urban average pri,1.1736,0.496,31
+Monthly import price index for BEA End Use 01 Nonagricultural products not seasonally adjusted,-0.259,0.32,31
+Monthly import price index for BEA End Use 10110 Gas-natural not seasonally adjusted,0.0086,0.402,31
+PPI Commodity data for Final demand-Transportation and warehousing of government purchased goods not,1.2665,0.004,31
+PPI Commodity data for Processed foods and feeds-Cat food not seasonally adjusted,0.2208,0.147,31
+PPI Commodity data for Pulp paper and allied products-Corrugated shipping containers for paper and a,-0.3136,0.22,31
+PPI industry data for Electronic connector mfg-Primary products not seasonally adjusted,0.1612,0.705,31
+PPI industry data for Farm machinery and equipment mfg-Harvesting machinery (except hay and straw) a,-0.1092,0.603,31
+PPI industry data for Heavy duty truck mfg-Primary products not seasonally adjusted,-0.2232,0.615,31
+PPI industry data for Wired telecommunications carriers-Video programming distribution not seasonall,0.2324,0.294,31
+PPI industry group data for Pharmaceutical and medicine mfg not seasonally adjusted,-0.0362,0.652,31
+Rent of primary residence in South urban all urban consumers not seasonally adjusted,-0.359,0.177,31
+const,-15.1119,0.319,32
+Alcoholic beverages away from home in U.S. city average all urban consumers seasonally adjusted,0.0282,0.5529999999999999,32
+Gasoline unleaded regular in Boston-Cambridge-Newton MA-NH all urban consumers not seasonally adjust,0.0029,0.6940000000000001,32
+Medical equipment and supplies in U.S. city average all urban consumers not seasonally adjusted,0.0305,0.56,32
+Monthly import price index by origin for NAICS All industries Asian Newly Industrialized Countries n,0.183,0.113,32
+Monthly import price index for BEA End Use 213 Computers peripherals and semiconductors not seasonal,0.1208,0.532,32
+Monthly import price index for NAICS 111 Crop production not seasonally adjusted,-0.0078,0.145,32
+Other personal services in Midwest - Size Class A all urban consumers not seasonally adjusted,-0.0223,0.727,32
+PPI Commodity data for Intermediate demand by commodity type-Processed materials less energy seasona,-0.1202,0.10400000000000001,32
+PPI Commodity data for Metals and metal products-Other fabricated ferrous wire products n.e.c. not s,0.0302,0.359,32
+PPI industry data for Burial casket mfg-Primary products not seasonally adjusted,-0.0036,0.81,32
+PPI industry data for Construction machinery mfg-Parts for off-highway wheel tractors and shovel loa,0.0274,0.366,32
+PPI industry data for Search detection and navigation instruments not seasonally adjusted,0.0205,0.39799999999999996,32
+PPI industry data for Travel agencies-Car rental bookings not seasonally adjusted,0.0007,0.919,32
+Transportation in South urban all urban consumers not seasonally adjusted,0.007,0.718,32
+Used cars and trucks in Northeast urban all urban consumers not seasonally adjusted,0.0041,0.868,32
+const,7.3968,0.7879999999999999,33
+Education and communication commodities in Northeast urban all urban consumers not seasonally adjust,0.0507,0.345,33
+Motor fuel in Philadelphia-Camden-Wilmington PA-NJ-DE-MD all urban consumers not seasonally adjusted,-0.001,0.8320000000000001,33
+PPI Commodity data for Fuels and related products and power-Utility natural gas not seasonally adjus,-0.0071,0.28600000000000003,33
+PPI Commodity data for Health care services-Dental care seasonally adjusted,-0.0883,0.787,33
+PPI Commodity data for Machinery and equipment-Other industrial valves including nuclear not seasona,0.0218,0.48100000000000004,33
+PPI Commodity data for Net inputs to 325510 paint and coating manufacturing excl. capital investment,0.0813,0.198,33
+PPI industry data for Dental equipment and supplies mfg not seasonally adjusted,-0.0062,0.628,33
+PPI industry data for Offices of lawyers-Civil negligence legal services not seasonally adjusted,-0.0013,0.981,33
+PPI industry data for Plastics packaging film and sheet mfg.-Primary products not seasonally adjuste,-0.0663,0.096,33
+PPI industry sub-sector data for Accommodation not seasonally adjusted,0.006,0.628,33
+const,52.2812,0.21899999999999997,34
+Commodities less food and energy commodities in U.S. city average all urban consumers seasonally adj,-0.1091,0.086,34
+Electricity per KWH in Chicago-Naperville-Elgin IL-IN-WI average price not seasonally adjusted,-2.485,0.251,34
+Gasoline all types per gallon/3.785 liters in South - Size Class A average price not seasonally adju,0.7411,0.168,34
+Gasoline unleaded midgrade in Midwest - Size Class B/C all urban consumers not seasonally adjusted,-0.0024,0.251,34
+Ham excluding canned in U.S. city average all urban consumers not seasonally adjusted,0.0139,0.0,34
+Monthly import price index for balance of payments V1424 Air passenger fares Latin America/Caribbean,0.0026,0.136,34
+Nondurables less food beverages and apparel in Northeast urban all urban consumers not seasonally ad,-0.0188,0.212,34
+Other processed fruits and vegetables including dried in U.S. city average all urban consumers not s,-0.0035,0.6759999999999999,34
+PPI Commodity data for Furniture and household durables-Wood office files storage units and tables n,0.0239,0.053,34
+PPI Commodity data for Pulp paper and allied products-Advertising printing not seasonally adjusted,0.0091,0.9329999999999999,34
+PPI industry data for Accessories and other apparel manufacturing-Gloves and mittens made from purch,0.0317,0.11199999999999999,34
+PPI industry data for Other aircraft parts and equipment mfg-Aircraft propellers and helicopter roto,-0.0268,0.027000000000000003,34
+PPI industry data for Other crushed and broken stone mining-Bituminous limestone and sandstone and o,0.0027,0.42100000000000004,34
+PPI industry data for Toilet preparation manufacturing-Other cosmetics and toilet preparations not s,-0.3522,0.322,34
+PPI industry data for Tortilla mfg not seasonally adjusted,-0.0113,0.166,34
+PPI industry sub-sector data for Food mfg not seasonally adjusted,-0.0011,0.919,34
+Purchase of pets pet supplies accessories in U.S. city average all urban consumers not seasonally ad,-0.0575,0.05,34
+Recreation in West - Size Class B/C all urban consumers not seasonally adjusted,0.0784,0.059000000000000004,34
+const,15.175,0.636,35
+All items less medical care in Midwest - Size Class B/C all urban consumers not seasonally adjusted,0.0097,0.9229999999999999,35
+Breakfast cereal in U.S. city average all urban consumers seasonally adjusted,0.0146,0.5820000000000001,35
+Commodities less food in New York-Newark-Jersey City NY-NJ-PA all urban consumers not seasonally adj,0.0103,0.672,35
+Dental services in U.S. city average all urban consumers seasonally adjusted,0.0117,0.516,35
+Furniture and bedding in U.S. city average all urban consumers not seasonally adjusted,-0.0095,0.885,35
+Monthly import price index for NAICS 326 Plastics and rubber products manufacturing not seasonally a,0.1513,0.19399999999999998,35
+Monthly import price index for NAICS 33639 Other motor vehicle parts manufacturing not seasonally ad,-0.2558,0.071,35
+Other goods and services in Los Angeles-Long Beach-Anaheim CA all urban consumers not seasonally adj,-0.0021,0.826,35
+Potatoes in U.S. city average all urban consumers not seasonally adjusted,8.862000000000001e-06,0.9990000000000001,35
+Potatoes white per lb. (453.6 gm) in U.S. city average average price not seasonally adjusted,7.3866,0.135,35
+PPI Commodity data for Contract work on textile products apparel and leather-Other commission finish,0.0155,0.599,35
+PPI Commodity data for Rubber and plastic products-Consumer institutional and commercial products n.,-0.0416,0.222,35
+PPI Commodity data for Transportation equipment-Filters for internal combustion engines and motor ve,-0.1155,0.273,35
+PPI industry data for Crude petroleum and natural gas extraction-Natural gas (from the wellhead) not,-0.0007,0.747,35
+PPI industry data for Dental equipment and supplies mfg-Professional dental supplies not seasonally,-0.0188,0.6509999999999999,35
+PPI industry data for Fabric coating mills-Secondary products not seasonally adjusted,-0.011,0.757,35
+PPI industry data for Iron and steel forging-Hot impression die impact press and upset carbon steel,0.0116,0.602,35
+PPI industry data for Laminated plastics plate sheet (except packaging) and shape manufacturing not,0.0212,0.7140000000000001,35
+PPI industry data for Other basic inorganic chemical manufacturing-All other inorganic chemicals not,-0.0036,0.852,35
+PPI industry data for Plate work & fabricated structural prod mfg not seasonally adjusted,0.0058,0.731,35
+PPI industry data for Seafood product preparation and packaging-Fresh and frozen seafood processing,0.011,0.46399999999999997,35
+const,4.5133,0.616,36
+Energy in San Francisco-Oakland-Hayward CA all urban consumers not seasonally adjusted,0.0039,0.203,36
+Food at home in Washington-Arlington-Alexandria DC-VA-MD-WV all urban consumers not seasonally adjus,-0.0004,0.981,36
+Intracity transportation in U.S. city average all urban consumers not seasonally adjusted,0.0068,0.6559999999999999,36
+Limited service meals and snacks in U.S. city average all urban consumers not seasonally adjusted,-0.1182,0.068,36
+Monthly import price index by origin for NAICS 3251 Basic chemical manufacturing Industrialized Coun,0.0019,0.9279999999999999,36
+PPI Commodity data for Chemicals and allied products-Argon and hydrogen not seasonally adjusted,-0.0116,0.129,36
+PPI industry data for Other airport operations not seasonally adjusted,0.0439,0.059000000000000004,36
+Services less energy services in Northeast urban all urban consumers not seasonally adjusted,0.0327,0.507,36
+const,53.8914,0.35100000000000003,37
+All items less medical care in Northeast urban all urban consumers not seasonally adjusted,0.3364,0.16,37
+Electricity per KWH in South urban average price not seasonally adjusted,31.2811,0.276,37
+Gasoline unleaded premium per gallon/3.785 liters in Size Class B/C average price not seasonally adj,3.1662,0.017,37
+Other food at home in U.S. city average all urban consumers not seasonally adjusted,0.2005,0.344,37
+PPI Commodity data for Fuels and related products and power-Commercial natural gas New England not s,-0.0051,0.40399999999999997,37
+PPI Commodity data for Net inputs to 336111 goods not seasonally adjusted,-0.5455,0.287,37
+PPI Commodity data for Processed foods and feeds-Flavoring extracts emulsions liquid flavors and foo,0.0157,0.598,37
+PPI Commodity data for Textile products and apparel-Textured/crimped/bulked filament yarns incl. str,-0.0905,0.44299999999999995,37
+PPI industry data for Animal except poultry slaughtering-Hides skins and pelts made in slaughtering,0.0174,0.294,37
+PPI industry data for Electronic and mail-order shopping-Electronic and mail-order electronic goods,0.0625,0.057999999999999996,37
+PPI industry data for Other metal valve and pipe fitting mfg not seasonally adjusted,-0.0155,0.772,37
+PPI industry data for Semiconductors and related device mfg not seasonally adjusted,0.0752,0.792,37
+Rent of primary residence in Size Class A all urban consumers not seasonally adjusted,0.2754,0.013000000000000001,37
+Used cars and trucks in South urban all urban consumers not seasonally adjusted,0.0317,0.638,37
+const,99.4876,0.086,38
+Gasoline unleaded midgrade in Northeast urban all urban consumers not seasonally adjusted,0.0112,0.584,38
+Monthly import price index by origin for NAICS 3343 Audio and video equipment manufacturing Pacific,0.1117,0.772,38
+Monthly import price index for NAICS 3339 Other general purpose machinery manufacturing not seasonal,-0.2895,0.581,38
+Nondurables less food in Northeast urban all urban consumers not seasonally adjusted,0.1424,0.023,38
+PPI Commodity data for Final demand services less trade transportation and warehousing seasonally ad,-0.5641,0.322,38
+PPI Commodity data for Lumber and wood products-Hardwood flooring other than oak and maple not seaso,0.0627,0.389,38
+PPI Commodity data for Rubber and plastic products-Polystyrene foam protective shipping pads/shaped,-0.0522,0.648,38
+PPI industry data for Direct health and medical insurance carriers not seasonally adjusted,0.0707,0.256,38
+PPI industry data for Iron and steel pipe and tube manufacturing from purchased steel not seasonally,-0.0106,0.645,38
+PPI industry data for Material recyclers-Used beverage can scrap not seasonally adjusted,0.0067,0.525,38
+PPI industry data for Motor vehicle body mfg-Buses and firefighting vehicles complete produced on pu,0.1942,0.5329999999999999,38
+PPI industry data for Other snack food manufacturing not seasonally adjusted,0.0875,0.198,38
+PPI industry data for Plumbing fixture fitting and trim mfg not seasonally adjusted,-0.0079,0.9009999999999999,38
+PPI industry group data for Cement and concrete product manufacturing not seasonally adjusted,0.3494,0.031,38
+Services less medical care services in U.S. city average all urban consumers not seasonally adjusted,0.3417,0.218,38
+Sewing machines fabric and supplies in U.S. city average all urban consumers not seasonally adjusted,0.0191,0.637,38
+const,7.7826,0.89,39
+Commodities less food and beverages in South - Size Class B/C all urban consumers not seasonally adj,0.572,0.001,39
+Commodities less food in Midwest urban all urban consumers not seasonally adjusted,0.0134,0.905,39
+Electricity in Midwest - Size Class A all urban consumers not seasonally adjusted,0.011,0.306,39
+Energy in Dallas-Fort Worth-Arlington TX all urban consumers not seasonally adjusted,-0.0123,0.48700000000000004,39
+Food away from home in Size Class B/C all urban consumers not seasonally adjusted,0.4146,0.092,39
+Household furnishings and operations in South urban all urban consumers not seasonally adjusted,-0.0665,0.6709999999999999,39
+Lemons per lb. (453.6 gm) in U.S. city average average price not seasonally adjusted,1.1242,0.122,39
+Monthly export price index for Harmonized 27 Mineral fuels mineral oils and products of their distil,0.0144,0.34700000000000003,39
+Monthly export price index for NAICS 3331 Agriculture construction and mining machinery manufacturin,0.1896,0.424,39
+Monthly import price index for BEA End Use 10020 Other petroleum products not seasonally adjusted,-0.0096,0.355,39
+Monthly import price index for Harmonized 8542 Electronic integrated circuits; parts thereof not sea,-0.0562,0.868,39
+Monthly import price index for NAICS 3262 Rubber product manufacturing not seasonally adjusted,0.0522,0.675,39
+PPI Commodity data for Fuels and related products and power-Gasoline not seasonally adjusted,0.0008,0.955,39
+PPI Commodity data for Fuels and related products and power-Prepared bituminous coal and lignite sea,-0.0428,0.276,39
+PPI Commodity data for Processed foods and feeds-Other packaged milk products not seasonally adjuste,0.0199,0.74,39
+PPI industry data for Tobacco manufacturing-Cigars not seasonally adjusted,-0.0129,0.9109999999999999,39
+PPI industry sub-sector data for Electrical equipment and appliance mfg not seasonally adjusted,-0.0759,0.462,39
+Services in South - Size Class A all urban consumers not seasonally adjusted,0.281,0.013000000000000001,39
+const,356.7312,0.0,40
+PPI Commodity data for Furniture and household durables not seasonally adjusted,0.23,0.005,40
+PPI industry data for Corrugated and solid fiber box manufacturing-Primary products not seasonally a,-0.0218,0.349,40
+Purchasing power of the consumer dollar - old base in U.S. city average all urban consumers not seas,-12.8921,0.0,40
+Transportation services in South urban all urban consumers not seasonally adjusted,0.0629,0.08199999999999999,40
+const,10.875,0.705,41
+All items less medical care in South - Size Class A all urban consumers not seasonally adjusted,0.4422,0.054000000000000006,41
+Education and communication in Northeast - Size Class B/C all urban consumers not seasonally adjuste,0.11,0.099,41
+Gasoline all types per gallon/3.785 liters in U.S. city average average price not seasonally adjuste,0.0712,0.961,41
+PPI Commodity data for Final demand services less trade services seasonally adjusted,0.3674,0.341,41
+PPI Commodity data for Machinery and equipment-Abrasive products seasonally adjusted,0.2321,0.10099999999999999,41
+PPI industry data for Adhesive mfg not seasonally adjusted,0.0382,0.8029999999999999,41
+PPI industry data for General freight trucking long-distance TL-Primary services not seasonally adju,0.1653,0.018000000000000002,41
+PPI industry data for Metal tank heavy gauge mfg-Metal tanks completed at factory (standard line non,-0.036,0.11,41
+PPI industry data for New car dealers-Used vehicle sales not seasonally adjusted,0.0115,0.807,41
+PPI industry group data for Sporting goods and hobby stores not seasonally adjusted,-0.0294,0.452,41
+const,-78.4724,0.03,42
+Alcoholic beverages in Size Class A all urban consumers not seasonally adjusted,-0.0652,0.741,42
+All items less food and energy in New York-Newark-Jersey City NY-NJ-PA all urban consumers not seaso,0.5593,0.003,42
+Delivery services in U.S. city average all urban consumers seasonally adjusted,-0.0162,0.8340000000000001,42
+Monthly import price index for Harmonized 28 Inorganic chemicals; organic or inorganic compounds of,0.0022,0.866,42
+Monthly import price index for NAICS 33312 Construction machinery manufacturing not seasonally adjus,-0.2108,0.341,42
+New and used motor vehicles in Size Class A all urban consumers not seasonally adjusted,0.1123,0.49200000000000005,42
+Nondurables in Los Angeles-Long Beach-Anaheim CA all urban consumers not seasonally adjusted,0.1293,0.033,42
+PPI Commodity data for Final demand-Total finished less foods seasonally adjusted,1.9683,0.0,42
+PPI industry data for Stationery product manufacturing-Miscellaneous receipts not seasonally adjuste,-0.1657,0.10400000000000001,42
+PPI industry data for Surgical appliance and supplies mfg-Other orthopedic and prosthetic appliances,-0.3753,0.035,42
+const,-306.4045,0.136,43
+All items in Size Class A all urban consumers not seasonally adjusted,3.3275,0.0,43
+Monthly export price index for Harmonized 8443 Printing machinery used for printing with plates cyli,0.1357,0.747,43
+Monthly export price index for NAICS 33422 Radio and Television broadcasting and wireless communicat,1.2232,0.055,43
+Other personal services in Size Class B/C all urban consumers not seasonally adjusted,1.1134,0.031,43
+PPI Commodity data for Chemicals and allied products-Nitrogenates seasonally adjusted,0.014,0.8190000000000001,43
+PPI Commodity data for Farm products-Round red potatoes not seasonally adjusted,0.0063,0.733,43
+PPI Commodity data for Fuels and related products and power-Asphalt seasonally adjusted,-0.0367,0.376,43
+PPI Commodity data for Machinery and equipment-Air conditioning and refrigeration equip seasonally a,-0.1778,0.73,43
+PPI Commodity data for Machinery and equipment-Metal punching and shearing (power & manual) and bend,0.7637,0.066,43
+PPI Commodity data for Selected security services (partial) not seasonally adjusted,1.6136,0.01,43
+PPI Commodity data for Special indexes-Pharmaceuticals for human use non-prescription not seasonally,-0.2265,0.58,43
+PPI industry data for Casino hotels-Casino hotel food and beverage and related services not seasonal,0.3024,0.496,43
+PPI industry data for Commercial banking-New and used auto and truck loans not seasonally adjusted,0.1832,0.081,43
+PPI industry data for Concrete contractors nonresidential building work-Primary products not seasona,-1.343,0.04,43
+PPI industry data for Direct property and casualty insurers-Commercial multiple peril insurance not,-0.8051,0.294,43
+PPI industry group data for Amusement and theme parks not seasonally adjusted,-0.2912,0.094,43
