@@ -51,7 +51,7 @@
 					<tr>
 						<td>
 							{% if r.0 != 'const' %}
-								<form action="/home/" method="post">
+								<form action="/" method="post">
 									{% csrf_token %}
 									<input type="hidden" name="timeseries" value="{{ r.0 }}" />
 									<button title="{{ r.0 }}">{{ r.0|truncatechars:20 }}</button>

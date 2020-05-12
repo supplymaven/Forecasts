@@ -60,11 +60,20 @@ class timeseries(models.Model):
 class series_names(models.Model):
     series_title=models.CharField(db_index=True, max_length=100, verbose_name="Series Title")
     
-# we store ARIMA predictions for every index here    
+# we store ARIMA predictions for every index here 
+class arima_forecast(models.Model):
+    series=models.ForeignKey(series_names, verbose_name="Series", on_delete=models.CASCADE)
+   
 class arima_predictions(models.Model):
     future_date=models.DateField(unique=False, null=True)
-    series_title=models.CharField(db_index=True, max_length=100, verbose_name="Series Title")
+    forecasted_series=models.ForeignKey(arima_forecast, on_delete=models.CASCADE, null=True)
     inx=models.DecimalField(max_digits=10, decimal_places=4)  
+    
+class arima_coefficients(models.Model):
+    forecasted_series=models.ForeignKey(arima_forecast, on_delete=models.CASCADE)
+    variables=models.CharField(db_index=True, max_length=10, verbose_name="Variable", null=True)
+    coefficients=models.DecimalField(max_digits=10, decimal_places=4)
+    pvalues=models.DecimalField(max_digits=10, decimal_places=4)
     
 class econometric_forecast(models.Model):
     series=models.ForeignKey(series_names, verbose_name="Series", on_delete=models.CASCADE)

@@ -1,5 +1,6 @@
 import MySQLdb
 import math
+import random
 import statsmodels.api as sm
 from sklearn.model_selection import train_test_split
 from statsmodels.tools.eval_measures import rmse
@@ -75,7 +76,7 @@ def make_predictions(this_series):
     crossover_probability=0.7
     mutation_probability=0.001
     #                                  num_possble_vars, num_possible_combinations_of_vars, max number of independent variables allowed
-    chromosome_population=generate_initial_population(num_variables,size_of_chromosome_population, 20)
+    chromosome_population=generate_initial_population(num_variables,size_of_chromosome_population, 10)
     min_rmse_test=math.inf
     most_fit_chromosome=''
     for i in range(num_generations):  
@@ -94,11 +95,23 @@ def make_predictions(this_series):
             X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
             #X_train=sm.add_constant(X_train)
             model=sm.OLS(y_train.astype(float), X_train.astype(float)).fit()
+            
+            # getting the p-values as we want to penalize the fitness function in favor of p-values <= 0.1
+            df_summary = pd.read_html(model.summary().tables[1].as_html(),header=0,index_col=0)[0][['coef','P>|t|']]
+            p_values=[]
+            for i,r in df_summary.iterrows():
+                if r[1]>0.1:
+                    p_values.append(r[1])
+            num_large_p_values=len(p_values)
+            penalty_slope=0.17
+            penalty=1+penalty_slope*num_large_p_values
+            
+            
             predictions_train=model.predict(X_train.astype(float))
             predictions_test=model.predict(X_test.astype(float))
             rmse_train=round(rmse(y_train.astype(float),predictions_train.astype(float)),3)
             # We will use this as our fitness function in the GA
-            rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),10) 
+            rmse_test=round(rmse(y_test.astype(float),predictions_test.astype(float)),8)*penalty 
             #population_rmse_test.append(rmse_test)
             #print(rmse_test)
             if rmse_test<min_rmse_test:
@@ -237,10 +250,12 @@ if __name__=='__main__':
     for result in results:
         selections_list.append(result[0])
         
+    selections_list=random.sample(selections_list, k=10)    
+        
     cursor.close()
     db.close()
     
-    pool=Pool(processes=16)
+    pool=Pool(processes=4)
     pool.map(make_predictions,selections_list)
     pool.close()
     pool.join()

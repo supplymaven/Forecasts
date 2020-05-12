@@ -43,7 +43,18 @@ def make_predictions(this_series):
                                 #error_action='ignore',  
                                 suppress_warnings=True, 
                                 stepwise=True)
-                                                  
+    
+    model_dictionary=model.to_dict()
+    ar_vars=['AR' + str(v+1) for v in range(model_dictionary['order'][0])]
+    ma_vars=['MA' + str(v+1) for v in range(model_dictionary['order'][2])]         
+    
+    print(model.summary())
+    for k,v in model_dictionary.items():
+        if k!='resid':
+            print(k,v)
+            
+    #print(ar_vars)
+    #print(ma_vars)
     n_periods = 12
     predictions=model.predict(n_periods)
     #print(model.summary())
@@ -72,8 +83,8 @@ if __name__=='__main__':
     
     #forecasts_already_made=arima_predictions.objects.values_list('series_title', flat=True).distinct()
     selections_list=timeseries.objects.values_list('series_title', flat=True).distinct()#.exclude(series_title__in=forecasts_already_made)
-    p=Pool(4)
-    preds=p.map(make_predictions, selections_list)
+    p=Pool(1)
+    preds=p.map(make_predictions, selections_list[:5])
     #preds=p.imap_unordered(make_predictions, selections_list, 500)
     p.close()
     p.join()

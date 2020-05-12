@@ -131,7 +131,7 @@ td {
 				<ul>				
 					{% for breadcrumb in breadcrumbs %}
 						<li class="left">
-							<form action="/home/" method="post">
+							<form action="/" method="post">
 								{% csrf_token %}
 								<input type="hidden" name="timeseries" value="{{ breadcrumb }}" />
 								{% if not forloop.last %}
@@ -147,7 +147,7 @@ td {
 		</nav> 
 		<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
 		
-		<form id="autocomplete_form" method='post' action="/home/">
+		<form id="autocomplete_form" method='post' action="/">
 			{% csrf_token %}
 			<div class="ui-widgets">
 				<div>Search for Index</div>
