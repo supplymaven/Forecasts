@@ -68,6 +68,8 @@ class arima_predictions(models.Model):
     future_date=models.DateField(unique=False, null=True)
     forecasted_series=models.ForeignKey(arima_forecast, on_delete=models.CASCADE, null=True)
     inx=models.DecimalField(max_digits=10, decimal_places=4)  
+    lower_ci=models.DecimalField(max_digits=10, decimal_places=4)
+    upper_ci=models.DecimalField(max_digits=10, decimal_places=4)
     
 class arima_coefficients(models.Model):
     forecasted_series=models.ForeignKey(arima_forecast, on_delete=models.CASCADE)

@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
-from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries, arima_predictions, series_visited, series_names, econometric_predictions, econometric_coefficients, econometric_forecast
+from MachineLearning.models import sand_mining, zillow, nasdaq, yale, sp_ratios, corporate_bond_yield_rates, commodity_indices, crude, timeseries, arima_predictions, series_visited, series_names, econometric_predictions, econometric_coefficients, econometric_forecast, arima_predictions, arima_coefficients, arima_forecast
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
@@ -21,6 +21,81 @@ from utils.lstm_utils import *
 from utils.genetic_algorithm import *
 
 def home(request):
+    # You can't just arrive at this page; you must first be logged in
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('login'))
+
+    selections_list=series_names.objects.filter(id__in=arima_forecast.objects.values_list('series', flat=True).distinct()).values_list('series_title',flat=True).distinct()
+    
+    if request.POST:
+    
+        df=pd.DataFrame.from_records(timeseries.objects.filter(series_title=request.POST['timeseries']).values())[-6:]
+        actual_periods=6
+        n_periods=6
+        series_name=series_names.objects.get(series_title=request.POST['timeseries'])
+        forecast=arima_forecast.objects.get(series=series_name)
+        prediction_objects=arima_predictions.objects.filter(forecasted_series=forecast).order_by('future_date')
+        coefficient_objects=arima_coefficients.objects.filter(forecasted_series=forecast)
+        
+        predictions=[]
+        lower_cis=[]
+        upper_cis=[]
+        for p in prediction_objects:
+            predictions.append(p.inx)
+            lower_cis.append(p.lower_ci)
+            upper_cis.append(p.upper_ci)
+            
+        coefficients=[]
+        variables=[]
+        pvalues=[]
+        for c in coefficient_objects:
+            coefficients.append(c.coefficients)
+            variables.append(c.variables)
+            pvalues.append(c.pvalues)
+            
+   
+    
+        # make series for plotting purpose
+        index_of_fc = np.arange(actual_periods, actual_periods+n_periods)
+        fc_series = pd.Series(np.asarray(predictions[-6:]), index=index_of_fc)
+        lower_series = pd.Series(np.asarray(lower_cis[-6:]), index=index_of_fc)
+        upper_series = pd.Series(np.asarray(upper_cis[-6:]), index=index_of_fc)
+
+        # Plot
+        formatted_series=request.POST['timeseries']
+        df.index=np.arange(actual_periods)
+        plt.plot(df.inx)
+        plt.plot(fc_series, color='darkgreen')
+        print(lower_series.index)
+        print(lower_series)
+        print(upper_series)
+        plt.fill_between(lower_series.index, 
+                        lower_series.astype(float), 
+                        upper_series.astype(float), 
+                        color='k', alpha=.15)
+
+        plt.title("ARIMA Forecast")
+        #print([fc])
+        #plt.table(cellText=[['' for i in range(len(df.inx))]+[round(f,1) for f in fc]])
+        #plt.show()
+        now=datetime.now()
+        timestamp=datetime.timestamp(now)
+        image_file_name='arima' + str(int(round(timestamp,0))) + '.png'
+        plt.savefig(os.path.join(settings.BASE_DIR, str(settings.STATIC_ROOT) + '/images/' + image_file_name))
+        # clear the figure
+        plt.clf()
+        
+        df=pd.DataFrame(list(arima_coefficients.objects.filter(forecasted_series=forecast).values('variables','coefficients','pvalues')))
+        future_dates=['2020-01-01','2020-02-01','2020-03-01','2020-04-01','2020-05-01','2020-06-01','2020-07-01','2020-08-01','2020-09-01','2020-10-01','2020-11-01','2020-12-01']
+        
+        predictions=zip(predictions,future_dates)
+
+        return render(request, '../templates/home_arima.html', {'selections_list': selections_list, 'image_file_name': image_file_name, 'coefficients': coefficients, 'pvalues': pvalues, 'variables': variables, 'predictions': predictions, 'lower_cis': lower_cis, 'upper_cis': upper_cis, 'timeseries': request.POST['timeseries'],'df': df, })
+    else:    
+        return render(request, '../templates/home.html', {'selections_list': selections_list})    
+
+# deprecated
+def home_regression(request):
     # the arima predictions for these indexes did not turn out right so we exclude them for the time being
     to_exclude=['Dow Jones Industrial Average','Gold','PPI Commodity data for Machinery and equipment-Parts and attachments for industrial process furnaces','PPI Commodity data for Nonmetallic mineral products-Handmade pressed and blown glassware not seasona','PPI Commodity data for Textile products and apparel-Womens and girls tailored jackets and vests ex','PPI Commodity data for Transportation equipment-Air brake and other brake equipment not seasonally a','PPI industry data for Industrial process furnace and oven mfg-Parts and attachments for industrial p','PPI industry data for Mechanical power transmission equipment mfg-Plain bearings and bushings not se','PPI industry data for Nonferrous metal (except copper and aluminum) rolling drawing and extruding-Al','PPI industry data for Other metal container mfg-Steel shipping barrels & drums exc. beer barrels (mo','PPI industry data for Power boiler and heat exchanger mfg-Fabricated heat exchangers and steam conde','PPI industry data for Railroad rolling stock mfg-Air brake and other brake equipment not seasonally','PPI industry data for Sawmills-Secondary products not seasonally adjusted','S&P 500','Utility (piped) gas per therm in Atlanta-Sandy Springs-Roswell GA average price not seasonally adjus','Utility (piped) gas service in Atlanta-Sandy Springs-Roswell GA all urban consumers not seasonally a','WTI Crude Oil']
     selections_list=series_names.objects.filter(id__in=econometric_forecast.objects.values_list('series', flat=True).distinct()).values_list('series_title',flat=True).distinct().exclude(series_title__in=to_exclude)

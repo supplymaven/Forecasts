@@ -1,0 +1,77 @@
+{% extends "base_new.html" %}
+
+{% load static %}
+
+{% block additional_css %}
+
+
+#results {
+	position: absolute;
+	top: 425px;
+	//height: 500px;
+}
+.column1 {
+	float: left;
+	width: 620px;
+	margin: 10px;
+}
+.column2 {
+	float: left;
+	width: 300px;
+	margin: 10px;
+}
+.column3 {
+	float: left;
+	width: 300px;
+	margin: 10px;
+}
+
+
+
+{% endblock %}
+
+{% block main_content %}
+
+{% if image_file_name %}
+	<div id="results">
+		<div class="column1">
+			<div>Series ID: ...</div>
+			<div>Title: {{ timeseries }}</div>
+			<div>Industry: ...</div>
+			<div>Base Date: 6/1/2019</div>
+			{% with '/images/'|add:image_file_name as image_static %}
+				<img src="{% static image_static %}" alt="ARIMA image" />
+			{% endwith %}
+		</div>
+		<div class="column2">
+			<!--{{ table1 | safe }}-->
+			<table>
+				<tr><th>Var</th><th>Coeffs</th><th>PVals</th></tr>
+				{% for i,r in df.iterrows %}
+					<tr>
+						<td>
+							{% if r.0 != 'const' %}
+								{{ r.0 }}
+							{% else %}
+								{{ r.0 }}
+							{% endif %}
+						</td>
+						<td>{{ r.1|floatformat:2 }}</td>
+						<td>{{ r.2|floatformat:2 }}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+		<div class="column3">
+			<table>
+				<tr><th>Future Time Period</th><th>Index Value</th></tr>
+				{% for prediction in predictions %}
+					<tr><td>{{ prediction.1 }}</td><td>{{ prediction.0|floatformat:2 }}</td></tr>
+				{% endfor %}	
+			</table>
+		</div>
+	</div>
+{% endif %}
+
+
+{% endblock %}
