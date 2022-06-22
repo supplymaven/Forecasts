@@ -4,7 +4,7 @@ Quandl==3.4.8
 Keras==2.2.4
 matplotlib==3.0.2
 statsmodels==0.10.1
-numpy==1.17.3
+numpy==1.22.0
 knoema==1.0.19b1
 Django==2.2.4
 scikit_learn==0.22.1
